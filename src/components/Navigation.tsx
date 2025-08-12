@@ -39,7 +39,7 @@ const Navigation = () => {
             className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => scrollToSection('hero')}
           >
-            Henna Artistry
+            HennaKala
           </div>
 
           {/* Desktop Navigation */}
@@ -57,7 +57,7 @@ const Navigation = () => {
             <Button 
               variant="warm" 
               size="sm"
-              onClick={() => window.open('https://instagram.com/hennaartistry', '_blank')}
+              onClick={() => window.open('https://instagram.com/hennakala', '_blank')}
             >
               <Instagram className="w-4 h-4 mr-2" />
               Follow Us
@@ -93,7 +93,7 @@ const Navigation = () => {
                 size="sm" 
                 className="w-full"
                 onClick={() => {
-                  window.open('https://instagram.com/hennaartistry', '_blank');
+                  window.open('https://instagram.com/hennakala', '_blank');
                   setIsOpen(false);
                 }}
               >
