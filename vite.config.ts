@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/', // Deploy at root domain
+  base: '/henna-flow-studio/', // Project site subdirectory
   server: {
     host: "::",
     port: 8080,
