@@ -26,7 +26,7 @@ const Gallery = () => {
             My KALĀ
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover the beauty and artistry of my henna creations. Each design is crafted with care, blending tradition and creativity to celebrate every moment. 
+            Discover the beauty and artistry of my henna creations.
             Browse through the gallery and find inspiration for your own special look.
           </p>
         </div>
