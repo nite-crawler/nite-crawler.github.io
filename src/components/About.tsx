@@ -91,13 +91,13 @@ const About = () => {
           {stats.map((stat, index) => <div key={index} className="text-center bg-card rounded-xl p-6 shadow-float hover:shadow-float-hover transition-all duration-300 hover:-translate-y-2 animate-scale-in" style={{
           animationDelay: `${index * 0.1}s`
         }}>
-              <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-[b64400] bg-[#b64400]">
                 <stat.icon className="w-6 h-6 text-primary-foreground bg-[#8d3218]" />
               </div>
               <div className="text-3xl font-bold bg-clip-text text-transparent mb-2 bg-[8d3218] bg-[#8d3218] rounded-none">
                 {stat.value}
               </div>
-              <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>
+              <div className="text-muted-foreground text-sm font-medium bg-[b64400]">{stat.label}</div>
             </div>)}
         </div>
       </div>

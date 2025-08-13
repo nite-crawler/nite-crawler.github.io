@@ -45,7 +45,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
             Ready, Set, Henna — Book Now!
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">Ready to adorn your hands with beautiful henna art? 
+          <p className="text-xl max-w-2xl mx-auto mb-8 font-extralight text-[#272725]">Ready to adorn your hands with beautiful henna art? 
 Get in touch with us to schedule your appointment or ask any questions.</p>
           
           {/* Booking Form */}
@@ -53,19 +53,27 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
             <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <Label htmlFor="name" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>NAME</Label>
+                  <Label htmlFor="name" className="text-left block mb-2 font-bold" style={{
+                  color: '#272725'
+                }}>NAME</Label>
                   <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
                 </div>
                 <div>
-                  <Label htmlFor="email" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>EMAIL</Label>
+                  <Label htmlFor="email" className="text-left block mb-2 font-bold" style={{
+                  color: '#272725'
+                }}>EMAIL</Label>
                   <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
                 </div>
                 <div>
-                  <Label htmlFor="phone" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>PHONE</Label>
+                  <Label htmlFor="phone" className="text-left block mb-2 font-bold" style={{
+                  color: '#272725'
+                }}>PHONE</Label>
                   <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
                 </div>
                 <div>
-                  <Label htmlFor="message" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>MESSAGE</Label>
+                  <Label htmlFor="message" className="text-left block mb-2 font-bold" style={{
+                  color: '#272725'
+                }}>MESSAGE</Label>
                   <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." />
                 </div>
                 <Button type="submit" size="lg" className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold">
