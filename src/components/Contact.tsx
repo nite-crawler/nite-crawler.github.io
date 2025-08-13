@@ -19,7 +19,7 @@ const Contact = () => {
             Book Your Session
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Hi Hennabees! I'm Swathi, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehnd/hennai with the world through creativity, skill, and heartfelt respect.
+            Hi Hennabees! I'm Swathi, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehndi/hennai with the world through creativity, skill, and heartfelt respect.
           </p>
         </div>
 
