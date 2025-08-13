@@ -25,8 +25,8 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="animate-fade-in">
               <div className="mb-6">
-                <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#D17046'}}>MEET THE ARTIST</h3>
-                <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
+                <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#272725'}}>MEET THE ARTIST</h3>
+                <h2 className="text-3xl font-bold mb-2 font-seasons tracking-wider" style={{color: '#272725'}}">SWATHI NAMBIAR</h2>
                 <div className="flex items-start gap-3">
                   <div className="w-1 h-12 bg-gradient-primary rounded-full mt-1"></div>
                   <div>
