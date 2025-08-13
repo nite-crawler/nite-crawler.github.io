@@ -24,7 +24,12 @@ const About = () => {
           {/* Story Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="animate-fade-in">
-              <h3 className="text-3xl font-bold mb-6 font-seasons" style={{color: '#D17046'}}>My Story</h3>
+              <div className="mb-6">
+                <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#D17046'}}>MEET THE ARTIST</h3>
+                <h2 className="text-3xl font-bold mb-2 text-foreground font-seasons">SWATHI NAMBIAR</h2>
+                <p className="text-muted-foreground font-medium">Owner & Founder</p>
+                <p className="text-muted-foreground font-medium">Lead Artist</p>
+              </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Henna has been a part of my life for as long as I can remember. I started my journey in my early teenage years, doodling simple curvy lines on my own hands and those of my friends. What began as a playful pastime quickly became something much deeper, an art form that connected me to my culture, creativity, and a sense of calm.
