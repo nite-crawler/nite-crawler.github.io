@@ -13,11 +13,11 @@ const Index = () => {
         <div id="hero">
           <Hero />
         </div>
+        <About />
         <div id="intro">
           <Intro />
         </div>
         <Gallery />
-        <About />
         <Contact />
       </main>
     </div>
