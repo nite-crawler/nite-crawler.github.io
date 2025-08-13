@@ -38,7 +38,7 @@ const Gallery = () => {
           <h2 className="text-4xl mb-6 text-gallery-title font-seasons uppercase font-thin md:text-5xl">
             My KALĀ
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl max-w-2xl mx-auto font-extralight text-[#272725]">
             Discover the beauty and artistry of my henna creations.
             Browse through the gallery and find inspiration for your own special look.
           </p>

@@ -74,7 +74,7 @@ const About = () => {
         <div className="text-center mb-8 animate-fade-in">
           <h2 style={{
           color: '#D17046'
-        }} className="text-3xl font-seasons uppercase tracking-wider text-[#dbbe97] font-thin text-center md:text-5xl">
+        }} className="text-3xl font-seasons uppercase tracking-wider font-thin text-center text-[#dbbe97] md:text-5xl">
             Our Henna Cones
           </h2>
         </div>
@@ -83,7 +83,7 @@ const About = () => {
         <div className="text-center mb-16 animate-fade-in">
           <p style={{
           color: '#D17046'
-        }} className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center text-[#272725] md:text-xl">Transform your hands into masterpieces with our intricate henna designs. Achieve flawless detail and rich color every time with our premium henna cone — the artist’s top choice.</p>
+        }} className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center md:text-xl text-[#272725]">Transform your hands into masterpieces with our intricate henna designs. Achieve flawless detail and rich color every time with our premium henna cone — the artist’s top choice.</p>
         </div>
 
         {/* Stats Section */}
@@ -92,9 +92,9 @@ const About = () => {
           animationDelay: `${index * 0.1}s`
         }}>
               <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-6 h-6 text-primary-foreground" />
+                <stat.icon className="w-6 h-6 text-primary-foreground bg-[#8d3218]" />
               </div>
-              <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+              <div className="text-3xl font-bold bg-clip-text text-transparent mb-2 bg-[8d3218] bg-[#8d3218] rounded-none">
                 {stat.value}
               </div>
               <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>

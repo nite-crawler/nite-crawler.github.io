@@ -6,12 +6,6 @@ const Intro = () => {
       behavior: 'smooth'
     });
   };
-  return (
-    <section className="py-20">
-      <div className="container mx-auto px-6">
-        {/* Empty intro section for now */}
-      </div>
-    </section>
-  );
+  return;
 };
 export default Intro;
