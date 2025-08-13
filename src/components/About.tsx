@@ -20,12 +20,10 @@ const About = () => {
   return <section id="about" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
+          <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase font-thin">
             ABOUT THE ARTIST 
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Hi Hennabees! I'm Swathi, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehendi/henna with the world through creativity, skill, and heartfelt respect.
-          </p>
+          <p className="text-xl max-w-3xl mx-auto font-extralight text-[#272725]">Hi Hennabees! I'm Swathi, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehendi or henna with the world through creativity, skill, and heartfelt respect.</p>
         </div>
 
         <div className="mb-20">
@@ -74,21 +72,18 @@ const About = () => {
 
         {/* Our Henna Cones heading */}
         <div className="text-center mb-8 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-seasons font-bold uppercase tracking-wider" style={{
-            color: '#D17046'
-          }}>
+          <h2 style={{
+          color: '#D17046'
+        }} className="text-3xl font-seasons uppercase tracking-wider text-[#dbbe97] font-thin text-center md:text-5xl">
             Our Henna Cones
           </h2>
         </div>
 
         {/* Transform your hands text */}
         <div className="text-center mb-16 animate-fade-in">
-          <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto" style={{
+          <p style={{
           color: '#D17046'
-        }}>
-            Transform your hands into masterpieces with our intricate henna designs.
-            Achieve flawless detail and rich color every time with our premium henna cone—the artist’s top choice.
-          </p>
+        }} className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center text-[#272725] md:text-xl">Transform your hands into masterpieces with our intricate henna designs. Achieve flawless detail and rich color every time with our premium henna cone — the artist’s top choice.</p>
         </div>
 
         {/* Stats Section */}
