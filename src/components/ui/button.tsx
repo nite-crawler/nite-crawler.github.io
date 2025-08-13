@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-gradient-primary text-primary-foreground shadow-float hover:shadow-float-hover hover:-translate-y-1 border-0",
-        warm: "bg-gradient-warm text-primary shadow-float hover:shadow-float-hover hover:-translate-y-1",
+        warm: "bg-nav-button text-primary shadow-float hover:shadow-float-hover hover:-translate-y-1 hover:bg-nav-button/90",
         floating: "bg-card text-card-foreground shadow-float hover:shadow-float-hover hover:-translate-y-2 border border-border/50",
       },
       size: {

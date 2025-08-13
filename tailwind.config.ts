@@ -50,6 +50,7 @@ export default {
 				},
 				henna: 'hsl(var(--henna))',
 				'nav-text': 'hsl(var(--nav-text))',
+				'nav-button': 'hsl(var(--nav-button))',
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
