@@ -39,7 +39,7 @@ const Navigation = () => {
             className="cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => scrollToSection('hero')}
           >
-            <h1 className="font-seasons font-bold text-2xl text-foreground tracking-wide">
+            <h1 className="font-seasons text-2xl text-nav-text tracking-wide">
               HENNA KALĀ
             </h1>
           </div>
