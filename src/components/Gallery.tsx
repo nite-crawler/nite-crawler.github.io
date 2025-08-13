@@ -69,11 +69,6 @@ const Gallery = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-6 left-6 bg-card/90 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <span className="text-sm font-medium text-foreground">
-                    {hennaImages[currentIndex].category}
-                  </span>
-                </div>
               </div>
             </CardContent>
           </Card>
