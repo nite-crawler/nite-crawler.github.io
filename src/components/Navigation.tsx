@@ -58,7 +58,8 @@ const Navigation = () => {
             ))}
             <Button 
               variant="warm" 
-              size="sm"
+              size="default"
+              className="px-6"
               onClick={() => scrollToSection('contact')}
             >
               BOOK NOW
