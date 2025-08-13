@@ -23,7 +23,7 @@ const HennaCones = () => {
         <div className="text-center mb-8 animate-fade-in">
           <h2 style={{
           color: '#D17046'
-        }} className="text-3xl font-seasons uppercase tracking-wider font-thin text-center text-[#dbbe97] md:text-5xl">
+        }} className="text-3xl font-seasons uppercase tracking-wider text-center font-thin text-[#dbbe97] md:text-5xl">
             Our Henna Cones
           </h2>
         </div>
