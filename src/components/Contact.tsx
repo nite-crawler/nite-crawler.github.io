@@ -53,19 +53,19 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
             <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>NAME</Label>
                   <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>EMAIL</Label>
                   <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
                 </div>
                 <div>
-                  <Label htmlFor="phone">Phone</Label>
+                  <Label htmlFor="phone" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>PHONE</Label>
                   <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
                 </div>
                 <div>
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-left block mb-2 font-bold" style={{color: '#272725'}}>MESSAGE</Label>
                   <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." />
                 </div>
                 <Button type="submit" size="lg" className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold">
