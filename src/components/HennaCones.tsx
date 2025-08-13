@@ -1,5 +1,4 @@
 import { Package, Hand, Leaf, Shield } from "lucide-react";
-
 const HennaCones = () => {
   const stats = [{
     icon: Leaf,
@@ -18,9 +17,7 @@ const HennaCones = () => {
     value: "HOME-MADE & HAND-FINISHED",
     label: "Every batch crafted with a personal touch, care and love"
   }];
-
-  return (
-    <section id="henna-cones" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
+  return <section id="henna-cones" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
       <div className="container mx-auto px-6">
         {/* Our Henna Cones heading */}
         <div className="text-center mb-8 animate-fade-in">
@@ -43,18 +40,20 @@ const HennaCones = () => {
           {stats.map((stat, index) => <div key={index} className="text-center bg-card rounded-xl p-6 shadow-float hover:shadow-float-hover transition-all duration-300 hover:-translate-y-2 animate-scale-in" style={{
           animationDelay: `${index * 0.1}s`
         }}>
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#b64400' }}>
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{
+            backgroundColor: '#b64400'
+          }}>
                 <stat.icon className="w-6 h-6 text-white" />
               </div>
-              <div className="text-lg font-bold mb-2" style={{ color: '#8d3218' }}>
+              <div className="text-lg font-bold mb-2" style={{
+            color: '#8d3218'
+          }}>
                 {stat.value}
               </div>
               <div className="text-muted-foreground text-sm font-medium text-center">{stat.label}</div>
             </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HennaCones;
