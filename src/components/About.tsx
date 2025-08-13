@@ -26,7 +26,7 @@ const About = () => {
             <div className="animate-fade-in">
               <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed relative">
-                <div className="absolute -top-4 -left-2 text-6xl text-primary/20 font-serif pointer-events-none select-none">"</div>
+                <div className="absolute -top-8 -left-4 text-9xl text-primary/20 font-mono font-black pointer-events-none select-none">"</div>
                 <p>
                   Henna has been a part of my life for as long as I can remember. I started my journey in my early teenage years, doodling simple curvy lines on my own hands and those of my friends. What began as a playful pastime quickly became something much deeper, an art form that connected me to my culture, creativity, and a sense of calm.
                 </p>
