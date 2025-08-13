@@ -22,7 +22,7 @@ const About = () => {
 
         <div className="mb-20">
           {/* Story Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-3xl mx-auto">
             <div className="animate-fade-in">
               <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
