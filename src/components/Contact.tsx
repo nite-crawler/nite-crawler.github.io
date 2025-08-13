@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,44 +10,43 @@ const Contact = () => {
     phone: '',
     message: ''
   });
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = 'Henna Appointment Request';
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AMessage: ${formData.message}`;
     window.open(`mailto:swathi@hennakala.com?subject=${subject}&body=${body}`, '_blank');
   };
-
   const handleInstagramClick = () => {
     window.open('https://instagram.com/thehennakala', '_blank');
   };
-
   const handleFacebookClick = () => {
     window.open('https://facebook.com/thehennakala', '_blank');
   };
-
-  const contactInfo = [
-    { icon: Mail, label: "Email", value: "swathi@hennakala.com", href: "mailto:swathi@hennakala.com" },
-    { icon: MapPin, label: "Location", value: "Lincoln, Nebraska", href: "#" },
-  ];
-
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-background to-secondary/30">
+  const contactInfo = [{
+    icon: Mail,
+    label: "Email",
+    value: "swathi@hennakala.com",
+    href: "mailto:swathi@hennakala.com"
+  }, {
+    icon: MapPin,
+    label: "Location",
+    value: "Lincoln, Nebraska",
+    href: "#"
+  }];
+  return <section id="contact" className="py-20 bg-gradient-to-br from-background to-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
             Ready, Set, Henna — Book Now!
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask any questions.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">Ready to adorn your hands with beautiful henna art? 
+Get in touch with us to schedule your appointment or ask any questions.</p>
           
           {/* Booking Form */}
           <div className="max-w-md mx-auto mb-12">
@@ -56,49 +54,21 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
                 </div>
                 <div>
                   <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
                 </div>
                 <div>
                   <Label htmlFor="phone">Phone</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                  />
+                  <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
                 </div>
                 <div>
                   <Label htmlFor="message">Message</Label>
-                  <Input
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Tell us about your henna needs..."
-                  />
+                  <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." />
                 </div>
-                <Button 
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
-                >
+                <Button type="submit" size="lg" className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold">
                   BOOK APPOINTMENT
                 </Button>
               </form>
@@ -113,26 +83,17 @@ const Contact = () => {
               <h3 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase text-center">LET'S CONNECT!</h3>
               
               <div className="space-y-6 mb-8">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-center space-x-4 group">
+                {contactInfo.map((info, index) => <div key={index} className="flex items-center space-x-4 group">
                     <div className="w-12 h-12 bg-contact-accent rounded-full flex items-center justify-center flex-shrink-0">
                       <info.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">{info.label}</div>
-                      {info.href && info.href !== "#" ? (
-                        <a 
-                          href={info.href}
-                          className="text-foreground font-medium hover:text-primary transition-colors"
-                        >
+                      {info.href && info.href !== "#" ? <a href={info.href} className="text-foreground font-medium hover:text-primary transition-colors">
                           {info.value}
-                        </a>
-                      ) : (
-                        <div className="text-foreground font-medium">{info.value}</div>
-                      )}
+                        </a> : <div className="text-foreground font-medium">{info.value}</div>}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               {/* Social Media CTA */}
@@ -146,18 +107,10 @@ const Contact = () => {
                   Spot a design you love? DM us to lock in your henna fun!
                 </p>
                 <div className="space-y-3">
-                  <Button 
-                    variant="floating" 
-                    onClick={handleInstagramClick}
-                    className="w-full"
-                  >
+                  <Button variant="floating" onClick={handleInstagramClick} className="w-full">
                     @thehennakala
                   </Button>
-                  <Button 
-                    variant="floating" 
-                    onClick={handleFacebookClick}
-                    className="w-full"
-                  >
+                  <Button variant="floating" onClick={handleFacebookClick} className="w-full">
                     facebook.com/thehennakala
                   </Button>
                 </div>
@@ -166,8 +119,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
