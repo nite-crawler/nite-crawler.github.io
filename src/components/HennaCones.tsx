@@ -7,15 +7,15 @@ const HennaCones = () => {
     label: "for pure, honest goodness in every drop"
   }, {
     icon: Shield,
-    value: "NO BLACK HENNA AKA PPD",
+    value: "NO PPD AKA BLACK HENNA",
     label: "ingredients you can read, recognize, and trust"
   }, {
     icon: Package,
-    value: "SMALL BATCHES",
+    value: "CRAFTED IN SMALL BATCHES",
     label: "to ensure quality, freshness, and attention to detail"
   }, {
     icon: Hand,
-    value: "HOME & HAND MADE",
+    value: "HOME-MADE & HAND-FINISHED",
     label: "Every batch crafted with a personal touch, care and love"
   }];
 
