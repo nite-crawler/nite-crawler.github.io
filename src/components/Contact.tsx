@@ -1,7 +1,31 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = 'Henna Appointment Request';
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AMessage: ${formData.message}`;
+    window.open(`mailto:swathi@hennakala.com?subject=${subject}&body=${body}`, '_blank');
+  };
+
   const handleInstagramClick = () => {
     window.open('https://instagram.com/thehennakala', '_blank');
   };
@@ -26,15 +50,57 @@ const Contact = () => {
             Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask any questions.
           </p>
           
-          {/* Book Appointment Button */}
-          <div className="flex justify-center">
-            <Button 
-              size="lg"
-              className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold px-8 py-3 rounded-full text-lg"
-              onClick={() => window.open('mailto:swathi@hennakala.com?subject=Henna Appointment Request', '_blank')}
-            >
-              Book Appointment
-            </Button>
+          {/* Booking Form */}
+          <div className="max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="phone">Phone</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <Label htmlFor="message">Message</Label>
+                <Input
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Tell us about your henna needs..."
+                />
+              </div>
+              <Button 
+                type="submit"
+                size="lg"
+                className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
+              >
+                BOOK APPOINTMENT
+              </Button>
+            </form>
           </div>
         </div>
 
