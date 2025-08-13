@@ -2,19 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import ReCAPTCHA from "react-google-recaptcha";
 const Contact = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    botcheck: '' // Honeypot field
   });
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -25,13 +23,10 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!recaptchaToken) {
-      toast({
-        title: "Verification Required",
-        description: "Please complete the reCAPTCHA verification.",
-        variant: "destructive",
-      });
-      return;
+    // Honeypot spam protection - if this field is filled, it's likely spam
+    if (formData.botcheck) {
+      console.log("Spam detected");
+      return; // Silently reject spam
     }
     
     setIsLoading(true);
@@ -44,13 +39,13 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "0dbaf878-ecc0-4e60-afad-dfe2cb940d18", // Replace with your web3forms access key
+          access_key: "0dbaf878-ecc0-4e60-afad-dfe2cb940d18",
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
           subject: "Henna Appointment Request",
-          "g-recaptcha-response": recaptchaToken,
+          botcheck: formData.botcheck, // Include honeypot field
         }),
       });
 
@@ -66,10 +61,9 @@ const Contact = () => {
           name: '',
           email: '',
           phone: '',
-          message: ''
+          message: '',
+          botcheck: ''
         });
-        setRecaptchaToken(null);
-        recaptchaRef.current?.reset();
       } else {
         throw new Error(result.message || "Something went wrong");
       }
@@ -156,21 +150,22 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                   />
                 </div>
                 
-                {/* reCAPTCHA */}
-                <div className="flex justify-center">
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey="6Lcc-6QrAAAAADUCM3JGPXMlR165KUXT8u6hsaQc" // Replace with your site key
-                    onChange={(token) => setRecaptchaToken(token)}
-                    onExpired={() => setRecaptchaToken(null)}
-                  />
-                </div>
+                {/* Honeypot field - hidden from users */}
+                <input
+                  type="text"
+                  name="botcheck"
+                  value={formData.botcheck}
+                  onChange={handleInputChange}
+                  style={{ display: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
                 
                 <Button 
                   type="submit" 
                   size="lg" 
                   className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
-                  disabled={isLoading || !recaptchaToken}
+                  disabled={isLoading}
                 >
                   {isLoading ? "SENDING..." : "BOOK APPOINTMENT"}
                 </Button>
