@@ -42,7 +42,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/41b42ad9-d089-444c-b075-28d1b54f801c.png" 
               alt="Henna Kala by Swathi"
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
