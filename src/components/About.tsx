@@ -27,13 +27,12 @@ const About = () => {
               <div className="mb-6">
                 <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#D17046'}}>MEET THE ARTIST</h3>
                 <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-4 bg-gradient-primary rounded-sm"></div>
-                  <p className="text-muted-foreground font-medium">Owner & Founder</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-4 bg-gradient-primary rounded-sm"></div>
-                  <p className="text-muted-foreground font-medium">Lead Artist</p>
+                <div className="flex items-start gap-3">
+                  <div className="w-1 h-12 bg-gradient-primary rounded-full mt-1"></div>
+                  <div>
+                    <p className="text-muted-foreground font-medium">Owner & Founder</p>
+                    <p className="text-muted-foreground font-medium">Lead Artist</p>
+                  </div>
                 </div>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
