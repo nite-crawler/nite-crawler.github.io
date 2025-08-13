@@ -10,10 +10,6 @@ const Intro = () => {
     <section className="py-16 bg-background">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{color: '#D17046'}}>
-            Transform your hands into masterpieces with our intricate henna designs. 
-            Traditional patterns meet contemporary artistry.
-          </p>
           
           <div className="flex justify-center items-center mb-12">
             <Button 

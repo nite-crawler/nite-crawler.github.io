@@ -63,6 +63,14 @@ const About = () => {
           </div>
         </div>
 
+        {/* Transform your hands text */}
+        <div className="text-center mb-16 animate-fade-in">
+          <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto" style={{color: '#D17046'}}>
+            Transform your hands into masterpieces with our intricate henna designs. 
+            Traditional patterns meet contemporary artistry.
+          </p>
+        </div>
+
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
