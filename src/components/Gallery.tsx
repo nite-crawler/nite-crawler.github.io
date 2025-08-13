@@ -53,13 +53,6 @@ const Gallery = () => {
                   {image.category}
                 </div>
                 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-lg font-semibold mb-2">View Full Size</p>
-                    <p className="text-sm opacity-90">{image.category} Design</p>
-                  </div>
-                </div>
               </div>
             </div>
           ))}
