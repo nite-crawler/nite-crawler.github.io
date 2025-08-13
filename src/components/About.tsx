@@ -92,12 +92,12 @@ const About = () => {
           animationDelay: `${index * 0.1}s`
         }}>
               <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-[b64400] bg-[#b64400]">
-                <stat.icon className="w-6 h-6 text-primary-foreground bg-[#8d3218]" />
+                <stat.icon className="w-6 h-6 text-primary-foreground bg-[#b64400]" />
               </div>
               <div className="text-3xl font-bold bg-clip-text text-transparent mb-2 bg-[8d3218] bg-[#8d3218] rounded-none">
                 {stat.value}
               </div>
-              <div className="text-muted-foreground text-sm font-medium bg-[b64400]">{stat.label}</div>
+              <div className="text-muted-foreground text-sm font-medium bg-[b64400] py-0">{stat.label}</div>
             </div>)}
         </div>
       </div>
