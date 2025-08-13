@@ -1,8 +1,6 @@
 import { Star, Users } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
+  return <section id="about" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase font-thin">
@@ -22,8 +20,9 @@ const About = () => {
                 <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
                 <div className="flex items-start gap-3">
                   <div className="w-1 h-12 bg-gradient-primary rounded-full mt-1"></div>
-                  <div>
-                    <p className="font-medium text-[#272725] py-px">OWNER & FOUNDER</p>
+                  <div className="px-0 py-0 rounded-sm">
+                    <p className="font-medium text-[#272725] py-px">
+OWNER &amp; FOUNDER</p>
                     <div className="flex items-start gap-3 w-1 h-2"></div>
                     <p style={{
                     color: '#D17046'
@@ -55,8 +54,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
