@@ -49,7 +49,7 @@ const HennaCones = () => {
               <div className="text-lg font-bold mb-2" style={{ color: '#8d3218' }}>
                 {stat.value}
               </div>
-              <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>
+              <div className="text-muted-foreground text-sm font-medium text-center">{stat.label}</div>
             </div>)}
         </div>
       </div>
