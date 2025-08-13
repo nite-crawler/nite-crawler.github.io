@@ -52,7 +52,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
+                className="text-nav-text hover:text-primary transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
@@ -86,7 +86,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-6 py-2 text-foreground hover:text-primary hover:bg-secondary/50 transition-all duration-300 font-medium"
+                className="block w-full text-left px-6 py-2 text-nav-text hover:text-primary hover:bg-secondary/50 transition-all duration-300 font-medium"
               >
                 {item.name}
               </button>

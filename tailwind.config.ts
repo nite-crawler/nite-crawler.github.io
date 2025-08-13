@@ -49,6 +49,7 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				henna: 'hsl(var(--henna))',
+				'nav-text': 'hsl(var(--nav-text))',
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
