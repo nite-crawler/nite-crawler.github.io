@@ -116,18 +116,22 @@ const Gallery = () => {
         {/* Zoom Modal */}
         {selectedImage && (
           <div 
-            className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" 
+            className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center animate-fade-in" 
             onClick={() => setSelectedImage(null)}
           >
-            <div className="relative max-w-[95vw] max-h-[95vh] animate-scale-in">
+            <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8">
               <img 
                 src={selectedImage} 
                 alt="Zoomed henna design" 
-                className="w-full h-full object-contain rounded-xl shadow-2xl"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl animate-scale-in"
+                style={{ maxWidth: '100vw', maxHeight: '100vh' }}
               />
               <button 
-                onClick={() => setSelectedImage(null)} 
-                className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm text-foreground w-12 h-12 rounded-full flex items-center justify-center hover:bg-card transition-colors shadow-float text-lg font-bold"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedImage(null);
+                }} 
+                className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/90 backdrop-blur-sm text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-lg text-lg font-bold z-10"
               >
                 ✕
               </button>
