@@ -23,7 +23,7 @@ const About = () => {
                   <div className="px-0 py-0 rounded-sm">
                     <p className="font-medium text-[#272725] py-px">
 OWNER &amp; FOUNDER</p>
-                    <div className="flex items-start gap-3 w-1 h-2"></div>
+                    <div className="flex items-start gap-2 w-1 h-2"></div>
                     <p style={{
                     color: '#D17046'
                   }} className="font-medium text-[3] flex items-start gap-3 px-0 py-0 my-0 text-[#cb6829]">Lead Artist</p>
