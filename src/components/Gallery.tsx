@@ -22,7 +22,7 @@ const Gallery = () => {
     <section id="gallery" className="py-20 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gallery-title font-seasons">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gallery-title font-seasons uppercase">
             My KALĀ
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
