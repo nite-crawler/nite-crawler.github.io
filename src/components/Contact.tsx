@@ -22,9 +22,20 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
             Ready, Set, Henna — Book Now!
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask any questions.
           </p>
+          
+          {/* Book Appointment Button */}
+          <div className="flex justify-center">
+            <Button 
+              size="lg"
+              className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold px-8 py-3 rounded-full text-lg"
+              onClick={() => window.open('mailto:swathi@hennakala.com?subject=Henna Appointment Request', '_blank')}
+            >
+              Book Appointment
+            </Button>
+          </div>
         </div>
 
         <div className="max-w-2xl mx-auto">
