@@ -9,7 +9,12 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-primary-glow/20 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
       </div>
 
-      {/* Hero section now only contains background */}
+      {/* Hero content at bottom */}
+      <div className="absolute bottom-8 left-0 right-0 text-center px-4">
+        <p className="font-seasons text-henna text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg">
+          A dream dipped in henna and made real — one cone at a time.
+        </p>
+      </div>
     </section>
   );
 };
