@@ -2,11 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
+import ReCAPTCHA from "react-google-recaptcha";
 const Contact = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,6 +24,16 @@ const Contact = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!recaptchaToken) {
+      toast({
+        title: "Verification Required",
+        description: "Please complete the reCAPTCHA verification.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsLoading(true);
 
     try {
@@ -37,6 +50,7 @@ const Contact = () => {
           phone: formData.phone,
           message: formData.message,
           subject: "Henna Appointment Request",
+          "g-recaptcha-response": recaptchaToken,
         }),
       });
 
@@ -54,6 +68,8 @@ const Contact = () => {
           phone: '',
           message: ''
         });
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
       } else {
         throw new Error(result.message || "Something went wrong");
       }
@@ -130,11 +146,22 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                 }}>MESSAGE</Label>
                   <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." required />
                 </div>
+                
+                {/* reCAPTCHA */}
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // Replace with your site key
+                    onChange={(token) => setRecaptchaToken(token)}
+                    onExpired={() => setRecaptchaToken(null)}
+                  />
+                </div>
+                
                 <Button 
                   type="submit" 
                   size="lg" 
                   className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
-                  disabled={isLoading}
+                  disabled={isLoading || !recaptchaToken}
                 >
                   {isLoading ? "SENDING..." : "BOOK APPOINTMENT"}
                 </Button>
