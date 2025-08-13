@@ -24,7 +24,7 @@ const Hero = () => {
               className="max-w-md w-full h-auto"
             />
           </div>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{color: '#D17046'}}>
             Transform your hands into masterpieces with our intricate henna designs. 
             Traditional patterns meet contemporary artistry.
           </p>
