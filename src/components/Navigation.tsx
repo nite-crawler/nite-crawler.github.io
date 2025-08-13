@@ -59,10 +59,9 @@ const Navigation = () => {
             <Button 
               variant="warm" 
               size="sm"
-              onClick={() => window.open('https://instagram.com/hennakala', '_blank')}
+              onClick={() => scrollToSection('contact')}
             >
-              <Instagram className="w-4 h-4 mr-2" />
-              Follow Us
+              BOOK NOW
             </Button>
           </div>
 
@@ -95,12 +94,11 @@ const Navigation = () => {
                 size="sm" 
                 className="w-full"
                 onClick={() => {
-                  window.open('https://instagram.com/hennakala', '_blank');
+                  scrollToSection('contact');
                   setIsOpen(false);
                 }}
               >
-                <Instagram className="w-4 h-4 mr-2" />
-                Follow Us
+                BOOK NOW
               </Button>
             </div>
           </div>
