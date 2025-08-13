@@ -16,7 +16,7 @@ const About = () => {
             ABOUT THE ARTIST 
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Hi Hennabees! I'm Swathi Nambiar, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehendi/henna with the world through creativity, skill, and heartfelt respect.
+            Hi Hennabees! I'm Swathi, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehendi/henna with the world through creativity, skill, and heartfelt respect.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ const About = () => {
             <div className="animate-fade-in">
               <div className="mb-6">
                 <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#D17046'}}>MEET THE ARTIST</h3>
-                <h2 className="text-3xl font-bold mb-2 text-foreground font-seasons">SWATHI NAMBIAR</h2>
+                <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
                 <p className="text-muted-foreground font-medium">Owner & Founder</p>
                 <p className="text-muted-foreground font-medium">Lead Artist</p>
               </div>
