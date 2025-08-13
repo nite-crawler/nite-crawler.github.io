@@ -32,8 +32,8 @@ const Contact = () => {
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-4 group">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-5 h-5 text-primary-foreground" />
+                    <div className="w-12 h-12 bg-contact-accent rounded-full flex items-center justify-center flex-shrink-0">
+                      <info.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">{info.label}</div>
@@ -53,10 +53,10 @@ const Contact = () => {
               </div>
 
               {/* Instagram CTA */}
-              <div className="bg-gradient-warm rounded-xl p-6 text-center">
-                <Instagram className="w-8 h-8 text-primary mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-primary mb-2">Follow Us on Instagram</h4>
-                <p className="text-primary/80 text-sm mb-4">
+              <div className="bg-contact-accent rounded-xl p-6 text-center">
+                <Instagram className="w-8 h-8 text-white mx-auto mb-4" />
+                <h4 className="text-lg font-semibold text-white mb-2">Follow Us on Instagram</h4>
+                <p className="text-white/80 text-sm mb-4">
                   See our latest work and book directly through DM
                 </p>
                 <Button 
