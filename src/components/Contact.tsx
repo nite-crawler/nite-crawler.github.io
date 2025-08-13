@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
-            Book Your Session
+            Ready, Set, Henna — Book Now!
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Hi Hennabees! I'm Swathi, a passionate henna artist rooted in tradition, dedicated to sharing the ancient art of mehndi/hennai with the world through creativity, skill, and heartfelt respect.
