@@ -22,7 +22,6 @@ const HennaCones = () => {
         {/* Our Henna Cones heading */}
         <div className="text-center mb-8 animate-fade-in">
           <h2 style={{
-          color: '#D17046'
         }} className="text-3xl font-seasons uppercase tracking-wider text-center font-thin text-[#dbbe97] md:text-5xl">
             Our Henna Cones
           </h2>
@@ -31,7 +30,6 @@ const HennaCones = () => {
         {/* Transform your hands text */}
         <div className="text-center mb-16 animate-fade-in">
           <p style={{
-          color: '#D17046'
         }} className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center md:text-xl text-[#272725]">Transform your hands into masterpieces with our intricate henna designs. Achieve flawless detail and rich color every time with our premium henna cone — the artist's top choice.</p>
         </div>
 
