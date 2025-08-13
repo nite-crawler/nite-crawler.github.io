@@ -1,4 +1,12 @@
 import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 import henna1 from "/lovable-uploads/e56afc26-5077-489b-9e98-de43402abd87.png";
 import henna2 from "/lovable-uploads/52ce71f8-db12-4dc9-a6ff-6322023656a6.png";
 import henna3 from "/lovable-uploads/816b54df-6f43-41b7-b4d3-fc47d0d96dfb.png";
@@ -7,6 +15,8 @@ import henna5 from "/lovable-uploads/b5b3c836-8c5d-4b91-9847-433f214b1991.png";
 import henna6 from "/lovable-uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const hennaImages = [{
     src: henna1,
     alt: "Intricate white henna design with mandala patterns",
@@ -44,27 +54,91 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {hennaImages.map((image, index) => <div key={index} className="group relative bg-card rounded-2xl overflow-hidden shadow-float hover:shadow-float-hover transition-all duration-500 hover:-translate-y-4 cursor-pointer animate-scale-in" style={{
-          animationDelay: `${index * 0.1}s`
-        }} onClick={() => setSelectedImage(image.src)}>
-              <div className="relative overflow-hidden">
-                <img src={image.src} alt={image.alt} className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
+        {/* Main Featured Image */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="overflow-hidden shadow-float hover:shadow-float-hover transition-all duration-500 animate-scale-in">
+            <CardContent className="p-0">
+              <div 
+                className="relative cursor-zoom-in group"
+                onClick={() => setSelectedImage(hennaImages[currentIndex].src)}
+              >
+                <img 
+                  src={hennaImages[currentIndex].src} 
+                  alt={hennaImages[currentIndex].alt}
+                  className="w-full h-[500px] md:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-6 left-6 bg-card/90 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <span className="text-sm font-medium text-foreground">
+                    {hennaImages[currentIndex].category}
+                  </span>
+                </div>
               </div>
-            </div>)}
+            </CardContent>
+          </Card>
         </div>
 
-        {/* Lightbox Modal */}
-        {selectedImage && <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setSelectedImage(null)}>
-            <div className="relative max-w-4xl max-h-[90vh] animate-scale-in">
-              <img src={selectedImage} alt="Selected henna design" className="w-full h-full object-contain rounded-xl shadow-2xl" />
-              <button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm text-foreground w-10 h-10 rounded-full flex items-center justify-center hover:bg-card transition-colors shadow-float">
+        {/* Card Stack Carousel */}
+        <div className="max-w-5xl mx-auto">
+          <Carousel
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {hennaImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <Card 
+                    className={`overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-float-hover ${
+                      index === currentIndex 
+                        ? 'ring-2 ring-primary shadow-float scale-105' 
+                        : 'hover:scale-105'
+                    }`}
+                    onClick={() => setCurrentIndex(index)}
+                  >
+                    <CardContent className="p-0">
+                      <div className="aspect-square overflow-hidden">
+                        <img 
+                          src={image.src} 
+                          alt={image.alt}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                          loading="lazy"
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
+        </div>
+
+        {/* Zoom Modal */}
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" 
+            onClick={() => setSelectedImage(null)}
+          >
+            <div className="relative max-w-[95vw] max-h-[95vh] animate-scale-in">
+              <img 
+                src={selectedImage} 
+                alt="Zoomed henna design" 
+                className="w-full h-full object-contain rounded-xl shadow-2xl"
+              />
+              <button 
+                onClick={() => setSelectedImage(null)} 
+                className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm text-foreground w-12 h-12 rounded-full flex items-center justify-center hover:bg-card transition-colors shadow-float text-lg font-bold"
+              >
                 ✕
               </button>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
     </section>;
 };
