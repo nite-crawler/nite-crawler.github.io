@@ -36,10 +36,14 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div 
-            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => scrollToSection('hero')}
           >
-            HennaKala
+            <img 
+              src="/lovable-uploads/7709a125-45af-4d58-80cc-2ee53945fd6f.png" 
+              alt="Henna Kala by Swathi"
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
