@@ -56,15 +56,17 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Media CTAs */}
-              <div className="space-y-4">
-                {/* Instagram CTA */}
-                <div className="bg-contact-accent rounded-xl p-6 text-center">
-                  <Instagram className="w-8 h-8 text-white mx-auto mb-4" />
-                  <h4 className="text-lg font-semibold text-white mb-2">Stay connected with the Hennabees — follow us for all the latest!</h4>
-                  <p className="text-white/80 text-sm mb-4">
-                    Spot a design you love? DM us to lock in your henna fun!
-                  </p>
+              {/* Social Media CTA */}
+              <div className="bg-contact-accent rounded-xl p-6 text-center">
+                <div className="flex justify-center space-x-4 mb-4">
+                  <Instagram className="w-8 h-8 text-white" />
+                  <Facebook className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">Stay connected with the Hennabees — follow us for all the latest!</h4>
+                <p className="text-white/80 text-sm mb-4">
+                  Spot a design you love? DM us to lock in your henna fun!
+                </p>
+                <div className="space-y-3">
                   <Button 
                     variant="floating" 
                     onClick={handleInstagramClick}
@@ -72,15 +74,6 @@ const Contact = () => {
                   >
                     @thehennakala
                   </Button>
-                </div>
-
-                {/* Facebook CTA */}
-                <div className="bg-contact-accent rounded-xl p-6 text-center">
-                  <Facebook className="w-8 h-8 text-white mx-auto mb-4" />
-                  <h4 className="text-lg font-semibold text-white mb-2">Like our Facebook page for updates and inspiration!</h4>
-                  <p className="text-white/80 text-sm mb-4">
-                    Join our community and never miss our latest designs!
-                  </p>
                   <Button 
                     variant="floating" 
                     onClick={handleFacebookClick}
