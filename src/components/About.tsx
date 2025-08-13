@@ -1,10 +1,10 @@
-import { Heart, Star, Users, Award, Leaf } from "lucide-react";
+import { Heart, Star, Users, Award, Leaf, NoPPD } from "lucide-react";
 
 const About = () => {
   const stats = [
     { icon: Leaf, value: "100% NATURAL INGREDIENTS", label: "Happy Clients" },
-    { icon: Star, value: "NO BLACK HENNA OR PPD", label: "Experience" },
-    { icon: Heart, value: "NON_TOXIC", label: "Designs Created" },
+    { icon: NoPPD, value: "NO BLACK HENNA OR PPD", label: "Experience" },
+    { icon: Heart, value: "NON-TOXIC", label: "Designs Created" },
     { icon: Award, value: "100%", label: "Natural Henna" },
   ];
 
