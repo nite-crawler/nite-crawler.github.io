@@ -22,11 +22,11 @@ const About = () => {
                   <div className="w-1 h-12 bg-gradient-primary rounded-full mt-1"></div>
                   <div className="px-0 py-0 rounded-sm">
                     <p className="font-medium text-[#272725] py-px">
-OWNER &amp; FOUNDER</p>
+FONDER &amp; LEAD ARTIST</p>
                     <div className="flex items-start gap-1 w-1 h-1"></div>
                     <p style={{
                     color: '#D17046'
-                  }} className="font-medium text-[3] px-0 py-0 my-0 text-[#cb6829]">Lead Artist</p>
+                  }} className="font-medium text-[3] px-0 py-0 my-0 text-[#cb6829]">Women-Run, Culture-Inspired</p>
                   </div>
                 </div>
               </div>
