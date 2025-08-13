@@ -39,11 +39,9 @@ const Navigation = () => {
             className="cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => scrollToSection('hero')}
           >
-            <img 
-              src="/lovable-uploads/41b42ad9-d089-444c-b075-28d1b54f801c.png" 
-              alt="Henna Kala by Swathi"
-              className="h-15 w-auto"
-            />
+            <h1 className="font-seasons font-bold text-2xl text-foreground tracking-wide">
+              HENNA KALĀ
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
