@@ -14,7 +14,7 @@ const HennaCones = () => {
     label: "to ensure quality, freshness, and attention to detail"
   }, {
     icon: Hand,
-    value: "HOME-MADE & HAND-FINISHED",
+    value: "HOME-MADE &\nHAND-FINISHED",
     label: "Every batch crafted with a personal touch, care and love"
   }];
   return <section id="henna-cones" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
