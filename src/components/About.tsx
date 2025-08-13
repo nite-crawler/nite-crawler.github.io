@@ -20,9 +20,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="mb-20">
           {/* Story Section */}
-          <div className="animate-fade-in">
+          <div className="animate-fade-in max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
@@ -37,39 +37,6 @@ const About = () => {
               <p>
                 Henna isn't just something I do, it's a part of who I am.
               </p>
-            </div>
-          </div>
-
-          {/* Values Section */}
-          <div className="p-8 animate-fade-in">
-            <h3 className="text-2xl font-bold mb-6 text-foreground">Our Values</h3>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Authentic Artistry",
-                  desc: "Honoring traditional techniques while embracing creative innovation"
-                },
-                {
-                  title: "Natural Beauty",
-                  desc: "Using only pure, organic henna for safe and stunning results"
-                },
-                {
-                  title: "Personal Touch",
-                  desc: "Every design is customized to reflect your personality and style"
-                },
-                {
-                  title: "Cultural Respect",
-                  desc: "Celebrating the rich heritage and meaning behind henna traditions"
-                }
-              ].map((value, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">{value.title}</h4>
-                    <p className="text-muted-foreground text-sm">{value.desc}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
