@@ -32,7 +32,7 @@ const About = () => {
                   <div>
                     <p className="text-muted-foreground font-medium">OWNER & FOUNDER</p>
                     <div className="flex items-start gap-3 w-1 h-2"></div>
-                    <p className="bg-gradient-primary style={{color: '#b64400'}} bg-clip-text text-transparent font-medium">Lead Artist</p>
+                    <p className="font-medium" style={{color: '#b64400'}}>Lead Artist</p>
                   </div>
                 </div>
               </div>
