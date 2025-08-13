@@ -15,7 +15,7 @@ const About = () => {
             <div className="animate-fade-in">
               <div className="mb-6">
                 <h3 style={{
-                color: '#D17046'
+               // color: '#D17046'
               }} className="text-lg font-bold mb-2 font-seasons tracking-wider text-[#272725]">MEET THE ARTIST</h3>
                 <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
                 <div className="flex items-start gap-3">
