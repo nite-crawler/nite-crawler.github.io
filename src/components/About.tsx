@@ -28,9 +28,9 @@ const About = () => {
                 <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#D17046'}}>MEET THE ARTIST</h3>
                 <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
                 <div className="flex items-start gap-3">
-                  <div className="w-1 h-12 bg-gradient-primary rounded-full mt-1"></div>
+                  <div className="w-1 h-12 bg-gradient-primary style={{color: '#b64400'}} rounded-full mt-1"></div>
                   <div>
-                    <p className="text-muted-foreground font-medium">Owner & Founder</p>
+                    <p className="text-muted-foreground font-medium">OWNER & FOUNDERr</p>
                     <p className="text-muted-foreground font-medium">Lead Artist</p>
                   </div>
                 </div>
