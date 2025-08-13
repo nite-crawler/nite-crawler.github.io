@@ -22,21 +22,33 @@ const About = () => {
 
         <div className="mb-20">
           {/* Story Section */}
-          <div className="animate-fade-in max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Henna has been a part of my life for as long as I can remember. I started my journey in my early teenage years, doodling simple curvy lines on my own hands and those of my friends. What began as a playful pastime quickly became something much deeper, an art form that connected me to my culture, creativity, and a sense of calm.
-              </p>
-              <p>
-                Over the years, those simple lines have grown into intricate designs, each pattern telling a story. Every swirl, dot, and petal I draw is a reflection of my love for this craft. Henna is more than just decoration for me, it's a way to celebrate moments, bring smiles, and share a tradition that has been cherished for generations.
-              </p>
-              <p>
-                Today, I'm grateful to turn this passion into my work, creating designs that range from delicate and minimal to bold and elaborate. Whether it's for a wedding, a festival, or just because, I pour my heart into every stain, making sure each one feels special.
-              </p>
-              <p>
-                Henna isn't just something I do, it's a part of who I am.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="animate-fade-in">
+              <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Henna has been a part of my life for as long as I can remember. I started my journey in my early teenage years, doodling simple curvy lines on my own hands and those of my friends. What began as a playful pastime quickly became something much deeper, an art form that connected me to my culture, creativity, and a sense of calm.
+                </p>
+                <p>
+                  Over the years, those simple lines have grown into intricate designs, each pattern telling a story. Every swirl, dot, and petal I draw is a reflection of my love for this craft. Henna is more than just decoration for me, it's a way to celebrate moments, bring smiles, and share a tradition that has been cherished for generations.
+                </p>
+                <p>
+                  Today, I'm grateful to turn this passion into my work, creating designs that range from delicate and minimal to bold and elaborate. Whether it's for a wedding, a festival, or just because, I pour my heart into every stain, making sure each one feels special.
+                </p>
+                <p>
+                  Henna isn't just something I do, it's a part of who I am.
+                </p>
+              </div>
+            </div>
+            <div className="animate-scale-in order-first lg:order-last">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/f357b71c-2cf0-4518-914e-48b245f516d1.png" 
+                  alt="Swathi Nambiar - Henna Artist"
+                  className="w-full h-auto rounded-2xl shadow-float hover:shadow-float-hover transition-all duration-300 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl"></div>
+              </div>
             </div>
           </div>
         </div>
