@@ -144,7 +144,16 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                   <Label htmlFor="message" className="text-left block mb-2 font-bold" style={{
                   color: '#272725'
                 }}>MESSAGE</Label>
-                  <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." required />
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    value={formData.message} 
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    placeholder="Tell us about your henna needs..." 
+                    required 
+                    rows={4}
+                    className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  />
                 </div>
                 
                 {/* reCAPTCHA */}
