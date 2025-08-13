@@ -72,6 +72,15 @@ const About = () => {
           </div>
         </div>
 
+        {/* Our Henna Cones heading */}
+        <div className="text-center mb-8 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-seasons font-bold uppercase tracking-wider" style={{
+            color: '#D17046'
+          }}>
+            Our Henna Cones
+          </h2>
+        </div>
+
         {/* Transform your hands text */}
         <div className="text-center mb-16 animate-fade-in">
           <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto" style={{
