@@ -27,7 +27,7 @@ OWNER &amp; FOUNDER</p>
                     <p style={{
                     color: '#D17046'
                   }} className="font-medium text-[3] px-0 py-0 my-0 text-[#cb6829]">Lead Artist</p>
-                  </div>
+                  <div className="flex items-start gap-3">
                 </div>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
