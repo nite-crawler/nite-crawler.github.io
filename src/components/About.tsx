@@ -41,7 +41,7 @@ const About = () => {
           </div>
 
           {/* Values Section */}
-          <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300 animate-fade-in">
+          <div className="p-8 animate-fade-in">
             <h3 className="text-2xl font-bold mb-6 text-foreground">Our Values</h3>
             <div className="space-y-6">
               {[
