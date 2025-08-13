@@ -11,7 +11,7 @@ const Hero = () => {
 
       {/* Hero content at bottom */}
       <div className="absolute bottom-8 left-0 right-0 text-center px-4">
-        <p className="font-seasons text-henna text-2xl md:text-3xl lg:text-4xl drop-shadow-lg">
+        <p className="font-seasons text-henna text-lg md:text-xl lg:text-2xl drop-shadow-lg">
           A dream dipped in henna and made real — one cone at a time.
         </p>
       </div>
