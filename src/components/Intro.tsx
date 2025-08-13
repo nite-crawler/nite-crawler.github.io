@@ -6,6 +6,10 @@ const Intro = () => {
       behavior: 'smooth'
     });
   };
-  return;
+  return (
+    <div>
+      {/* Intro content will go here */}
+    </div>
+  );
 };
 export default Intro;
