@@ -3,7 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,11 +19,54 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = 'Henna Appointment Request';
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AMessage: ${formData.message}`;
-    window.open(`mailto:swathi@hennakala.com?subject=${subject}&body=${body}`, '_blank');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_ACCESS_KEY_HERE", // Replace with your web3forms access key
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          subject: "Henna Appointment Request",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Appointment Request Sent!",
+          description: "We'll get back to you soon to confirm your henna appointment.",
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send appointment request. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
   const handleInstagramClick = () => {
     window.open('https://instagram.com/thehennakala', '_blank');
@@ -76,8 +122,13 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                 }}>MESSAGE</Label>
                   <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold">
-                  BOOK APPOINTMENT
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "SENDING..." : "BOOK APPOINTMENT"}
                 </Button>
               </form>
             </div>
