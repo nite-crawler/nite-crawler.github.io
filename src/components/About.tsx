@@ -77,8 +77,8 @@ const About = () => {
           <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto" style={{
           color: '#D17046'
         }}>
-            Transform your hands into masterpieces with our intricate henna designs. 
-            Traditional patterns meet contemporary artistry.
+            Transform your hands into masterpieces with our intricate henna designs.
+            Achieve flawless detail and rich color every time with our premium henna cone—the artist’s top choice.
           </p>
         </div>
 
