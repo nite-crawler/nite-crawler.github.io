@@ -31,7 +31,7 @@ const About = () => {
                   <div className="w-1 h-12 bg-gradient-primary style={{color: '#b64400'}} rounded-full mt-1"></div>
                   <div>
                     <p className="text-muted-foreground font-medium">OWNER & FOUNDER</p>
-                    <div className="flex items-start gap-3"></div>
+                    <div className="flex items-start gap-3 w-1 h-12"></div>
                     <p className="text-muted-foreground font-medium">Lead Artist</p>
                   </div>
                 </div>
