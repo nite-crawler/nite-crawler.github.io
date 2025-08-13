@@ -19,7 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'seasons': ['The Seasons', 'serif'],
+				'seasons': ['Playfair Display', 'serif'],
+				'crimson': ['Crimson Text', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
