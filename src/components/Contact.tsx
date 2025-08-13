@@ -27,7 +27,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="animate-fade-in">
             <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-8 text-foreground text-center">Get In Touch</h3>
+              <h3 className="text-xs font-bold mb-8 text-connect-title text-center font-seasons">LET'S CONNECT!</h3>
               
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (

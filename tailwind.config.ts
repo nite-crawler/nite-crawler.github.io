@@ -61,6 +61,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'contact-accent': 'hsl(var(--contact-accent))',
+				'connect-title': 'hsl(var(--connect-title))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
