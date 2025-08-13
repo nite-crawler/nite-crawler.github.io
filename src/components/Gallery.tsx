@@ -1,21 +1,21 @@
 import { useState } from "react";
-import henna1 from "@/assets/henna-1.jpg";
-import henna2 from "@/assets/henna-2.jpg";
-import henna3 from "@/assets/henna-3.jpg";
-import henna4 from "@/assets/henna-4.jpg";
-import henna5 from "@/assets/henna-5.jpg";
-import henna6 from "@/assets/henna-6.jpg";
+import henna1 from "/lovable-uploads/e56afc26-5077-489b-9e98-de43402abd87.png";
+import henna2 from "/lovable-uploads/52ce71f8-db12-4dc9-a6ff-6322023656a6.png";
+import henna3 from "/lovable-uploads/816b54df-6f43-41b7-b4d3-fc47d0d96dfb.png";
+import henna4 from "/lovable-uploads/956c8ed0-9bc5-4785-990b-6e9911cd7772.png";
+import henna5 from "/lovable-uploads/b5b3c836-8c5d-4b91-9847-433f214b1991.png";
+import henna6 from "/lovable-uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const hennaImages = [
-    { src: henna1, alt: "Intricate traditional henna design", category: "Traditional" },
-    { src: henna2, alt: "Elegant bridal henna with mandala patterns", category: "Bridal" },
-    { src: henna3, alt: "Modern minimalist henna design", category: "Modern" },
-    { src: henna4, alt: "Arabic henna with bold patterns", category: "Arabic" },
-    { src: henna5, alt: "Contemporary fusion henna design", category: "Fusion" },
-    { src: henna6, alt: "Delicate festival henna design", category: "Festival" },
+    { src: henna1, alt: "Intricate white henna design with mandala patterns", category: "Traditional" },
+    { src: henna2, alt: "Detailed palm henna with central mandala motif", category: "Bridal" },
+    { src: henna3, alt: "Elegant hand and arm henna with flowing patterns", category: "Traditional" },
+    { src: henna4, alt: "Beautiful foot henna with mandala and geometric designs", category: "Festival" },
+    { src: henna5, alt: "Contemporary hand henna with paisley and mandala elements", category: "Modern" },
+    { src: henna6, alt: "Delicate floral hand henna design", category: "Arabic" },
   ];
 
   return (
