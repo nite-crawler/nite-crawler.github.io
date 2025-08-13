@@ -55,16 +55,16 @@ const Contact = () => {
               {/* Instagram CTA */}
               <div className="bg-contact-accent rounded-xl p-6 text-center">
                 <Instagram className="w-8 h-8 text-white mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">Follow Us on Instagram</h4>
+                <h4 className="text-lg font-semibold text-white mb-2">Stay connected with the Hennabees — follow us for all the latest!</h4>
                 <p className="text-white/80 text-sm mb-4">
-                  See our latest work and book directly through DM
+                  Spot a design you love? DM us to lock in your henna fun!
                 </p>
                 <Button 
                   variant="floating" 
                   onClick={handleInstagramClick}
                   className="w-full"
                 >
-                  @hennakala
+                  @thehennakala
                 </Button>
               </div>
             </div>
