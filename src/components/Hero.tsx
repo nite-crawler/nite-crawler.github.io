@@ -15,7 +15,8 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-primary-glow/20 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-center relative z-10 flex flex-col justify-end min-h-screen pb-16">
+        {/* Content moved to bottom */}
         <div className="max-w-4xl mx-auto animate-fade-in">
           <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{color: '#D17046'}}>
             Transform your hands into masterpieces with our intricate henna designs. 
