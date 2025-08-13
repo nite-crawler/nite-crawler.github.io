@@ -65,7 +65,6 @@ const Contact = () => {
                   onClick={handleInstagramClick}
                   className="w-full"
                 >
-                  <Instagram className="w-4 h-4 mr-2" />
                   @hennakala
                 </Button>
               </div>
