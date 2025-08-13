@@ -151,7 +151,7 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                 <div className="flex justify-center">
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // Replace with your site key
+                    sitekey="6Lcc-6QrAAAAADUCM3JGPXMlR165KUXT8u6hsaQc" // Replace with your site key
                     onChange={(token) => setRecaptchaToken(token)}
                     onExpired={() => setRecaptchaToken(null)}
                   />
