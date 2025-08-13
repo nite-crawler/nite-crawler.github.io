@@ -7,10 +7,8 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: Mail, label: "Email", value: "hello@hennakala.com", href: "mailto:hello@hennakala.com" },
-    { icon: MapPin, label: "Location", value: "Downtown Studio District", href: "#" },
-    { icon: Clock, label: "Hours", value: "Mon-Sat: 10AM-8PM", href: "#" },
+    { icon: Mail, label: "Email", value: "swathi@hennakala.com", href: "mailto:swathi@hennakala.com" },
+    { icon: MapPin, label: "Location", value: "Lincoln, Nebraska", href: "#" },
   ];
 
   return (
