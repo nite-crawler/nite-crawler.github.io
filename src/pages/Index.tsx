@@ -16,9 +16,15 @@ const Index = () => {
         <div id="intro">
           <Intro />
         </div>
-        <Gallery />
-        <About />
-        <Contact />
+        <div id="gallery">
+          <Gallery />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </main>
     </div>
   );
