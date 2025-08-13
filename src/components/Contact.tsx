@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Instagram, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   const handleInstagramClick = () => {
-    window.open('https://instagram.com/hennakala', '_blank');
+    window.open('https://instagram.com/thehennakala', '_blank');
+  };
+
+  const handleFacebookClick = () => {
+    window.open('https://facebook.com/thehennakala', '_blank');
   };
 
   const contactInfo = [
@@ -52,20 +56,39 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Instagram CTA */}
-              <div className="bg-contact-accent rounded-xl p-6 text-center">
-                <Instagram className="w-8 h-8 text-white mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">Stay connected with the Hennabees — follow us for all the latest!</h4>
-                <p className="text-white/80 text-sm mb-4">
-                  Spot a design you love? DM us to lock in your henna fun!
-                </p>
-                <Button 
-                  variant="floating" 
-                  onClick={handleInstagramClick}
-                  className="w-full"
-                >
-                  @thehennakala
-                </Button>
+              {/* Social Media CTAs */}
+              <div className="space-y-4">
+                {/* Instagram CTA */}
+                <div className="bg-contact-accent rounded-xl p-6 text-center">
+                  <Instagram className="w-8 h-8 text-white mx-auto mb-4" />
+                  <h4 className="text-lg font-semibold text-white mb-2">Stay connected with the Hennabees — follow us for all the latest!</h4>
+                  <p className="text-white/80 text-sm mb-4">
+                    Spot a design you love? DM us to lock in your henna fun!
+                  </p>
+                  <Button 
+                    variant="floating" 
+                    onClick={handleInstagramClick}
+                    className="w-full"
+                  >
+                    @thehennakala
+                  </Button>
+                </div>
+
+                {/* Facebook CTA */}
+                <div className="bg-contact-accent rounded-xl p-6 text-center">
+                  <Facebook className="w-8 h-8 text-white mx-auto mb-4" />
+                  <h4 className="text-lg font-semibold text-white mb-2">Like our Facebook page for updates and inspiration!</h4>
+                  <p className="text-white/80 text-sm mb-4">
+                    Join our community and never miss our latest designs!
+                  </p>
+                  <Button 
+                    variant="floating" 
+                    onClick={handleFacebookClick}
+                    className="w-full"
+                  >
+                    Visit Our Facebook Page
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
