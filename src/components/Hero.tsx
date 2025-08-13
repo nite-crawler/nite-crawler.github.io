@@ -17,13 +17,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <div className="mb-6 flex justify-center">
-            <img 
-              src="/lovable-uploads/7709a125-45af-4d58-80cc-2ee53945fd6f.png" 
-              alt="Henna Kala by Swathi - Professional Henna Artistry"
-              className="max-w-md w-full h-auto"
-            />
-          </div>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{color: '#D17046'}}>
             Transform your hands into masterpieces with our intricate henna designs. 
             Traditional patterns meet contemporary artistry.
