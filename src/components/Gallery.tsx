@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -16,6 +16,7 @@ import henna6 from "/lovable-uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [modalIndex, setModalIndex] = useState(0);
   
   const hennaImages = [{
     src: henna1,
@@ -42,6 +43,37 @@ const Gallery = () => {
     alt: "Delicate floral hand henna design",
     category: "Arabic"
   }];
+
+  const openModal = (index: number) => {
+    setModalIndex(index);
+    setSelectedImage(hennaImages[index].src);
+  };
+
+  const navigateModal = (direction: 'prev' | 'next') => {
+    const newIndex = direction === 'prev' 
+      ? (modalIndex - 1 + hennaImages.length) % hennaImages.length
+      : (modalIndex + 1) % hennaImages.length;
+    setModalIndex(newIndex);
+    setSelectedImage(hennaImages[newIndex].src);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+      
+      if (e.key === 'ArrowLeft') {
+        navigateModal('prev');
+      } else if (e.key === 'ArrowRight') {
+        navigateModal('next');
+      } else if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [selectedImage, modalIndex]);
   return <section id="gallery" className="py-20 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
@@ -60,7 +92,7 @@ const Gallery = () => {
             <CardContent className="p-0">
               <div 
                 className="relative cursor-zoom-in group"
-                onClick={() => setSelectedImage(hennaImages[currentIndex].src)}
+                onClick={() => openModal(currentIndex)}
               >
                 <img 
                   src={hennaImages[currentIndex].src} 
@@ -93,6 +125,7 @@ const Gallery = () => {
                         : 'hover:scale-105'
                     }`}
                     onClick={() => setCurrentIndex(index)}
+                    onDoubleClick={() => openModal(index)}
                   >
                     <CardContent className="p-0">
                       <div className="aspect-square overflow-hidden">
@@ -113,28 +146,71 @@ const Gallery = () => {
           </Carousel>
         </div>
 
-        {/* Zoom Modal */}
+        {/* Enhanced Image Modal with Navigation */}
         {selectedImage && (
           <div 
-            className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center animate-fade-in" 
+            className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center animate-fade-in" 
             onClick={() => setSelectedImage(null)}
           >
+            {/* Modal Container */}
             <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8">
-              <img 
-                src={selectedImage} 
-                alt="Zoomed henna design" 
-                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl animate-scale-in"
-                style={{ maxWidth: '100vw', maxHeight: '100vh' }}
-              />
+              
+              {/* Previous Button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigateModal('prev');
+                }}
+                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg z-10 group"
+              >
+                <svg className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              {/* Main Image */}
+              <div className="relative animate-scale-in">
+                <img 
+                  src={selectedImage} 
+                  alt={hennaImages[modalIndex].alt}
+                  className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+                  onClick={(e) => e.stopPropagation()}
+                />
+                
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                  {modalIndex + 1} / {hennaImages.length}
+                </div>
+              </div>
+
+              {/* Next Button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigateModal('next');
+                }}
+                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg z-10 group"
+              >
+                <svg className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Close Button */}
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedImage(null);
                 }} 
-                className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/90 backdrop-blur-sm text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-lg text-lg font-bold z-10"
+                className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/20 backdrop-blur-sm text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-200 shadow-lg text-lg font-bold z-10"
               >
                 ✕
               </button>
+
+              {/* Keyboard Instructions */}
+              <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 bg-black/60 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-xs opacity-70">
+                Use ← → keys or click arrows
+              </div>
             </div>
           </div>
         )}
