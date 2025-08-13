@@ -79,7 +79,7 @@ const Contact = () => {
                     onClick={handleFacebookClick}
                     className="w-full"
                   >
-                    Visit Our Facebook Page
+                    facebook.com/thehennakala
                   </Button>
                 </div>
               </div>
