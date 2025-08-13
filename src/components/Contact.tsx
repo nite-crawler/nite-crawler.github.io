@@ -114,13 +114,21 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                   <Label htmlFor="phone" className="text-left block mb-2 font-bold" style={{
                   color: '#272725'
                 }}>PHONE</Label>
-                  <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
+                  <Input 
+                    id="phone" 
+                    name="phone" 
+                    type="tel"
+                    pattern="[0-9\s\-\+\(\)]*"
+                    value={formData.phone} 
+                    onChange={handleInputChange} 
+                    placeholder="(123) 456-7890"
+                  />
                 </div>
                 <div>
                   <Label htmlFor="message" className="text-left block mb-2 font-bold" style={{
                   color: '#272725'
                 }}>MESSAGE</Label>
-                  <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." />
+                  <Input id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your henna needs..." required />
                 </div>
                 <Button 
                   type="submit" 
