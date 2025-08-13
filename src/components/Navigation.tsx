@@ -40,7 +40,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('hero')}
           >
             <img 
-              src="/lovable-uploads/7709a125-45af-4d58-80cc-2ee53945fd6f.png" 
+              src="/lovable-uploads/41b42ad9-d089-444c-b075-28d1b54f801c.png" 
               alt="Henna Kala by Swathi"
               className="h-8 w-auto"
             />
