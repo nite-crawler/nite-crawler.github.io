@@ -7,12 +7,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import henna1 from "/lovable-uploads/e56afc26-5077-489b-9e98-de43402abd87.png";
-import henna2 from "/lovable-uploads/52ce71f8-db12-4dc9-a6ff-6322023656a6.png";
-import henna3 from "/lovable-uploads/816b54df-6f43-41b7-b4d3-fc47d0d96dfb.png";
-import henna4 from "/lovable-uploads/956c8ed0-9bc5-4785-990b-6e9911cd7772.png";
-import henna5 from "/lovable-uploads/b5b3c836-8c5d-4b91-9847-433f214b1991.png";
-import henna6 from "/lovable-uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
+import henna1 from "@/assets/henna-1.jpg";
+import henna2 from "@/assets/henna-2.jpg";
+import henna3 from "@/assets/henna-3.jpg";
+import henna4 from "@/assets/henna-4.jpg";
+import henna5 from "@/assets/henna-5.jpg";
+import henna6 from "@/assets/henna-6.jpg";
+import henna7 from "@/assets/henna-7.jpg";
+import henna8 from "@/assets/henna-8.jpg";
+import henna9 from "@/assets/henna-9.jpg";
+import henna10 from "@/assets/henna-10.jpg";
+import henna11 from "@/assets/henna-11.jpg";
+import henna12 from "@/assets/henna-12.jpg";
+import henna13 from "@/assets/henna-13.jpg";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,6 +49,34 @@ const Gallery = () => {
     src: henna6,
     alt: "Delicate floral hand henna design",
     category: "Arabic"
+  }, {
+    src: henna7,
+    alt: "Elegant bridal henna design with intricate patterns",
+    category: "Bridal"
+  }, {
+    src: henna8,
+    alt: "Traditional mandala henna design",
+    category: "Traditional"
+  }, {
+    src: henna9,
+    alt: "Modern geometric henna patterns",
+    category: "Modern"
+  }, {
+    src: henna10,
+    alt: "Festival henna design with floral motifs",
+    category: "Festival"
+  }, {
+    src: henna11,
+    alt: "Arabic style henna with flowing patterns",
+    category: "Arabic"
+  }, {
+    src: henna12,
+    alt: "Detailed finger henna with delicate designs",
+    category: "Traditional"
+  }, {
+    src: henna13,
+    alt: "Contemporary henna art with modern elements",
+    category: "Modern"
   }];
 
   const openModal = (index: number) => {
