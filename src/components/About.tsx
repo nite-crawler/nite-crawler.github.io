@@ -1,11 +1,11 @@
-import { Heart, Star, Users, Award, Leaf, Shield } from "lucide-react";
+import { Package, Star, Users, Hand, Leaf, Shield } from "lucide-react";
 
 const About = () => {
   const stats = [
     { icon: Leaf, value: "100% NATURAL INGREDIENTS", label: "for pure, honest goodness in every drop." },
     { icon: Shield, value: "NO BLACK HENNA AKA PPD", label: "ingredients you can read, recognize, and trust." },
-    { icon: Heart, value: "SMALL BATCHES", label: "to ensure quality, freshness, and attention to detail." },
-    { icon: Award, value: "HOME & HAND MADE", label: "Every batch crafted with a personal touch, care and love." },
+    { icon: Package, value: "SMALL BATCHES", label: "to ensure quality, freshness, and attention to detail." },
+    { icon: Hand, value: "HOME & HAND MADE", label: "Every batch crafted with a personal touch, care and love." },
   ];
 
   return (
