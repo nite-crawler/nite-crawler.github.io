@@ -24,21 +24,19 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Story Section */}
           <div className="animate-fade-in">
-            <h3 className="text-3xl font-bold mb-6 text-foreground">Our Story</h3>
+            <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Founded with a deep love for the traditional art of henna, our studio brings together 
-                centuries-old techniques with contemporary design sensibilities. We believe that every 
-                henna design should be as unique as the person wearing it.
+                Henna has been a part of my life for as long as I can remember. I started my journey in my early teenage years, doodling simple curvy lines on my own hands and those of my friends. What began as a playful pastime quickly became something much deeper, an art form that connected me to my culture, creativity, and a sense of calm.
               </p>
               <p>
-                Our journey began as a small family tradition and has grown into a celebrated art form 
-                that spans cultures and generations. We use only the finest, 100% natural henna paste, 
-                ensuring beautiful, safe, and long-lasting designs.
+                Over the years, those simple lines have grown into intricate designs, each pattern telling a story. Every swirl, dot, and petal I draw is a reflection of my love for this craft. Henna is more than just decoration for me, it's a way to celebrate moments, bring smiles, and share a tradition that has been cherished for generations.
               </p>
               <p>
-                From intimate gatherings to grand celebrations, we've had the privilege of adorning 
-                hands and hearts with meaningful, beautiful henna art that tells each client's unique story.
+                Today, I'm grateful to turn this passion into my work, creating designs that range from delicate and minimal to bold and elaborate. Whether it's for a wedding, a festival, or just because, I pour my heart into every stain, making sure each one feels special.
+              </p>
+              <p>
+                Henna isn't just something I do, it's a part of who I am.
               </p>
             </div>
           </div>
