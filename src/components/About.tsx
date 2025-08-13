@@ -24,7 +24,7 @@ const About = () => {
           {/* Story Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="animate-fade-in">
-              <h3 className="text-3xl font-bold mb-6 text-foreground">My Story</h3>
+              <h3 className="text-3xl font-bold mb-6 font-seasons" style={{color: '#D17046'}}>My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed relative">
                 <div className="absolute -top-8 -left-4 text-9xl text-primary/20 font-mono font-black pointer-events-none select-none">"</div>
                 <p>
