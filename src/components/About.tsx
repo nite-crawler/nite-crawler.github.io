@@ -1,15 +1,23 @@
 import { Package, Star, Users, Hand, Leaf, Shield } from "lucide-react";
-
 const About = () => {
-  const stats = [
-    { icon: Leaf, value: "100% NATURAL INGREDIENTS", label: "for pure, honest goodness in every drop" },
-    { icon: Shield, value: "NO BLACK HENNA AKA PPD", label: "ingredients you can read, recognize, and trust" },
-    { icon: Package, value: "SMALL BATCHES", label: "to ensure quality, freshness, and attention to detail" },
-    { icon: Hand, value: "HOME & HAND MADE", label: "Every batch crafted with a personal touch, care and love" },
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
+  const stats = [{
+    icon: Leaf,
+    value: "100% NATURAL INGREDIENTS",
+    label: "for pure, honest goodness in every drop"
+  }, {
+    icon: Shield,
+    value: "NO BLACK HENNA AKA PPD",
+    label: "ingredients you can read, recognize, and trust"
+  }, {
+    icon: Package,
+    value: "SMALL BATCHES",
+    label: "to ensure quality, freshness, and attention to detail"
+  }, {
+    icon: Hand,
+    value: "HOME & HAND MADE",
+    label: "Every batch crafted with a personal touch, care and love"
+  }];
+  return <section id="about" className="py-20 bg-gradient-to-br from-secondary/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
@@ -25,14 +33,18 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="animate-fade-in">
               <div className="mb-6">
-                <h3 className="text-lg font-bold mb-2 font-seasons tracking-wider" style={{color: '#D17046'}}>MEET THE ARTIST</h3>
+                <h3 style={{
+                color: '#D17046'
+              }} className="text-lg font-bold mb-2 font-seasons tracking-wider text-[#272725]">MEET THE ARTIST</h3>
                 <h2 className="text-3xl text-foreground font-seasons">SWATHI NAMBIAR</h2>
                 <div className="flex items-start gap-3">
                   <div className="w-1 h-12 bg-gradient-primary rounded-full mt-1"></div>
                   <div>
-                    <p className="text-muted-foreground font-medium">OWNER & FOUNDER</p>
+                    <p className="font-medium text-[#272725] py-px">OWNER & FOUNDER</p>
                     <div className="flex items-start gap-3 w-1 h-2"></div>
-                    <p className="font-medium" style={{color: '#D17046'}}>Lead Artist</p>
+                    <p style={{
+                    color: '#D17046'
+                  }} className="font-medium text-[3] px-0 py-0 my-0 text-[#cb6829]">Lead Artist</p>
                   </div>
                 </div>
               </div>
@@ -53,11 +65,7 @@ const About = () => {
             </div>
             <div className="animate-scale-in order-first lg:order-last">
               <div className="relative">
-                <img 
-                  src="/lovable-uploads/f357b71c-2cf0-4518-914e-48b245f516d1.png" 
-                  alt="Swathi Nambiar - Henna Artist"
-                  className="w-full h-auto rounded-2xl shadow-float hover:shadow-float-hover transition-all duration-300 object-cover"
-                />
+                <img src="/lovable-uploads/f357b71c-2cf0-4518-914e-48b245f516d1.png" alt="Swathi Nambiar - Henna Artist" className="w-full h-auto rounded-2xl shadow-float hover:shadow-float-hover transition-all duration-300 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl"></div>
               </div>
             </div>
@@ -66,7 +74,9 @@ const About = () => {
 
         {/* Transform your hands text */}
         <div className="text-center mb-16 animate-fade-in">
-          <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto" style={{color: '#D17046'}}>
+          <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto" style={{
+          color: '#D17046'
+        }}>
             Transform your hands into masterpieces with our intricate henna designs. 
             Traditional patterns meet contemporary artistry.
           </p>
@@ -74,12 +84,9 @@ const About = () => {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="text-center bg-card rounded-xl p-6 shadow-float hover:shadow-float-hover transition-all duration-300 hover:-translate-y-2 animate-scale-in"
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
+          {stats.map((stat, index) => <div key={index} className="text-center bg-card rounded-xl p-6 shadow-float hover:shadow-float-hover transition-all duration-300 hover:-translate-y-2 animate-scale-in" style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="w-6 h-6 text-primary-foreground" />
               </div>
@@ -87,12 +94,9 @@ const About = () => {
                 {stat.value}
               </div>
               <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
