@@ -205,7 +205,7 @@ const Events = () => {
           margin: 0 2px;
         }
         .cal-controls button:hover { 
-          background: hsl(13, 71%, 28%); 
+          background: hsl(34, 53%, 73%); 
         }
         .grid { 
           display: grid; 
