@@ -198,14 +198,14 @@ const Events = () => {
           border-radius: 12px; 
           border: none; 
           cursor: pointer; 
-          background: hsl(var(--secondary)); 
-          color: hsl(var(--secondary-foreground)); 
+          background: hsl(13, 71%, 32%); 
+          color: white; 
           font-weight: 600; 
           transition: 0.2s; 
           margin: 0 2px;
         }
         .cal-controls button:hover { 
-          background: hsl(var(--secondary) / 0.8); 
+          background: hsl(13, 71%, 28%); 
         }
         .grid { 
           display: grid; 
