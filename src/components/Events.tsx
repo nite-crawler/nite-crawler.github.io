@@ -205,12 +205,12 @@ const Events = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in">
-          <Card className="bg-gradient-primary p-8 text-white border-0">
+          <Card className="bg-event-cta p-8 text-white border-0">
             <h3 className="text-3xl font-seasons mb-4">Want to Host a Private Event?</h3>
             <p className="text-lg mb-6 opacity-90">
               Create unforgettable memories with custom henna experiences for your special occasions
             </p>
-            <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white hover:text-event-cta">
               Contact Us for Private Events
             </Button>
           </Card>

@@ -62,6 +62,7 @@ export default {
 				},
 				'contact-accent': 'hsl(var(--contact-accent))',
 				'connect-title': 'hsl(var(--connect-title))',
+				'event-cta': 'hsl(var(--event-cta))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

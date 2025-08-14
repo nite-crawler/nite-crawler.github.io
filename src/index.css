@@ -72,6 +72,9 @@ All colors MUST be HSL.
     /* Custom contact colors */
     --contact-accent: 32 39% 69%;
     --connect-title: 14 65% 32%;
+    
+    /* Event CTA color */
+    --event-cta: 18 100% 36%;
   }
 
   .dark {
