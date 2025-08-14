@@ -198,7 +198,7 @@ const Events = () => {
           border-radius: 12px; 
           border: none; 
           cursor: pointer; 
-          background: hsl(13, 71%, 32%); 
+          background: hsl(32, 66%, 91%); 
           color: white; 
           font-weight: 600; 
           transition: 0.2s; 
