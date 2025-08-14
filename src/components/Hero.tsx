@@ -4,7 +4,7 @@ const Hero = () => {
   }} className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-no-repeat">
       {/* Hero content centered */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-m font-light max-w-2xl">
+        <p className="font-seasons gap-2 text-henna text-base sm:text-lg md:text-xl drop-shadow-m font-light max-w-2xl">
           A dream dipped in henna and made real — one cone at a time.
         </p>
       </div>
