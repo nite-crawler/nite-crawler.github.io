@@ -77,12 +77,12 @@ const Events = () => {
                   AUGUST 2025
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="p-4">
                 <Calendar
                   mode="single"
                   selected={selectedDate}
                   onSelect={setSelectedDate}
-                  className="w-full"
+                  className="w-full justify-center [&_table]:w-full [&_table]:max-w-none [&_td]:h-12 [&_td]:w-12 [&_th]:h-12 [&_th]:w-12"
                   modifiers={{
                     event: eventDates
                   }}
@@ -94,7 +94,7 @@ const Events = () => {
                     }
                   }}
                 />
-                <div className="mt-4 text-sm text-muted-foreground text-center">
+                <div className="mt-3 text-sm text-muted-foreground text-center">
                   <div className="flex items-center justify-center gap-2">
                     <div className="w-3 h-3 bg-primary rounded-full"></div>
                     <span>Event dates</span>
