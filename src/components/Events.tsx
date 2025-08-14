@@ -15,6 +15,7 @@ const Events = () => {
       date: new Date(2025, 8, 16), // August 15, 2025
       time: "10:00 AM - 12:30 PM",
       location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
+      capacity: "Walk-in",
       description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!",
       category: "Pop-up Henna Booth"
     },
