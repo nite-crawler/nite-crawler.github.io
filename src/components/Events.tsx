@@ -156,8 +156,8 @@ const Events = () => {
                 ))}
               </>
             ) : (
-              <div className="text-center py-12">
-                <h3 className="text-2xl font-seasons text-gallery-title mb-4">All Upcoming Events</h3>
+              <div>
+                <h3 className="text-2xl font-seasons text-gallery-title mb-6">All Upcoming Events</h3>
                 <div className="space-y-6">
                   {events.map((event) => (
                     <Card key={event.id} className="bg-card/90 backdrop-blur-sm border-border/50 shadow-float hover:shadow-float-hover transition-all duration-300">
