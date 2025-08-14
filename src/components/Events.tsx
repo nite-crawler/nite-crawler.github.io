@@ -16,8 +16,7 @@ const Events = () => {
       time: "10:00 AM - 12:30 PM",
       location: "Henna Kalā @",
       address: "Ten Thousand Villages
-        
-        Address: 140 N 8th St #125, Lincoln, NE 68508, United States",
+        Address: 140 N 8th St #125, Lincoln, NE 68508, United States. ",
       description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!
       price: "Varies",
       category: "Pop-up Henna Session"
