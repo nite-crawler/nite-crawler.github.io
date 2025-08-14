@@ -82,7 +82,7 @@ const Events = () => {
                   mode="single"
                   selected={selectedDate}
                   onSelect={setSelectedDate}
-                  className="w-full justify-center [&_table]:w-full [&_table]:max-w-none [&_td]:h-12 [&_td]:w-12 [&_th]:h-12 [&_th]:w-12"
+                  className="w-full justify-center [&_table]:w-full [&_table]:max-w-full [&_td]:h-12 [&_td]:w-12 [&_th]:h-12 [&_th]:w-12"
                   modifiers={{
                     event: eventDates
                   }}
