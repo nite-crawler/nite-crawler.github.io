@@ -12,7 +12,7 @@ const Events = () => {
     {
       id: 1,
       title: "Henna Kala @Haymarket",
-      date: new Date(2025, 8, 16), // August 16, 2025
+      date: new Date(2025, 7, 16), // August 16, 2025
       time: "10:00 AM - 12:30 PM",
       location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
       capacity: "Walk-in",
@@ -80,7 +80,7 @@ const Events = () => {
                   mode="single"
                   selected={selectedDate}
                   onSelect={setSelectedDate}
-                  className="w-full justify-center [&_table]:w-full [&_table]:max-w-full [&_td]:h-12 [&_td]:w-12 [&_th]:h-12 [&_th]:w-12"
+                  className="w-full justify-center [&_table]:w-full [&_table]:max-w-full [&_td]:h-12 [&_td]:w-12 [&_td]:text-center [&_th]:h-12 [&_th]:w-12 [&_th]:text-center [&_button]:w-full [&_button]:h-full [&_button]:flex [&_button]:items-center [&_button]:justify-center"
                   modifiers={{
                     event: eventDates
                   }}
