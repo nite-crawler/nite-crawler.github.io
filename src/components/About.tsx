@@ -26,7 +26,7 @@ FONDER &amp; LEAD ARTIST</p>
                     <div className="flex items-start gap-1 w-1 h-1"></div>
                     <p style={{
                     color: '#D17046'
-                  }} className="font-medium text-[3] px-0 py-0 my-0 text-[#cb6829]">Women-Run, Culture-Inspired</p>
+                  }} className="font-medium text-[3] px-0 py-0 my-0 text-[#cb6829]">Women Run, Culture Inspired</p>
                   </div>
                 </div>
               </div>
