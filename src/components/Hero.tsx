@@ -10,7 +10,7 @@ const Hero = () => {
       <div></div>
 
       {/* Hero content at bottom */}
-      <div className="text-center p-4 sm:p-8">
+      <div className="text-center p-4 sm:p-8 mb-12 sm:mb-20">
         <h1 className="font-seasons text-base sm:text-md lg:text-xl font-light drop-shadow-lg my-[2px]">
           A dream dipped in henna and made real — one cone at a time.
         </h1>
