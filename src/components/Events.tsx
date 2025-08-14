@@ -127,20 +127,20 @@ const Events = () => {
                         {event.description}
                       </p>
                       
-                      <div className="space-y-2 mb-6">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Clock className="w-4 h-4 text-primary" />
-                          {event.time}
+                        <div className="space-y-2 mb-6">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                            {event.time}
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                            {event.location}
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                            {event.capacity}
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <MapPin className="w-4 h-4 text-primary" />
-                          {event.location}
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Users className="w-4 h-4 text-primary" />
-                          {event.capacity}
-                        </div>
-                      </div>
                       
                       <div className="flex justify-end items-center">
                         <Button variant="warm" size="lg">
@@ -179,20 +179,20 @@ const Events = () => {
                           {event.description}
                         </p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-6 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4 text-primary" />
-                            {event.time}
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-6 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-2">
+                              <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                              {event.time}
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                              {event.location}
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                              {event.capacity}
+                            </div>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4 text-primary" />
-                            {event.location}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Users className="w-4 h-4 text-primary" />
-                            {event.capacity}
-                          </div>
-                        </div>
                         
                         <div className="flex justify-end items-center">
                           <Button variant="warm" size="lg">
