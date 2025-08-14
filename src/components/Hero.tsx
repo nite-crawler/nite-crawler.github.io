@@ -5,7 +5,7 @@ const Hero = () => {
       {/* Hero content centered */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         
-        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-lg font-light max-w-2xl py-[10px] my-0 px-0 mx-0">
+        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-lg text-bottom font-light max-w-2xl py-[10px] my-0 px-0 mx-0">
 
 
 
