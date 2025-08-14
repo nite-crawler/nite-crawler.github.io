@@ -12,7 +12,7 @@ KALĀ, meaning “art” in Sanskrit, signifies skill, creativity, and cultural 
 
 Merging the elegance of Middle Eastern HENNA with the rich traditions of South Asian Mehendi, and grounding it in the timeless concept of KALĀ, HENNA KALĀ is born, a name that embodies beauty, artistry, and a fusion of traditions that transcend borders and eras.
           </p>
-          <p className="text-lg leading-relaxed text-muted-foreground font-extralight">
+          <p className="text-lg leading-relaxed text-muted-foreground font-extralight text-[#B64400]">
             At HENNA KALĀ, we honor this timeless craft by creating intricate patterns that tell your unique story, one beautiful stain at a time.
           </p>
         </div>
