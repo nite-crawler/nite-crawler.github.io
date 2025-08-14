@@ -34,7 +34,7 @@ const HennaCones = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => <div key={index} className="text-center bg-card rounded-xl p-6 shadow-float hover:shadow-float-hover transition-all duration-300 hover:-translate-y-2 animate-scale-in" style={{
           animationDelay: `${index * 0.1}s`
         }}>
@@ -50,6 +50,13 @@ const HennaCones = () => {
               </div>
               <div className="text-muted-foreground text-sm font-medium text-center">{stat.label}</div>
             </div>)}
+        </div>
+
+        {/* Heritage description */}
+        <div className="text-center animate-fade-in">
+          <p className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center md:text-xl text-[#272725]">
+            Our cones are made with love from Rajasthani henna powder, brought in straight from the heart of Rajasthan, India — the land where mehndi is more than art, it's tradition.
+          </p>
         </div>
       </div>
     </section>;
