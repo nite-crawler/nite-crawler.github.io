@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Instagram } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,8 +17,21 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item: { name: string; id: string; isLink?: boolean }) => {
+    if (item.isLink) {
+      if (item.id === "events") {
+        navigate("/events");
+      }
+    } else {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
     setIsOpen(false);
   };
 
@@ -23,6 +39,7 @@ const Navigation = () => {
     { name: "Home", id: "hero" },
     { name: "About", id: "about" },
     { name: "Gallery", id: "gallery" },
+    { name: "Events", id: "events", isLink: true },
     { name: "Contact", id: "lets-connect" },
   ];
 
@@ -37,7 +54,7 @@ const Navigation = () => {
           {/* Logo */}
           <div 
             className="cursor-pointer hover:scale-105 transition-transform duration-300"
-            onClick={() => scrollToSection('hero')}
+            onClick={() => navigate('/')}
           >
             <h1 className="font-seasons text-2xl text-nav-text tracking-wide">
               HENNA KALĀ
@@ -49,7 +66,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item)}
                 className="text-nav-text hover:text-primary transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
@@ -60,7 +77,16 @@ const Navigation = () => {
               variant="warm" 
               size="default"
               className="px-6"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => {
+                if (location.pathname !== "/") {
+                  navigate("/");
+                  setTimeout(() => {
+                    document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                } else {
+                  document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               BOOK NOW
             </Button>
@@ -83,7 +109,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item)}
                 className="block w-full text-left px-6 py-2 text-nav-text hover:text-primary hover:bg-secondary/50 transition-all duration-300 font-medium"
               >
                 {item.name}
@@ -95,7 +121,14 @@ const Navigation = () => {
                 size="sm" 
                 className="w-full"
                 onClick={() => {
-                  scrollToSection('contact');
+                  if (location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  } else {
+                    document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                  }
                   setIsOpen(false);
                 }}
               >
