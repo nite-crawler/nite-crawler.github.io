@@ -304,9 +304,10 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Event Calendar Section */}
-          <div className="relative h-full">
+          <div className="relative">
+            <h3 className="text-2xl font-seasons text-gallery-title mb-6">Event Calendar</h3>
             <div className="calendar" ref={calendarRef} aria-label="Event Calendar">
               <div className="cal-header">
                 <div className="cal-title">
