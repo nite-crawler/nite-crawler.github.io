@@ -7,7 +7,7 @@ const BrandStory = () => {
             THE ESSENCE OF HENNA
           </h2>
           <p className="text-xl leading-relaxed font-extralight text-[#272725] mb-6">
-            Henna is more than art—it's a bridge between generations, a celebration of heritage, and a canvas for dreams. HENNA, derived from the Arabic word ḥinnāʾ (حناء) , is an ancient Middle Eastern art form using the natural dye from the Lawsonia inermis plant, while Mehendi comes from the Sanskrit word Mehndika, reflecting its deep South Asian heritage.
+            Henna is more than art, it's a bridge between generations, a celebration of heritage, and a canvas for dreams. HENNA, derived from the Arabic word ḥinnāʾ (حناء) , is an ancient Middle Eastern art form using the natural dye from the Lawsonia inermis plant, while Mehendi comes from the Sanskrit word Mehndika, reflecting its deep South Asian heritage.
 KALĀ, meaning “art” in Sanskrit, signifies skill, creativity, and cultural expression. 
 
 Merging the elegance of Middle Eastern HENNA with the rich traditions of South Asian Mehendi, and grounding it in the timeless concept of KALĀ, HENNA KALĀ is born, a name that embodies beauty, artistry, and a fusion of traditions that transcend borders and eras.
