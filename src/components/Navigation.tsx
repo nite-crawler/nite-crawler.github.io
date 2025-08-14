@@ -23,7 +23,7 @@ const Navigation = () => {
     { name: "Home", id: "hero" },
     { name: "About", id: "about" },
     { name: "Gallery", id: "gallery" },
-    { name: "Contact", id: "contact" },
+    { name: "Contact", id: "lets-connect" },
   ];
 
   return (
