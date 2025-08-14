@@ -1,7 +1,8 @@
+
 const Hero = () => {
   return <section 
     style={{
-      backgroundImage: 'url(/lovable-uploads/e242f893-571e-4990-9e42-6ee5f49b4d1d.png)',
+      backgroundImage: 'url(/lovable-uploads/60c81b9d-f7f3-4230-9ffa-8f0f7acbce22.png)',
     }} 
     className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-no-repeat
                bg-[center_40%] 
