@@ -194,12 +194,6 @@ const Events = () => {
                               {event.capacity}
                             </div>
                           </div>
-                        
-                        <div className="flex justify-end items-center">
-                          <Button variant="warm" size="lg">
-                            Book Event
-                          </Button>
-                        </div>
                       </CardContent>
                     </Card>
                   ))}
