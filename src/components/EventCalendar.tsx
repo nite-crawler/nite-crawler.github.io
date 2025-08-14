@@ -17,11 +17,11 @@ const EventCalendar: React.FC = () => {
 
   const EVENTS: Record<string, Event[]> = {
     "2025-08-16": [{ title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-up designs, quick cones, festival florals." }],
-    "2025-08-30": [
-     // { title: "Harvest Moon Festival Preview", time: "10:00 AM – 1:00 PM", location: "Community Center Plaza", description: "Mini mehndi specials + booking info." },
-      { title: "Private Henna Event", time: "1:00 PM", location: "Studio", description: "By appointment only." }
+    "2025-08-23": [
+      { title: "Harvest Moon Festival Preview", time: "10:00 AM – 1:00 PM", location: "Community Center Plaza", description: "Mini mehndi specials + booking info." },
+      { title: "Private Bridal Trial", time: "2:30 PM", location: "Studio", description: "By appointment only." }
     ],
-   // "2025-09-07": [{ title: "Haymarket Pop‑Up", time: "9:00 AM – 1:00 PM", location: "Haymarket", description: "Floral + mandala sets." }]
+    "2025-09-07": [{ title: "Haymarket Pop‑Up", time: "9:00 AM – 1:00 PM", location: "Haymarket", description: "Floral + mandala sets." }]
   };
 
   const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];

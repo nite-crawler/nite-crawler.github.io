@@ -115,8 +115,7 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-warm': 'var(--gradient-warm)',
-				'gradient-sunset': 'var(--gradient-sunset)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-sunset': 'var(--gradient-sunset)'
 			}
 		}
 	},
