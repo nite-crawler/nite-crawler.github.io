@@ -1,6 +1,6 @@
 const Hero = () => {
   return <section style={{
-    backgroundImage: 'url(/public/lovable-uploads/FINAL__HK_BUSINESS_CARD_4.png)'
+    backgroundImage: 'url(/lovable-uploads/FINAL__HK_BUSINESS_CARD_4.png)'
   }} className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-no-repeat">
       {/* Hero content at bottom */}
       <div className="absolute bottom-4 sm:bottom-8 left-4 right-4 text-center">
