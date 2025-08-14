@@ -30,7 +30,7 @@ const HennaCones = () => {
         {/* Transform your hands text */}
         <div className="text-center mb-16 animate-fade-in">
           <p style={{
-        }} className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center md:text-xl text-[#272725]">Transform your hands into masterpieces with our intricate henna designs. Achieve flawless detail and rich color every time with our premium henna cone — the artist's top choice.</p>
+        }} className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center md:text-xl text-[#272725]">Transform your hands into masterpieces with our exquisite henna designs. Achieve flawless detail and rich color every time with our premium henna cone — the artist's top choice.</p>
         </div>
 
         {/* Stats Section */}
