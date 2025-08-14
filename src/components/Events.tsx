@@ -62,27 +62,23 @@ const Events = () => {
 
   // Calendar functionality
   const CALENDAR_EVENTS: Record<string, Event[]> = {
-    "2025-08-16": [{ title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-up designs, quick cones, festival florals." }],
-    "2025-08-23": [
-      { title: "Harvest Moon Festival Preview", time: "10:00 AM – 1:00 PM", location: "Community Center Plaza", description: "Mini mehndi specials + booking info." },
-      { title: "Private Bridal Trial", time: "2:30 PM", location: "Studio", description: "By appointment only." }
-    ],
-    "2025-09-07": [{ title: "Haymarket Pop‑Up", time: "9:00 AM – 1:00 PM", location: "Haymarket", description: "Floral + mandala sets." }]
+    "2025-08-14": [
+      { title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-up designs." }
+    ]
   };
 
-  const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  const DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-  const pad = (n: number): string => String(n).padStart(2, '0');
-  const keyFor = (y: number, m: number, d: number): string => `${y}-${pad(m + 1)}-${pad(d)}`;
+  const keyFor = (y: number, m: number, d: number): string => `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
 
   const showPopover = (cell: HTMLElement, y: number, m: number, d: number) => {
-    const eventKey = keyFor(y, m, d);
-    const events = CALENDAR_EVENTS[eventKey] || [];
-    if (!events.length) return;
-
-    setPopoverEvents(events);
-    setPopoverDate(`${MONTHS[m]} ${d}, ${y}`);
+    clearPopover();
+    const list = CALENDAR_EVENTS[keyFor(y, m, d)] || [];
+    const dateLabel = `${MONTHS[m]} ${d}, ${y}`;
+    
+    setPopoverEvents(list);
+    setPopoverDate(dateLabel);
 
     const rect = cell.getBoundingClientRect();
     const calRect = calendarRef.current?.getBoundingClientRect();
@@ -100,55 +96,43 @@ const Events = () => {
     setPopoverEvents([]);
   };
 
+  const renderDayNames = () => {
+    return DAY_NAMES.map(name => (
+      <div key={name} className="day-name">{name}</div>
+    ));
+  };
+
   const renderCalendar = () => {
     const y = viewDate.getFullYear();
     const m = viewDate.getMonth();
-    let firstDay = new Date(y, m, 1).getDay();
-    firstDay = firstDay === 0 ? 6 : firstDay - 1; // shift Sunday to end for Monday-first
+    
+    const firstDay = new Date(y, m, 1);
+    let startDay = (firstDay.getDay() + 6) % 7; // Monday-first shift
     const daysInMonth = new Date(y, m + 1, 0).getDate();
-    const daysInPrev = new Date(y, m, 0).getDate();
 
     const cells = [];
-    
-    // Previous month days
-    for (let i = 0; i < firstDay; i++) {
+
+    // Empty cells for days before month starts
+    for (let i = 0; i < startDay; i++) {
       cells.push(
-        <div key={`prev-${i}`} className="cell out-month">
-          <div className="day-num">{daysInPrev - firstDay + i + 1}</div>
-        </div>
+        <div key={`empty-${i}`} className="day"></div>
       );
     }
 
-    const today = new Date();
-    const isToday = (day: number) => 
-      day === today.getDate() && m === today.getMonth() && y === today.getFullYear();
-
-    // Current month days
+    // Days of the month
     for (let d = 1; d <= daysInMonth; d++) {
-      const eventKey = keyFor(y, m, d);
-      const hasEvents = CALENDAR_EVENTS[eventKey];
-      const todayClass = isToday(d) ? 'today' : '';
+      const dateKey = keyFor(y, m, d);
+      const hasEvents = CALENDAR_EVENTS[dateKey];
       
       cells.push(
         <div 
           key={d} 
-          className={`cell ${todayClass}`}
+          className="day"
           onMouseEnter={(e) => hasEvents && showPopover(e.currentTarget, y, m, d)}
           onMouseLeave={clearPopover}
         >
-          <div className="day-num">{d}</div>
+          {d}
           {hasEvents && <span className="dot"></span>}
-        </div>
-      );
-    }
-
-    // Next month days
-    const totalCells = firstDay + daysInMonth;
-    const trailing = (7 - (totalCells % 7)) % 7;
-    for (let i = 1; i <= trailing; i++) {
-      cells.push(
-        <div key={`next-${i}`} className="cell out-month">
-          <div className="day-num">{i}</div>
         </div>
       );
     }
@@ -158,140 +142,30 @@ const Events = () => {
 
   const prevMonth = () => {
     setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1));
-    clearPopover();
   };
 
   const nextMonth = () => {
     setViewDate(new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1));
-    clearPopover();
-  };
-
-  const goToToday = () => {
-    setViewDate(new Date());
-    clearPopover();
   };
 
   return (
     <section className="min-h-screen py-20 px-6 bg-gradient-subtle">
       <style>{`
-        .calendar { 
-          width: min(100%, 920px); 
-          background: hsl(var(--card)); 
-          border-radius: 18px; 
-          padding: 18px; 
-          position: relative; 
-          margin: 0 auto;
-        }
-        .cal-header { 
-          display: flex; 
-          justify-content: space-between; 
-          align-items: center; 
-          margin-bottom: 10px; 
-        }
-        .cal-header .cal-title { 
-          font-size: clamp(20px, 2.4vw, 28px); 
-          font-weight: 700; 
-          color: hsl(var(--foreground));
-        }
-        .cal-controls button { 
-          padding: 8px 12px; 
-          border-radius: 12px; 
-          border: none; 
-          cursor: pointer; 
-          background: hsl(32, 66%, 91%); 
-          color: white; 
-          font-weight: 600; 
-          transition: 0.2s; 
-          margin: 0 2px;
-        }
-        .cal-controls button:hover { 
-          background: hsl(34, 53%, 73%); 
-        }
-        .grid { 
-          display: grid; 
-          grid-template-columns: repeat(7, 1fr); 
-          gap: 10px; 
-        }
-        .dow { 
-          color: hsl(var(--muted-foreground)); 
-          font-size: 12px; 
-          text-transform: uppercase; 
-          letter-spacing: 0.12em; 
-          text-align: center;
-          padding: 10px;
-        }
-        .cell { 
-          aspect-ratio: 1/1; 
-          border-radius: 16px; 
-          padding: 10px; 
-          position: relative; 
-          background: hsl(var(--muted) / 0.3); 
-          cursor: pointer; 
-          transition: 0.2s; 
-          display: flex;
-          align-items: flex-start;
-          justify-content: flex-start;
-        }
-        .cell:hover { 
-          background: hsl(var(--muted) / 0.5); 
-          transform: translateY(-1px); 
-        }
-        .cell.out-month { 
-          opacity: 0.35; 
-        }
-        .day-num { 
-          font-weight: 700; 
-          font-size: 14px; 
-          color: hsl(var(--foreground));
-        }
-        .dot { 
-          position: absolute; 
-          right: 10px; 
-          bottom: 10px; 
-          width: 8px; 
-          height: 8px; 
-          border-radius: 999px; 
-          background: hsl(var(--primary)); 
-          box-shadow: 0 0 0 3px hsl(var(--primary) / 0.35); 
-        }
-        .today { 
-          outline: 2px solid hsl(var(--primary)); 
-          outline-offset: 2px; 
-          box-shadow: 0 0 0 5px hsl(var(--primary) / 0.35); 
-        }
-        .popover { 
-          position: absolute; 
-          min-width: 260px; 
-          max-width: min(360px, 90vw); 
-          background: hsl(var(--popover)); 
-          border: 1px solid hsl(var(--border));
-          border-radius: 16px; 
-          padding: 12px 12px 8px; 
-          box-shadow: 0 20px 40px hsl(var(--foreground) / 0.15); 
-          z-index: 50; 
-          font-size: 14px; 
-          color: hsl(var(--popover-foreground));
-        }
-        .popover h3 { 
-          margin: 0 0 6px; 
-          font-size: 16px; 
-          color: hsl(var(--foreground));
-        }
-        .event-item { 
-          padding: 8px; 
-          border-radius: 10px; 
-          border: 1px solid hsl(var(--border)); 
-          margin-bottom: 8px; 
-          background: hsl(var(--card));
-        }
-        .event-item small { 
-          color: hsl(var(--muted-foreground)); 
-          display: block; 
-          margin-top: 4px; 
-        }
-        .event-item strong {
-          color: hsl(var(--foreground));
-        }
+        .calendar { width: 100%; max-width: 800px; margin: auto; background: hsl(var(--card)); border-radius: 18px; padding: 18px; position: relative; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .header h2 { font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; color: hsl(var(--foreground)); margin: 0; }
+        .header button { padding: 8px 12px; border-radius: 12px; border: none; cursor: pointer; background: #8d3218; color: white; font-weight: 600; transition: 0.2s; margin: 0 4px; }
+        .header button:hover { background: #6d2612; }
+        .days { display: grid; grid-template-columns: repeat(7, 1fr); background: hsl(var(--card)); border-radius: 12px; }
+        .day-name, .day { padding: 10px; border: 1px solid hsl(var(--border)); text-align: center; }
+        .day-name { background: hsl(var(--muted) / 0.3); font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: hsl(var(--muted-foreground)); }
+        .day { position: relative; height: 80px; cursor: pointer; background: hsl(var(--card)); color: hsl(var(--foreground)); transition: 0.2s; }
+        .day:hover { background: hsl(var(--muted) / 0.2); transform: translateY(-1px); }
+        .day .dot { width: 6px; height: 6px; background: red; border-radius: 50%; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); }
+        .popover { position: absolute; z-index: 10; background: hsl(var(--popover)); border: 1px solid hsl(var(--border)); padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); max-width: 200px; border-radius: 12px; color: hsl(var(--popover-foreground)); }
+        .popover h3 { margin: 0 0 8px; font-size: 16px; color: hsl(var(--foreground)); }
+        .event-item { margin-top: 5px; font-size: 0.9em; padding: 8px; border-radius: 8px; border: 1px solid hsl(var(--border)); background: hsl(var(--card)); }
+        .event-item strong { color: hsl(var(--foreground)); }
       `}</style>
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
@@ -308,25 +182,16 @@ const Events = () => {
           {/* Event Calendar Section */}
           <div className="relative">
             <h3 className="text-2xl font-seasons text-gallery-title mb-6">Event Calendar</h3>
-            <div className="calendar" ref={calendarRef} aria-label="Event Calendar">
-              <div className="cal-header">
-                <div className="cal-title">
-                  {MONTHS[viewDate.getMonth()]} {viewDate.getFullYear()}
-                </div>
-                <div className="cal-controls">
-                  <button onClick={prevMonth} aria-label="Previous Month">◀</button>
-                  <button onClick={goToToday} aria-label="Jump to Today">Today</button>
-                  <button onClick={nextMonth} aria-label="Next Month">▶</button>
-                </div>
+            <div className="calendar" ref={calendarRef}>
+              <div className="header">
+                <button onClick={prevMonth}>Prev</button>
+                <h2>{MONTHS[viewDate.getMonth()]} {viewDate.getFullYear()}</h2>
+                <button onClick={nextMonth}>Next</button>
               </div>
-              
-              <div className="grid">
-                {DOW.map(day => (
-                  <div key={day} className="dow">{day}</div>
-                ))}
+              <div className="days">
+                {renderDayNames()}
               </div>
-              
-              <div className="grid">
+              <div className="days">
                 {renderCalendar()}
               </div>
               
@@ -335,19 +200,20 @@ const Events = () => {
                   className="popover" 
                   style={{ 
                     top: popoverPosition.top + 'px', 
-                    left: popoverPosition.left + 'px',
-                    display: 'block'
+                    left: popoverPosition.left + 'px'
                   }}
                 >
                   <h3>{popoverDate}</h3>
-                  {popoverEvents.map((event, index) => (
+                  {popoverEvents.length ? popoverEvents.map((event, index) => (
                     <div key={index} className="event-item">
-                      <strong>{event.title}</strong>
-                      {event.time && <small>🕒 {event.time}</small>}
-                      {event.location && <small>📍 {event.location}</small>}
-                      {event.description && <small>📝 {event.description}</small>}
+                      <strong>{event.title}</strong><br />
+                      {event.time && <>🕒 {event.time}<br /></>}
+                      {event.location && <>📍 {event.location}<br /></>}
+                      {event.description && <>📝 {event.description}</>}
                     </div>
-                  ))}
+                  )) : (
+                    <div className="event-item">No events</div>
+                  )}
                 </div>
               )}
             </div>
