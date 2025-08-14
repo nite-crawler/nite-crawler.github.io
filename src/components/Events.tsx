@@ -16,7 +16,6 @@ const Events = () => {
       time: "10:00 AM - 12:30 PM",
       location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
       description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!",
-     /* price: "Varies",*/
       category: "Pop-up Henna Session"
     },
     {
@@ -27,7 +26,6 @@ const Events = () => {
       location: "Antelope Park Bandshell, 1630 Memorial Dr, Lincoln, NE 68502",
       capacity: "Walk-in",
       description: "Create beautiful mandala designs inspired by traditional henna patterns.",
-      /*price: "$65",*/
       category: "Public Event "
     },
   /*  {
