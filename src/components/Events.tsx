@@ -74,7 +74,7 @@ const Events = () => {
             <Card className="relative z-10 bg-card/90 backdrop-blur-sm border-border/50 shadow-float">
               <CardHeader>
                 <CardTitle className="text-3xl font-seasons text-center text-gallery-title">
-                  August 2025
+                  AUGUST 2025
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-6">
