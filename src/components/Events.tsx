@@ -304,7 +304,7 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid s:grid-cols-2 gap-8 items-start">
           {/* Event Calendar Section */}
           <div className="relative">
             <h3 className="text-2xl font-seasons text-gallery-title mb-6">Event Calendar</h3>
