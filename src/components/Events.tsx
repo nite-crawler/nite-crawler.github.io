@@ -63,21 +63,21 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Calendar Section with Mandala Background */}
-          <div className="relative">
+          <div className="relative h-full">
             {/* Mandala Background Decoration */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
               <div className="w-full h-full bg-gradient-primary rounded-full transform rotate-12 scale-75 blur-3xl"></div>
             </div>
             
-            <Card className="relative z-10 bg-card/90 backdrop-blur-sm border-border/50 shadow-float">
-              <CardHeader>
+            <Card className="relative z-10 bg-card/90 backdrop-blur-sm border-border/50 shadow-float h-full flex flex-col">
+              <CardHeader className="flex-shrink-0">
                 <CardTitle className="text-3xl font-seasons text-center text-gallery-title">
                   AUGUST 2025
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-4">
+              <CardContent className="p-4 flex-1 flex flex-col justify-center">
                 <Calendar
                   mode="single"
                   selected={selectedDate}
