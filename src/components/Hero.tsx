@@ -4,52 +4,14 @@ const Hero = () => {
   }} className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-no-repeat">
       {/* Hero content centered */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        
-        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-lg text-bottom font-light max-w-2xl py-[10px] my-0 px-0 mx-0">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A dream dipped in henna and made real — one cone at a time.</p>
+        {/* Main title and floral elements will be positioned here */}
+      </div>
+      
+      {/* Tagline at bottom */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center px-4">
+        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-lg font-light">
+          A dream dipped in henna
+        </p>
       </div>
     </section>;
 };
