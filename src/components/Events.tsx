@@ -11,12 +11,13 @@ const Events = () => {
   const events = [
     {
       id: 1,
-      title: "Bridal Henna Workshop",
+      title: "Henna Kala @Haymarket",
       date: new Date(2025, 7, 16), // August 15, 2025
       time: "10:00 AM - 12:30 PM",
-      location: "Henna Kalā @",
-      address: "Ten Thousand Villages
-        Address: 140 N 8th St #125, Lincoln, NE 68508, United States. ",
+      location: "Ten Thousand Villages
+     
+        140 N 8th St #125, Lincoln, NE 68508, United States. ",
+      
       description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!
       price: "Varies",
       category: "Pop-up Henna Session"
