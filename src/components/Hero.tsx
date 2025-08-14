@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Tagline at bottom */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center px-4">
         <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-lg font-light">
-          A dream dipped in henna
+          A dream dipped in henna and made real — one cone at a time.
         </p>
       </div>
     </section>;
