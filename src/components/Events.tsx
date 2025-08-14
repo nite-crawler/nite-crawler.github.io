@@ -142,8 +142,7 @@ const Events = () => {
                         </div>
                       </div>
                       
-                      <div className="flex justify-between items-center">
-                        <span className="text-2xl font-bold text-primary">{event.price}</span>
+                      <div className="flex justify-end items-center">
                         <Button variant="warm" size="lg">
                           Book Event
                         </Button>
@@ -195,8 +194,7 @@ const Events = () => {
                           </div>
                         </div>
                         
-                        <div className="flex justify-between items-center">
-                          <span className="text-2xl font-bold text-primary">{event.price}</span>
+                        <div className="flex justify-end items-center">
                           <Button variant="warm" size="lg">
                             Book Event
                           </Button>
