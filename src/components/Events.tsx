@@ -130,6 +130,8 @@ const Events = () => {
           className="day"
           onMouseEnter={(e) => hasEvents && showPopover(e.currentTarget, y, m, d)}
           onMouseLeave={clearPopover}
+          onTouchStart={(e) => hasEvents && showPopover(e.currentTarget, y, m, d)}
+          onTouchEnd={() => setTimeout(clearPopover, 3000)} // Auto-hide after 3s on mobile
         >
           {d}
           {hasEvents && <span className="dot"></span>}
@@ -151,18 +153,27 @@ const Events = () => {
   return (
     <section className="min-h-screen py-20 px-6 bg-gradient-subtle">
       <style>{`
-        .calendar { width: 100%; max-width: 800px; margin: auto; background: hsl(var(--card)); border-radius: 18px; padding: 18px; position: relative; }
-        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .header h2 { font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; color: hsl(var(--foreground)); margin: 0; }
-        .header button { padding: 8px 12px; border-radius: 12px; border: none; cursor: pointer; background: #8d3218; color: white; font-weight: 600; transition: 0.2s; margin: 0 4px; }
+        .calendar { width: 100%; max-width: 800px; margin: auto; background: hsl(var(--card)); border-radius: 18px; padding: 12px; position: relative; }
+        @media (min-width: 768px) { .calendar { padding: 18px; } }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+        @media (min-width: 640px) { .header { margin-bottom: 20px; flex-wrap: nowrap; } }
+        .header h2 { font-size: clamp(18px, 4vw, 28px); font-weight: 700; color: hsl(var(--foreground)); margin: 0; }
+        .header button { padding: 10px 14px; border-radius: 12px; border: none; cursor: pointer; background: #8d3218; color: white; font-weight: 600; transition: 0.2s; margin: 0 2px; min-height: 44px; min-width: 44px; }
+        @media (min-width: 640px) { .header button { padding: 8px 12px; margin: 0 4px; } }
         .header button:hover { background: #6d2612; }
-        .days { display: grid; grid-template-columns: repeat(7, 1fr); background: hsl(var(--card)); border-radius: 12px; }
-        .day-name, .day { padding: 10px; border: 1px solid hsl(var(--border)); text-align: center; }
-        .day-name { background: hsl(var(--muted) / 0.3); font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: hsl(var(--muted-foreground)); }
-        .day { position: relative; height: 80px; cursor: pointer; background: hsl(var(--card)); color: hsl(var(--foreground)); transition: 0.2s; }
-        .day:hover { background: hsl(var(--muted) / 0.2); transform: translateY(-1px); }
-        .day .dot { width: 6px; height: 6px; background: red; border-radius: 50%; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); }
-        .popover { position: absolute; z-index: 10; background: hsl(var(--popover)); border: 1px solid hsl(var(--border)); padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); max-width: 200px; border-radius: 12px; color: hsl(var(--popover-foreground)); }
+        .days { display: grid; grid-template-columns: repeat(7, 1fr); background: hsl(var(--card)); border-radius: 12px; gap: 1px; }
+        @media (min-width: 640px) { .days { gap: 2px; } }
+        .day-name, .day { padding: 8px 4px; border: 1px solid hsl(var(--border)); text-align: center; }
+        @media (min-width: 640px) { .day-name, .day { padding: 10px; } }
+        .day-name { background: hsl(var(--muted) / 0.3); font-weight: bold; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: hsl(var(--muted-foreground)); }
+        @media (min-width: 640px) { .day-name { font-size: 12px; } }
+        .day { position: relative; height: 60px; cursor: pointer; background: hsl(var(--card)); color: hsl(var(--foreground)); transition: 0.2s; display: flex; align-items: flex-start; justify-content: flex-start; font-size: 14px; }
+        @media (min-width: 640px) { .day { height: 80px; font-size: 16px; } }
+        .day:hover, .day:active { background: hsl(var(--muted) / 0.2); transform: translateY(-1px); }
+        .day .dot { width: 6px; height: 6px; background: red; border-radius: 50%; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); }
+        @media (min-width: 640px) { .day .dot { bottom: 5px; } }
+        .popover { position: absolute; z-index: 50; background: hsl(var(--popover)); border: 1px solid hsl(var(--border)); padding: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: calc(100vw - 24px); width: 280px; border-radius: 12px; color: hsl(var(--popover-foreground)); }
+        @media (min-width: 640px) { .popover { max-width: 320px; width: 300px; } }
         .popover h3 { margin: 0 0 8px; font-size: 16px; color: hsl(var(--foreground)); }
         .event-item { margin-top: 5px; font-size: 0.9em; padding: 8px; border-radius: 8px; border: 1px solid hsl(var(--border)); background: hsl(var(--card)); }
         .event-item strong { color: hsl(var(--foreground)); }
@@ -178,7 +189,7 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid s:grid-cols-2 gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Event Calendar Section */}
           <div className="relative">
             <h3 className="text-2xl font-seasons text-gallery-title mb-6">Event Calendar</h3>
