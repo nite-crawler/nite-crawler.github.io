@@ -31,7 +31,7 @@ const Events = () => {
       price: "$65",
       category: "Art Class"
     },
-    {
+  /*  {
      id: 3,
      title: "Kids Henna Fun Day",
      date: new Date(2025, 7, 29), // August 29, 2025
@@ -41,7 +41,7 @@ const Events = () => {
      description: "Child-friendly henna designs and cultural storytelling.",
      price: "$35",
      category: "Kids Event"
-    }
+    } */
   ];
 
   const selectedDateEvents = events.filter(event => 
