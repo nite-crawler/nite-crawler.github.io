@@ -55,8 +55,8 @@ const HennaCones = () => {
           <p className="text-xl leading-relaxed max-w-3xl mx-auto font-extralight text-center md:text-xl text-[#272725]">Our cones are made with love from Rajasthani henna powder, brought in straight from the heart of Rajasthan, India — the land where mehndi is more than art, it's tradition. </p>
 
 
-<p className="text-medium leading-relaxed max-w-3xl mx-auto font-light text-center md:text-xl text-[#B64400]">Ingredients: Organic Rajasthani Henna Powder, Organic Cane Sugar, Eucalyptus Globulus Essential Oil, Lemon Juice, Distilled Water, Xanthum Gum. 
-Allergy-Friendly Option: If you’re sensitive to essential oils, no worries! We can prepare your henna cones with alternative ingredients so you can still enjoy beautiful designs without discomfort. Just let us know when you order or book appointment.</p>
+<p className="text-medium leading-relaxed max-w-3xl mx-auto font-light text-center md:text-xl text-[#B64400]">Ingredients: Organic Rajasthani Henna Powder, Organic Cane Sugar, Eucalyptus Globulus Essential Oil, Lemon Juice, Distilled Water, Xanthum Gum.</p>
+  <p className="text-medium leading-relaxed max-w-3xl mx-auto font-light text-center md:text-xl text-[#B64400]">Allergy-Friendly Option: If you’re sensitive to essential oils, no worries! We can prepare your henna cones with alternative ingredients so you can still enjoy beautiful designs without discomfort. Just let us know when you order or book appointment.</p>
         </div>
       </div>
     </section>;
