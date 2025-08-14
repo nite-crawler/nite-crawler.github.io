@@ -4,10 +4,7 @@ const Hero = () => {
   }} className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-no-repeat">
       {/* Hero content centered */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="font-seasons text-henna text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-lg font-light mb-4">
-          Henna Kala by Swathi
-        </h1>
-        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-lg font-light max-w-2xl">
+        <p className="font-seasons text-henna text-base sm:text-lg md:text-xl drop-shadow-m font-light max-w-2xl">
           A dream dipped in henna and made real — one cone at a time.
         </p>
       </div>
