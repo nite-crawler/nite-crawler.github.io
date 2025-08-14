@@ -12,7 +12,7 @@ const Events = () => {
     {
       id: 1,
       title: "Henna Kala @Haymarket",
-      date: new Date(2025, 8, 16), // August 15, 2025
+      date: new Date(2025, 8, 16), // August 16, 2025
       time: "10:00 AM - 12:30 PM",
       location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
       capacity: "Walk-in",
