@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Users } from "lucide-react";
+import EventCalendar from "@/components/EventCalendar";
 
 const Events = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
@@ -62,44 +62,9 @@ const Events = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-          {/* Calendar Section with Mandala Background */}
+          {/* Event Calendar Section */}
           <div className="relative h-full">
-            {/* Mandala Background Decoration */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-              <div className="w-full h-full bg-gradient-primary rounded-full transform rotate-12 scale-75 blur-3xl"></div>
-            </div>
-            
-            <Card className="relative z-10 bg-card/90 backdrop-blur-sm border-border/50 shadow-float h-full flex flex-col">
-              <CardHeader className="flex-shrink-0">
-                <CardTitle className="text-6xl font-seasons text-center text-gallery-title">
-                  2025
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 flex-1 flex flex-col justify-center">
-                <Calendar
-                  mode="single"
-                  selected={selectedDate}
-                  onSelect={setSelectedDate}
-                  className="w-full justify-center [&_table]:w-full [&_table]:max-w-full [&_td]:h-12 [&_td]:w-12 [&_td]:text-center [&_th]:h-12 [&_th]:w-12 [&_th]:text-center [&_button]:w-full [&_button]:h-full [&_button]:flex [&_button]:items-center [&_button]:justify-center"
-                  modifiers={{
-                    event: eventDates
-                  }}
-                  modifiersStyles={{
-                    event: {
-                      backgroundColor: 'hsl(var(--primary))',
-                      color: 'white',
-                      borderRadius: '50%'
-                    }
-                  }}
-                />
-                <div className="mt-3 text-sm text-muted-foreground text-center">
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="w-3 h-3 bg-primary rounded-full"></div>
-                    <span>Event dates</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <EventCalendar />
           </div>
 
           {/* Events List */}
