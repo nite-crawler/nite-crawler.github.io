@@ -21,6 +21,9 @@ const Navigation = () => {
     if (item.isLink) {
       if (item.id === "events") {
         navigate("/events");
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
       }
     } else {
       if (location.pathname !== "/") {
