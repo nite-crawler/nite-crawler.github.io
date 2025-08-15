@@ -7,7 +7,7 @@ const Hero = () => {
       }}
     >
       {/* Gradient overlay at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 from-black/50 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"></div>
 
       {/* Hero content at bottom */}
     
