@@ -341,7 +341,15 @@ const Events = () => {
             <p className="text-lg mb-6 opacity-90">
               Create unforgettable memories with custom henna experiences for your special occasions
             </p>
-            <Button variant="outline" size="lg" className="bg-white/20 border-white/30 text-white hover:bg-white hover:text-event-cta">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="bg-white/20 border-white/30 text-white hover:bg-white hover:text-event-cta"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contact Us for Private Events
             </Button>
           </Card>
