@@ -13,6 +13,15 @@ import henna3 from "/lovable-uploads/816b54df-6f43-41b7-b4d3-fc47d0d96dfb.png";
 import henna4 from "/lovable-uploads/956c8ed0-9bc5-4785-990b-6e9911cd7772.png";
 import henna5 from "/lovable-uploads/b5b3c836-8c5d-4b91-9847-433f214b1991.png";
 import henna6 from "/lovable-uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
+import henna7 from "/lovable-uploads/d86ddfbd-cf52-4452-8af0-9ac45d76bedf.png";
+import henna8 from "/lovable-uploads/d0da27d1-5f43-4d63-8d8c-4886f9044ca0.png";
+import henna9 from "/lovable-uploads/c499dc2f-2552-40cc-8e61-6f8700cc6b3c.png";
+import henna10 from "/lovable-uploads/269e0f22-a5aa-4a7d-a9e1-7acc6455b4df.png";
+import henna11 from "/lovable-uploads/d6a45b87-b8a4-4901-9f87-6e681873635b.png";
+import henna12 from "/lovable-uploads/df6fe019-5512-4ee3-bbee-30e9568cb134.png";
+import henna13 from "/lovable-uploads/811478a3-ad51-441a-8523-1749cf3d6859.png";
+import henna14 from "/lovable-uploads/f475df6f-7166-4e30-bafd-80d581844b25.png";
+import henna15 from "/lovable-uploads/24f6fe45-8713-40d3-82bf-75a067a9b78c.png";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,6 +51,42 @@ const Gallery = () => {
     src: henna6,
     alt: "Delicate floral hand henna design",
     category: "Arabic"
+  }, {
+    src: henna7,
+    alt: "Elaborate bridal henna with intricate mandala and paisley patterns on palm",
+    category: "Bridal"
+  }, {
+    src: henna8,
+    alt: "Detailed finger henna with geometric and floral motifs",
+    category: "Traditional"
+  }, {
+    src: henna9,
+    alt: "Beautiful full hand henna with mandala centerpiece and finger details",
+    category: "Bridal"
+  }, {
+    src: henna10,
+    alt: "Stunning arm henna with mesh patterns and intricate detailing",
+    category: "Traditional"
+  }, {
+    src: henna11,
+    alt: "Fresh henna paste application showing intricate finger patterns",
+    category: "Modern"
+  }, {
+    src: henna12,
+    alt: "Close-up of detailed finger henna with floral and geometric designs",
+    category: "Traditional"
+  }, {
+    src: henna13,
+    alt: "Delicate hand henna with leaf patterns and mandala elements",
+    category: "Arabic"
+  }, {
+    src: henna14,
+    alt: "Dark henna stain showing beautiful arm patterns with floral motifs",
+    category: "Festival"
+  }, {
+    src: henna15,
+    alt: "Complete hand henna design with dark stain and intricate patterns",
+    category: "Bridal"
   }];
 
   const openModal = (index: number) => {
