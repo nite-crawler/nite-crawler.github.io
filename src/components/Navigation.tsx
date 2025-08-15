@@ -54,7 +54,16 @@ const Navigation = () => {
           {/* Logo */}
           <div 
             className="cursor-pointer hover:scale-105 transition-transform duration-300"
-            onClick={() => navigate('/')}
+            onClick={() => {
+              if (location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              } else {
+                document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             <h1 className="font-seasons text-2xl text-nav-text tracking-wide">
               HENNA KALĀ
