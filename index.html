@@ -34,26 +34,82 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Henna Kala by Swathi",
-      "description": "Professional henna artistry featuring traditional and contemporary mehendi designs for bridal, festival, and custom occasions.",
-      "url": "https://hennakalabyswathi.lovable.app",
-      "logo": "https://hennakalabyswathi.lovable.app/lovable-uploads/HK%20LOGO.png",
-      "image": "https://hennakalabyswathi.lovable.app/lovable-uploads/HK%20LOGO.png",
-      "serviceType": "Henna Art Services",
-      "areaServed": "Worldwide",
-      "founder": {
-        "@type": "Person",
-        "name": "Swathi"
-      },
-      "sameAs": [
-        "@HennaKalaBySwathi"
-      ],
-      "offers": {
-        "@type": "Service",
-        "name": "Henna Art Services",
-        "description": "Traditional and modern henna designs for bridal occasions, festivals, and custom events"
-      }
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://hennakalabyswathi.lovable.app/#business",
+          "name": "Henna Kala by Swathi",
+          "description": "Professional henna artistry featuring traditional and contemporary mehendi designs for bridal, festival, and custom occasions.",
+          "url": "https://hennakalabyswathi.lovable.app",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hennakalabyswathi.lovable.app/lovable-uploads/HK%20LOGO.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://hennakalabyswathi.lovable.app/lovable-uploads/HK%20LOGO.png",
+          "serviceType": ["Henna Art Services", "Mehendi Art", "Bridal Henna", "Festival Henna"],
+          "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Swathi",
+            "jobTitle": "Professional Henna Artist"
+          },
+          "sameAs": [
+            "https://instagram.com/hennakalabyswathi",
+            "https://facebook.com/hennakalabyswathi"
+          ],
+          "offers": [
+            {
+              "@type": "Service",
+              "name": "Bridal Henna Services",
+              "description": "Intricate traditional and modern henna designs for brides",
+              "serviceType": "Bridal Henna Art"
+            },
+            {
+              "@type": "Service", 
+              "name": "Festival Henna",
+              "description": "Beautiful henna patterns for festivals and celebrations",
+              "serviceType": "Festival Henna Art"
+            },
+            {
+              "@type": "Service",
+              "name": "Custom Henna Designs",
+              "description": "Personalized henna art for special occasions",
+              "serviceType": "Custom Henna Art"
+            },
+            {
+              "@type": "Service",
+              "name": "Private Events",
+              "description": "Henna artistry for private parties and gatherings",
+              "serviceType": "Event Henna Services"
+            }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "hennakalabyswathi@gmail.com"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hennakalabyswathi.lovable.app/#website",
+          "url": "https://hennakalabyswathi.lovable.app",
+          "name": "Henna Kala by Swathi",
+          "description": "Professional henna artistry by Swathi featuring traditional and contemporary mehendi designs",
+          "publisher": {
+            "@id": "https://hennakalabyswathi.lovable.app/#business"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://hennakalabyswathi.lovable.app/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
     }
     </script>
     

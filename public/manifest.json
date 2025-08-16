@@ -1,0 +1,19 @@
+{
+  "name": "Henna Kala by Swathi - Traditional & Modern Mehendi Designs",
+  "short_name": "Henna Kala",
+  "description": "Professional henna artistry by Swathi featuring traditional and contemporary mehendi designs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#B64400",
+  "icons": [
+    {
+      "src": "/lovable-uploads/HK%20LOGO.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "beauty", "art"],
+  "orientation": "portrait"
+}
