@@ -24,7 +24,7 @@ import henna14 from "/lovable-uploads/f475df6f-7166-4e30-bafd-80d581844b25.png";
 import henna15 from "/lovable-uploads/24f6fe45-8713-40d3-82bf-75a067a9b78c.png";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(6); // Start with henna7 as main image
   const [modalIndex, setModalIndex] = useState(0);
   
   const hennaImages = [{
