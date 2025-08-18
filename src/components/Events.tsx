@@ -67,6 +67,9 @@ const Events = () => {
     ],
     "2025-08-30": [
       { title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-up designs." }
+    ],
+    "2025-10-05": [
+      { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
     ]
   };
 
