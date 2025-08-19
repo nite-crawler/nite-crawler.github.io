@@ -1,9 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Users } from "lucide-react";
-import ICAL from "ical.js";
 
 interface Event {
   title: string;
@@ -19,7 +18,6 @@ const Events = () => {
   const [popoverEvents, setPopoverEvents] = useState<Event[]>([]);
   const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
   const [popoverDate, setPopoverDate] = useState('');
-  const [calendarEvents, setCalendarEvents] = useState<Record<string, Event[]>>({});
   const calendarRef = useRef<HTMLDivElement>(null);
 
   const events = [
@@ -62,65 +60,18 @@ const Events = () => {
 
   const eventDates = events.map(event => event.date);
 
-  // Fetch iCal events
-  useEffect(() => {
-    const fetchCalendarEvents = async () => {
-      try {
-        const response = await fetch('/api/fetch-calendar');
-        const result = await response.json();
-        
-        if (!result.success) {
-          throw new Error(result.error);
-        }
-        
-        const icalData = result.data;
-        
-        const jcalData = ICAL.parse(icalData);
-        const comp = new ICAL.Component(jcalData);
-        const vevents = comp.getAllSubcomponents('vevent');
-        
-        const parsedEvents: Record<string, Event[]> = {};
-        
-        vevents.forEach((vevent) => {
-          const event = new ICAL.Event(vevent);
-          const startDate = event.startDate.toJSDate();
-          const endDate = event.endDate.toJSDate();
-          
-          const dateKey = `${startDate.getFullYear()}-${String(startDate.getMonth() + 1).padStart(2, '0')}-${String(startDate.getDate()).padStart(2, '0')}`;
-          
-          const eventData: Event = {
-            title: event.summary,
-            time: `${startDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })} - ${endDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}`,
-            location: event.location || 'Location TBD',
-            description: event.description || 'No description available'
-          };
-          
-          if (!parsedEvents[dateKey]) {
-            parsedEvents[dateKey] = [];
-          }
-          parsedEvents[dateKey].push(eventData);
-        });
-        
-        setCalendarEvents(parsedEvents);
-      } catch (error) {
-        console.error('Error fetching calendar events:', error);
-        // Fallback to static events if fetch fails
-        setCalendarEvents({
-          "2025-08-16": [
-            { title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
-          ],
-          "2025-08-30": [
-            { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
-          ],
-          "2025-10-05": [
-            { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
-          ]
-        });
-      }
-    };
-
-    fetchCalendarEvents();
-  }, []);
+  // Calendar functionality
+  const CALENDAR_EVENTS: Record<string, Event[]> = {
+    "2025-08-16": [
+      { title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
+    ],
+    "2025-08-30": [
+      { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
+    ],
+    "2025-10-05": [
+      { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
+    ]
+  };
 
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -129,7 +80,7 @@ const Events = () => {
 
   const showPopover = (cell: HTMLElement, y: number, m: number, d: number) => {
     clearPopover();
-    const list = calendarEvents[keyFor(y, m, d)] || [];
+    const list = CALENDAR_EVENTS[keyFor(y, m, d)] || [];
     const dateLabel = `${MONTHS[m]} ${d}, ${y}`;
     
     setPopoverEvents(list);
@@ -177,7 +128,7 @@ const Events = () => {
     // Days of the month
     for (let d = 1; d <= daysInMonth; d++) {
       const dateKey = keyFor(y, m, d);
-      const hasEvents = calendarEvents[dateKey];
+      const hasEvents = CALENDAR_EVENTS[dateKey];
       
       cells.push(
         <div 
