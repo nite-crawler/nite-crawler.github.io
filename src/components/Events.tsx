@@ -66,8 +66,14 @@ const Events = () => {
   useEffect(() => {
     const fetchCalendarEvents = async () => {
       try {
-        const response = await fetch('https://calendar.google.com/calendar/ical/swathi%40hennakala.com/public/basic.ics');
-        const icalData = await response.text();
+        const response = await fetch('/api/fetch-calendar');
+        const result = await response.json();
+        
+        if (!result.success) {
+          throw new Error(result.error);
+        }
+        
+        const icalData = result.data;
         
         const jcalData = ICAL.parse(icalData);
         const comp = new ICAL.Component(jcalData);
