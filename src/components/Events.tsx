@@ -111,6 +111,9 @@ const Events = () => {
   const renderCalendar = () => {
     const y = viewDate.getFullYear();
     const m = viewDate.getMonth();
+    const today = new Date();
+    const isCurrentMonth = y === today.getFullYear() && m === today.getMonth();
+    const todayDate = today.getDate();
     
     const firstDay = new Date(y, m, 1);
     let startDay = (firstDay.getDay() + 6) % 7; // Monday-first shift
@@ -129,11 +132,12 @@ const Events = () => {
     for (let d = 1; d <= daysInMonth; d++) {
       const dateKey = keyFor(y, m, d);
       const hasEvents = CALENDAR_EVENTS[dateKey];
+      const isToday = isCurrentMonth && d === todayDate;
       
       cells.push(
         <div 
           key={d} 
-          className="day"
+          className={`day ${isToday ? 'today' : ''}`}
           onMouseEnter={(e) => hasEvents && showPopover(e.currentTarget, y, m, d)}
           onMouseLeave={clearPopover}
           onTouchStart={(e) => hasEvents && showPopover(e.currentTarget, y, m, d)}
@@ -176,6 +180,7 @@ const Events = () => {
         .day { position: relative; height: 60px; cursor: pointer; background: hsl(var(--card)); color: hsl(var(--foreground)); transition: 0.2s; display: flex; align-items: flex-start; justify-content: flex-start; font-size: 14px; }
         @media (min-width: 640px) { .day { height: 80px; font-size: 16px; } }
         .day:hover, .day:active { background: hsl(var(--muted) / 0.2); transform: translateY(-1px); }
+        .day.today { background: #dbbe97; box-shadow: 0 2px 8px rgba(219, 190, 151, 0.4); font-weight: bold; }
         .day .dot { width: 6px; height: 6px; background: red; border-radius: 50%; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); }
         @media (min-width: 640px) { .day .dot { bottom: 5px; } }
         .popover { position: absolute; z-index: 50; background: hsl(var(--popover)); border: 1px solid hsl(var(--border)); padding: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: calc(100vw - 24px); width: 280px; border-radius: 12px; color: hsl(var(--popover-foreground)); }
