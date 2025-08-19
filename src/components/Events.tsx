@@ -63,7 +63,7 @@ const Events = () => {
   // Calendar functionality
   const CALENDAR_EVENTS: Record<string, Event[]> = {
     "2025-08-16": [
-      { title: "Haymarket Farmers Market – Henna Booth", time: "8:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
+      { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
     ],
     "2025-08-30": [
       { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
