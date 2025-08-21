@@ -23,7 +23,7 @@ const EventsPage = () => {
     // Update canonical URL for Events page
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', 'https://hennakalabyswathi.lovable.app/events');
+      canonicalLink.setAttribute('href', 'https://hennakala.com/events');
     }
   }, []);
 
