@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,7 @@ const Events = () => {
   const [popoverEvents, setPopoverEvents] = useState<Event[]>([]);
   const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
   const [popoverDate, setPopoverDate] = useState('');
+  const [calendarEvents, setCalendarEvents] = useState<Record<string, Event[]>>({});
   const calendarRef = useRef<HTMLDivElement>(null);
 
   const events = [
@@ -60,18 +61,47 @@ const Events = () => {
 
   const eventDates = events.map(event => event.date);
 
-  // Calendar functionality
-  const CALENDAR_EVENTS: Record<string, Event[]> = {
-    "2025-08-16": [
-      { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
-    ],
-    "2025-08-30": [
-      { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
-    ],
-    "2025-10-05": [
-      { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
-    ]
-  };
+  // Load calendar events from JSON file
+  useEffect(() => {
+    const loadCalendarEvents = async () => {
+      try {
+        const response = await fetch('/src/data/calendar-events.json');
+        if (response.ok) {
+          const data = await response.json();
+          setCalendarEvents(data);
+        } else {
+          // Fallback to hardcoded events if file doesn't exist
+          setCalendarEvents({
+            "2025-08-16": [
+              { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
+            ],
+            "2025-08-30": [
+              { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
+            ],
+            "2025-10-05": [
+              { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
+            ]
+          });
+        }
+      } catch (error) {
+        console.error('Error loading calendar events:', error);
+        // Use fallback events
+        setCalendarEvents({
+          "2025-08-16": [
+            { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
+          ],
+          "2025-08-30": [
+            { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
+          ],
+          "2025-10-05": [
+            { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
+          ]
+        });
+      }
+    };
+
+    loadCalendarEvents();
+  }, []);
 
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -80,7 +110,7 @@ const Events = () => {
 
   const showPopover = (cell: HTMLElement, y: number, m: number, d: number) => {
     clearPopover();
-    const list = CALENDAR_EVENTS[keyFor(y, m, d)] || [];
+    const list = calendarEvents[keyFor(y, m, d)] || [];
     const dateLabel = `${MONTHS[m]} ${d}, ${y}`;
     
     setPopoverEvents(list);
@@ -131,7 +161,7 @@ const Events = () => {
     // Days of the month
     for (let d = 1; d <= daysInMonth; d++) {
       const dateKey = keyFor(y, m, d);
-      const hasEvents = CALENDAR_EVENTS[dateKey];
+      const hasEvents = calendarEvents[dateKey];
       const isToday = isCurrentMonth && d === todayDate;
       
       cells.push(
