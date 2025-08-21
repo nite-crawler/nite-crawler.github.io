@@ -1,5 +1,8 @@
 name: Daily Calendar Sync and Deploy
 
+permissions:
+  contents: write
+
 on:
   schedule:
     # Run daily at 6 AM UTC (adjust timezone as needed)
