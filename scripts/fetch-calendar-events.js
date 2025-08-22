@@ -33,10 +33,20 @@ async function fetchCalendarEvents() {
     const data = await response.json();
     const events = data.items || [];
     
+    // Debug logging to see what we're getting from Google Calendar
+    console.log('API Response sample:', JSON.stringify(events.slice(0, 2), null, 2));
+    
     // Transform events to our format
     const calendarEvents = {};
     
     events.forEach(event => {
+      // Debug each event to see what fields are available
+      console.log('Processing event:', {
+        summary: event.summary,
+        description: event.description,
+        location: event.location,
+        allFields: Object.keys(event)
+      });
       if (event.start && event.start.date) {
         // All-day event
         const date = new Date(event.start.date);
