@@ -6,9 +6,12 @@ import { Clock, MapPin, Users } from "lucide-react";
 
 interface Event {
   title: string;
-  time: string;
+  time?: string;
   location: string;
   description: string;
+  startTime?: string;
+  endTime?: string;
+  isAllDay?: boolean;
 }
 
 const Events = () => {
@@ -256,14 +259,35 @@ const Events = () => {
                   }}
                 >
                   <h3>{popoverDate}</h3>
-                  {popoverEvents.length ? popoverEvents.map((event, index) => (
-                    <div key={index} className="event-item">
-                      <strong>{event.title}</strong><br />
-                      {event.time && <>🕒 {event.time}<br /></>}
-                      {event.location && <>📍 {event.location}<br /></>}
-                      {event.description && <>📝 {event.description}</>}
-                    </div>
-                  )) : (
+                  {popoverEvents.length ? popoverEvents.map((event, index) => {
+                    const formatTime = (startTime: string, endTime: string) => {
+                      if (!startTime) return '';
+                      const start = new Date(startTime);
+                      const end = new Date(endTime);
+                      const startStr = start.toLocaleTimeString('en-US', { 
+                        hour: 'numeric', 
+                        minute: '2-digit',
+                        hour12: true 
+                      });
+                      const endStr = end.toLocaleTimeString('en-US', { 
+                        hour: 'numeric', 
+                        minute: '2-digit',
+                        hour12: true 
+                      });
+                      return `${startStr} - ${endStr}`;
+                    };
+
+                    return (
+                      <div key={index} className="event-item">
+                        <strong>{event.title}</strong><br />
+                        {(event.time || (event.startTime && event.endTime)) && (
+                          <>🕒 {event.time || formatTime(event.startTime, event.endTime)}<br /></>
+                        )}
+                        {event.location && <>📍 {event.location}<br /></>}
+                        {event.description && <>📝 {event.description}</>}
+                      </div>
+                    );
+                  }) : (
                     <div className="event-item">No events</div>
                   )}
                 </div>
