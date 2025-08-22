@@ -42,7 +42,7 @@ const Events = () => {
       time: "12:00 PM - 4:00 PM",
       location: "Lincoln Community Foundation Garden, 1421 N St, Lincoln, NE 68508",
       capacity: "Walk-in",
-      description: "Create beautiful mandala designs inspired by traditional henna patterns.",
+      // description: "Create beautiful mandala designs inspired by traditional henna patterns.",
       category: "Public Event"
     },
     {
@@ -52,7 +52,7 @@ const Events = () => {
       time: "4:00 PM - 7:00 PM",
       location: "Antelope Park Bandshell, 1630 Memorial Dr, Lincoln, NE 68502",
       capacity: "Walk-in",
-      description: "Create beautiful mandala designs inspired by traditional henna patterns.",
+      // description: "Create beautiful mandala designs inspired by traditional henna patterns.",
       category: "Public Event "
     }
     // {
