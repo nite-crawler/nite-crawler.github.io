@@ -86,13 +86,13 @@ async function fetchCalendarEvents() {
       }
     });
     
-    // Write to src/data/calendar-events.json
-    const dataDir = path.join(__dirname, '..', 'src', 'data');
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
+    // Write to public/calendar-events.json
+    const publicDir = path.join(__dirname, '..', 'public');
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
     }
     
-    const outputPath = path.join(dataDir, 'calendar-events.json');
+    const outputPath = path.join(publicDir, 'calendar-events.json');
     fs.writeFileSync(outputPath, JSON.stringify(calendarEvents, null, 2));
     
     console.log(`Successfully fetched ${events.length} events and saved to ${outputPath}`);

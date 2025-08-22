@@ -65,7 +65,7 @@ const Events = () => {
   useEffect(() => {
     const loadCalendarEvents = async () => {
       try {
-        const response = await fetch('/src/data/calendar-events.json');
+        const response = await fetch('/calendar-events.json');
         if (response.ok) {
           const data = await response.json();
           setCalendarEvents(data);
