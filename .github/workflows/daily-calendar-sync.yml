@@ -1,7 +1,7 @@
 name: Daily Calendar Sync and Deploy
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -40,6 +40,14 @@ jobs:
         GOOGLE_CALENDAR_API_KEY: ${{ secrets.GOOGLE_CALENDAR_API_KEY }}
         GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
       run: node scripts/fetch-calendar-events.js
+      
+    - name: Commit updated calendar events
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add src/data/calendar-events.json
+        git diff --staged --quiet || git commit -m "Update calendar events [skip ci]"
+        git push
       
     - name: Build site
       run: npm run build
