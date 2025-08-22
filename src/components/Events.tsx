@@ -22,37 +22,37 @@ const Events = () => {
   const calendarRef = useRef<HTMLDivElement>(null);
 
   const events = [
-    {
-      id: 1,
-      title: "Henna Kala @Haymarket",
-      date: new Date(2025, 7, 16), // August 16, 2025
-      time: "10:00 AM - 12:30 PM",
-      location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
-      capacity: "Walk-in",
-      description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!",
-      category: "Pop-up Henna Booth"
-    },
-    {
-      id: 2,
-      title: "2025 Harvest Moon Festival",
-      date: new Date(2025, 9, 5), // October 5, 2025
-      time: "4:00 PM - 7:00 PM",
-      location: "Antelope Park Bandshell, 1630 Memorial Dr, Lincoln, NE 68502",
-      capacity: "Walk-in",
-      description: "Create beautiful mandala designs inspired by traditional henna patterns.",
-      category: "Public Event "
-    },
-  /*  {
-     id: 3,
-     title: "Kids Henna Fun Day",
-     date: new Date(2025, 7, 29), // August 29, 2025
-     time: "11:00 AM - 3:00 PM",
-     location: "Garden Pavilion",
-     capacity: "15 children",
-     description: "Child-friendly henna designs and cultural storytelling.",
-     price: "$35",
-     category: "Kids Event"
-    } */
+    // {
+    //   id: 1,
+    //   title: "Henna Kala @Haymarket",
+    //   date: new Date(2025, 7, 16), // August 16, 2025
+    //   time: "10:00 AM - 12:30 PM",
+    //   location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
+    //   capacity: "Walk-in",
+    //   description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!",
+    //   category: "Pop-up Henna Booth"
+    // },
+    // {
+    //   id: 2,
+    //   title: "2025 Harvest Moon Festival",
+    //   date: new Date(2025, 9, 5), // October 5, 2025
+    //   time: "4:00 PM - 7:00 PM",
+    //   location: "Antelope Park Bandshell, 1630 Memorial Dr, Lincoln, NE 68502",
+    //   capacity: "Walk-in",
+    //   description: "Create beautiful mandala designs inspired by traditional henna patterns.",
+    //   category: "Public Event "
+    // },
+    // {
+    //  id: 3,
+    //  title: "Kids Henna Fun Day",
+    //  date: new Date(2025, 7, 29), // August 29, 2025
+    //  time: "11:00 AM - 3:00 PM",
+    //  location: "Garden Pavilion",
+    //  capacity: "15 children",
+    //  description: "Child-friendly henna designs and cultural storytelling.",
+    //  price: "$35",
+    //  category: "Kids Event"
+    // } 
   ];
 
   const selectedDateEvents = events.filter(event => 
@@ -72,30 +72,30 @@ const Events = () => {
         } else {
           // Fallback to hardcoded events if file doesn't exist
           setCalendarEvents({
-            "2025-08-16": [
-              { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
-            ],
-            "2025-08-30": [
-              { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
-            ],
-            "2025-10-05": [
-              { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
-            ]
+            // "2025-08-16": [
+            //   { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
+            // ],
+            // "2025-08-30": [
+            //   { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
+            // ],
+            // "2025-10-05": [
+            //   { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
+            // ]
           });
         }
       } catch (error) {
         console.error('Error loading calendar events:', error);
         // Use fallback events
         setCalendarEvents({
-          "2025-08-16": [
-            { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
-          ],
-          "2025-08-30": [
-            { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
-          ],
-          "2025-10-05": [
-            { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
-          ]
+          // "2025-08-16": [
+          //   { title: "Haymarket Farmers Market – Henna Booth", time: "10:00 AM – 12:30 PM", location: "Haymarket Square", description: "Walk-in designs." }
+          // ],
+          // "2025-08-30": [
+          //   { title: "Private Event Booking", time: "1:00 PM – 5:30 PM", location: "Studio", description: "Private event" }
+          // ],
+          // "2025-10-05": [
+          //   { title: "2025 Harvest Moon Festival", time: "4:00 PM - 7:00 PM", location: "Antelope Park Bandshell", description: "Create beautiful mandala designs inspired by traditional henna patterns." }
+          // ]
         });
       }
     };
