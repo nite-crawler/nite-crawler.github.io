@@ -17,11 +17,15 @@ async function fetchCalendarEvents() {
   }
 
   try {
-    // Get events for the next 6 months
-    const timeMin = new Date().toISOString();
-    const timeMax = new Date(Date.now() + 6 * 30 * 24 * 60 * 60 * 1000).toISOString();
+    // Get events from previous month, current month, and future
+    const now = new Date();
+    const firstDayOfCurrentMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const firstDayOfPreviousMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
     
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime&fields=items(summary,description,location,start,end)`;
+    const timeMin = firstDayOfPreviousMonth.toISOString();
+    // No timeMax to get all future events
+    
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${timeMin}&singleEvents=true&orderBy=startTime&fields=items(summary,description,location,start,end)`;
     
     console.log('Fetching calendar events...');
     const response = await fetch(url);
