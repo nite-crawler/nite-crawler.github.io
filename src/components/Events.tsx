@@ -38,7 +38,7 @@ const Events = () => {
     {
       id: 1,
       title: "Lincoln Unites 2025",
-      date: new Date(2025, 9, 7), 
+      date: new Date(2025, 8, 7), // September 7, 2025 (month 8 = September)
       time: "12:00 PM - 4:00 PM",
       location: "Lincoln Community Foundation Garden, 1421 N St, Lincoln, NE 68508",
       capacity: "Walk-in",
@@ -48,7 +48,7 @@ const Events = () => {
     {
       id: 2,
       title: "2025 Harvest Moon Festival",
-      date: new Date(2025, 10, 5),
+      date: new Date(2025, 9, 5), // October 5, 2025 (month 9 = October)
       time: "4:00 PM - 7:00 PM",
       location: "Antelope Park Bandshell, 1630 Memorial Dr, Lincoln, NE 68502",
       capacity: "Walk-in",
