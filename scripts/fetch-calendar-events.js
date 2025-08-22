@@ -21,7 +21,7 @@ async function fetchCalendarEvents() {
     const timeMin = new Date().toISOString();
     const timeMax = new Date(Date.now() + 6 * 30 * 24 * 60 * 60 * 1000).toISOString();
     
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime`;
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime&fields=items(summary,description,location,start,end)`;
     
     console.log('Fetching calendar events...');
     const response = await fetch(url);
