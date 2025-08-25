@@ -327,9 +327,7 @@ const Events = () => {
                         </Badge>
                       </div>
                       
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {event.description}
-                      </p>
+                      {/* Description removed as it's not available in the current event structure */}
                       
                         <div className="space-y-2 mb-6">
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -379,9 +377,7 @@ const Events = () => {
                           </Badge>
                         </div>
                         
-                        <p className="text-muted-foreground mb-4 leading-relaxed">
-                          {event.description}
-                        </p>
+                        {/* Description removed as it's not available in the current event structure */}
                         
                           <div className="flex flex-wrap gap-4 mb-6 text-sm text-muted-foreground">
                             <div className="flex items-center gap-2">

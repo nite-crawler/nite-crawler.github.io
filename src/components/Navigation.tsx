@@ -85,23 +85,33 @@ const Navigation = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
-            <Button 
-              variant="warm" 
-              size="default"
-              className="px-6"
-              onClick={() => {
-                if (location.pathname !== "/") {
-                  navigate("/");
-                  setTimeout(() => {
+            <div className="flex items-center space-x-4">
+              <Button 
+                variant="outline"
+                size="default"
+                className="px-6 border-primary text-primary hover:bg-primary hover:text-white"
+                onClick={() => window.open('https://your-shopify-store.myshopify.com', '_blank')}
+              >
+                SHOP
+              </Button>
+              <Button 
+                variant="warm" 
+                size="default"
+                className="px-6"
+                onClick={() => {
+                  if (location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  } else {
                     document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                } else {
-                  document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              BOOK NOW
-            </Button>
+                  }
+                }}
+              >
+                BOOK NOW
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -127,7 +137,18 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <div className="px-6 py-2">
+            <div className="px-6 py-2 space-y-3">
+              <Button 
+                variant="outline"
+                size="sm" 
+                className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                onClick={() => {
+                  window.open('https://your-shopify-store.myshopify.com', '_blank');
+                  setIsOpen(false);
+                }}
+              >
+                SHOP
+              </Button>
               <Button 
                 variant="warm" 
                 size="sm" 
