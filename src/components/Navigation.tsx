@@ -87,9 +87,9 @@ const Navigation = () => {
             ))}
             <div className="flex items-center space-x-4">
               <Button 
-                variant="outline"
+                variant="warm"
                 size="default"
-                className="px-6 border-primary text-primary hover:bg-primary hover:text-white"
+                className="px-6"
                 onClick={() => window.open('https://your-shopify-store.myshopify.com', '_blank')}
               >
                 SHOP
@@ -139,9 +139,9 @@ const Navigation = () => {
             ))}
             <div className="px-6 py-2 space-y-3">
               <Button 
-                variant="outline"
+                variant="warm"
                 size="sm" 
-                className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                className="w-full"
                 onClick={() => {
                   window.open('https://your-shopify-store.myshopify.com', '_blank');
                   setIsOpen(false);
