@@ -39,6 +39,16 @@
       "isAllDay": false
     }
   ],
+  "2025-09-09": [
+    {
+      "title": "ECHO - Ember Society",
+      "description": "",
+      "location": "Turbine Flats, 2124 Y St, Lincoln, NE 68503, USA",
+      "startTime": "2025-09-09T18:00:00-05:00",
+      "endTime": "2025-09-09T20:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
   "2025-10-05": [
     {
       "title": "2025 Harvest Moon Festival",
@@ -46,6 +56,16 @@
       "location": "Antelope Park Shildneck Bandshell, 1630 Memorial Dr, Lincoln, NE 68502, USA",
       "startTime": "2025-10-05T16:00:00-05:00",
       "endTime": "2025-10-05T19:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-11-15": [
+    {
+      "title": "2025 Ralston Baseball Holiday Market",
+      "description": "",
+      "location": "Ralston High School, 8969 Park Dr, Ralston, NE 68127, USA",
+      "startTime": "2025-11-15T09:00:00-06:00",
+      "endTime": "2025-11-15T15:00:00-06:00",
       "isAllDay": false
     }
   ]
