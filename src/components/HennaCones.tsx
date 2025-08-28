@@ -62,7 +62,8 @@ const HennaCones = () => {
               variant="warm" 
               size="lg"
               className="px-8 py-4 text-lg font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
-              onClick={() => window.open('https://your-shopify-store.myshopify.com', '_blank')}
+              onClick={() => alert('ONLINE STORE COMING SOON')}
+              // onClick={() => window.open('https://your-shopify-store.myshopify.com', '_blank')}
             >
               SHOP NOW
             </Button>

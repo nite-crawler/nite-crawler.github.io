@@ -90,7 +90,8 @@ const Navigation = () => {
                 variant="warm"
                 size="default"
                 className="px-6"
-                onClick={() => window.open('https://your-shopify-store.myshopify.com', '_blank')}
+                onClick={() => alert('ONLINE STORE COMING SOON')}
+                // onClick={() => window.open('https://your-shopify-store.myshopify.com', '_blank')}
               >
                 SHOP
               </Button>
@@ -143,7 +144,8 @@ const Navigation = () => {
                 size="sm" 
                 className="w-full"
                 onClick={() => {
-                  window.open('https://your-shopify-store.myshopify.com', '_blank');
+                  alert('ONLINE STORE COMING SOON');
+                  // window.open('https://your-shopify-store.myshopify.com', '_blank');
                   setIsOpen(false);
                 }}
               >
