@@ -13,7 +13,7 @@
     {
       "title": "Private Henna Event",
       "description": "",
-      "location": "",
+      "location": "studio",
       "startTime": "2025-08-30T14:00:00-05:00",
       "endTime": "2025-08-30T18:00:00-05:00",
       "isAllDay": false
@@ -25,7 +25,7 @@
       "description": "",
       "location": "studio",
       "startTime": "2025-08-31T12:00:00-05:00",
-      "endTime": "2025-08-31T16:00:00-05:00",
+      "endTime": "2025-08-31T17:00:00-05:00",
       "isAllDay": false
     }
   ],
