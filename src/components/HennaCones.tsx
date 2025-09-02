@@ -5,19 +5,19 @@ const HennaCones = () => {
   const stats = [{
     icon: Leaf,
     value: "100% NATURAL INGREDIENTS",
-    label: "For pure, honest goodness in every drop"
+    label: "For pure, honest goodness in every drop."
   }, {
     icon: Shield,
     value: "NO PPD AKA BLACK HENNA",
-    label: "Ingredients you can read, recognize, and trust"
+    label: "Ingredients you can read, recognize, and trust."
   }, {
     icon: Package,
     value: "CRAFTED IN SMALL BATCHES",
-    label: "To ensure quality, freshness, and attention to detail"
+    label: "To ensure quality, freshness, and attention to detail."
   }, {
     icon: Hand,
     value: "HOME-MADE &\nHAND-FINISHED",
-    label: "Every batch crafted with a personal touch, care and love"
+    label: "Every batch crafted with a personal touch, care and love."
   }];
   return <section id="henna-cones" className="py-20 bg-gradient-to-br from-secondary/20 to-background rounded-sm">
       <div className="container mx-auto px-6">
