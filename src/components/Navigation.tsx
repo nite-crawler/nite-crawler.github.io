@@ -125,10 +125,10 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden transition-all duration-300 ${
+          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="py-4 space-y-4 bg-card/95 backdrop-blur-md rounded-xl mt-2 shadow-float">
+          <div className="py-4 space-y-4 bg-card/95 backdrop-blur-md rounded-xl mt-2 shadow-float border border-border/20">
             {navItems.map((item) => (
               <button
                 key={item.id}
