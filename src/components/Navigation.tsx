@@ -103,10 +103,10 @@ const Navigation = () => {
                   if (location.pathname !== "/") {
                     navigate("/");
                     setTimeout(() => {
-                      document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                   } else {
-                    document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
               >
@@ -159,10 +159,10 @@ const Navigation = () => {
                   if (location.pathname !== "/") {
                     navigate("/");
                     setTimeout(() => {
-                      document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                   } else {
-                    document.getElementById('lets-connect')?.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }
                   setIsOpen(false);
                 }}
