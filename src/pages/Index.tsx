@@ -24,6 +24,19 @@ const Index = () => {
     if (metaKeywords) {
       metaKeywords.setAttribute('content', 'henna artist, mehendi designs, bridal henna, traditional henna, custom henna, festival mehendi, Swathi henna artist, henna patterns, Indian mehendi, Arabic henna');
     }
+
+    // Handle hash navigation on page load
+    if (window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      console.log('Hash detected:', targetId);
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        console.log('Element found:', element);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 500); // Wait for page to fully render
+    }
   }, []);
 
   return (
