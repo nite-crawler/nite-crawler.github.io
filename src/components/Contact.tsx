@@ -99,7 +99,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
-            Ready, Set, Henna — Book Now!
+            Book Now!
           </h2>
           <p className="text-xl max-w-2xl mx-auto mb-8 font-extralight text-[#272725]">Ready to adorn your hands with beautiful henna art? 
 Get in touch with us to schedule your appointment or ask any questions.</p>
