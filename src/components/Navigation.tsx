@@ -43,7 +43,7 @@ const Navigation = () => {
     { name: "About", id: "about" },
     { name: "Gallery", id: "gallery" },
     { name: "Events", id: "events", isLink: true },
-    { name: "Contact", id: "contact" },
+    { name: "Contact", id: "lets-connect" },
   ];
 
   return (
