@@ -61,7 +61,7 @@ const Index = () => {
         <section aria-labelledby="gallery">
           <Gallery />
         </section>
-        <section id="contact" aria-labelledby="contact">
+        <section aria-labelledby="contact">
           <Contact />
         </section>
       </main>

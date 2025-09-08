@@ -95,7 +95,7 @@ const Contact = () => {
     value: "Lincoln, Nebraska",
     href: "#"
   }];
-  return <section className="py-20 bg-gradient-to-br from-background to-secondary/30">
+  return <section id="contact" className="py-20 bg-gradient-to-br from-background to-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
