@@ -59,6 +59,26 @@
       "isAllDay": false
     }
   ],
+  "2025-09-13": [
+    {
+      "title": "Private Event",
+      "description": "",
+      "location": "",
+      "startTime": "2025-09-13T09:30:00-05:00",
+      "endTime": "2025-09-13T11:30:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-09-14": [
+    {
+      "title": "Private Event",
+      "description": "",
+      "location": "",
+      "startTime": "2025-09-14T12:00:00-05:00",
+      "endTime": "2025-09-14T17:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
   "2025-10-05": [
     {
       "title": "2025 Harvest Moon Festival",
@@ -69,9 +89,19 @@
       "isAllDay": false
     }
   ],
-  "2025-10-29": [
+  "2025-10-11": [
     {
       "title": "Private Henna Event",
+      "description": "",
+      "location": "",
+      "startTime": "2025-10-11T12:00:00-05:00",
+      "endTime": "2025-10-11T18:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-10-29": [
+    {
+      "title": "Private Henna Event @Ameritas",
       "description": "",
       "location": "",
       "startTime": "2025-10-29T14:00:00-05:00",
