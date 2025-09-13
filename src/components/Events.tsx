@@ -8,14 +8,10 @@ interface Event {
   title: string;
   time?: string;
   location: string;
-  description?: string;
+  description: string;
   startTime?: string;
   endTime?: string;
   isAllDay?: boolean;
-  id?: number;
-  date?: Date;
-  capacity?: string;
-  category?: string;
 }
 
 const Events = () => {
@@ -26,29 +22,51 @@ const Events = () => {
   const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
   const [popoverDate, setPopoverDate] = useState('');
   const [calendarEvents, setCalendarEvents] = useState<Record<string, Event[]>>({});
-  const [events, setEvents] = useState<Event[]>([]);
   const calendarRef = useRef<HTMLDivElement>(null);
 
-  // Load events from JSON file
-  useEffect(() => {
-    const loadEvents = async () => {
-      try {
-        const response = await fetch('/lovable-uploads/events-data.json');
-        if (response.ok) {
-          const eventsData = await response.json();
-          const processedEvents = eventsData.map((event: any) => ({
-            ...event,
-            date: new Date(event.date)
-          }));
-          setEvents(processedEvents);
-        }
-      } catch (error) {
-        console.error('Error loading events:', error);
-      }
-    };
-
-    loadEvents();
-  }, []);
+  const events = [
+    // {
+    //   id: 1,
+    //   title: "Henna Kala @Haymarket",
+    //   date: new Date(2025, 7, 16), // August 16, 2025
+    //   time: "10:00 AM - 12:30 PM",
+    //   location: "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, United States.",
+    //   capacity: "Walk-in",
+    //   description: "Fresh and beautiful henna designs while you shop at Haymarket Farmer's Market!",
+    //   category: "Pop-up Henna Booth"
+    // },
+    {
+      id: 1,
+      title: "Lincoln Unites 2025",
+      date: new Date(2025, 8, 7), // September 7, 2025 (month 8 = September)
+      time: "12:00 PM - 4:00 PM",
+      location: "Lincoln Community Foundation Garden, 1421 N St, Lincoln, NE 68508",
+      capacity: "Walk-in",
+      // description: "Create beautiful mandala designs inspired by traditional henna patterns.",
+      category: "Public Event"
+    },
+    {
+      id: 2,
+      title: "2025 Harvest Moon Festival",
+      date: new Date(2025, 9, 5), // October 5, 2025 (month 9 = October)
+      time: "4:00 PM - 7:00 PM",
+      location: "Antelope Park Bandshell, 1630 Memorial Dr, Lincoln, NE 68502",
+      capacity: "Walk-in",
+      // description: "Create beautiful mandala designs inspired by traditional henna patterns.",
+      category: "Public Event "
+    }
+    // {
+    //  id: 3,
+    //  title: "Kids Henna Fun Day",
+    //  date: new Date(2025, 7, 29), // August 29, 2025
+    //  time: "11:00 AM - 3:00 PM",
+    //  location: "Garden Pavilion",
+    //  capacity: "15 children",
+    //  description: "Child-friendly henna designs and cultural storytelling.",
+    //  price: "$35",
+    //  category: "Kids Event"
+    // } 
+  ];
 
   const selectedDateEvents = events.filter(event => 
     selectedDate && event.date.toDateString() === selectedDate.toDateString()
