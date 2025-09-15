@@ -79,6 +79,16 @@
       "isAllDay": false
     }
   ],
+  "2025-10-01": [
+    {
+      "title": "Private Henna Event",
+      "description": "",
+      "location": "",
+      "startTime": "2025-10-01T18:00:00-05:00",
+      "endTime": "2025-10-01T20:30:00-05:00",
+      "isAllDay": false
+    }
+  ],
   "2025-10-05": [
     {
       "title": "2025 Harvest Moon Festival",
