@@ -7,6 +7,7 @@ import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import HennaCones from "@/components/HennaCones";
 import Contact from "@/components/Contact";
+import SEOHelmet from "@/components/SEOHelmet";
 
 const Index = () => {
   useEffect(() => {
@@ -28,6 +29,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHelmet 
+        title="Henna Kala by Swathi - Professional Henna Artist in Lincoln, Nebraska"
+        description="Professional henna artistry by Swathi in Lincoln, Nebraska. Specializing in bridal, festival, and custom mehendi designs. Book your henna session today!"
+        keywords="henna artist Lincoln Nebraska, mehendi designs Lincoln, bridal henna Nebraska, traditional henna artist, custom henna patterns, festival mehendi, Arabic henna designs, Indian mehendi artist Lincoln"
+        canonicalUrl="https://hennakalabyswathi.lovable.app/"
+      />
       <Navigation />
       <main>
         <div id="hero">

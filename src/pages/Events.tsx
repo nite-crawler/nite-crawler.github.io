@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Events from "@/components/Events";
 import Contact from "@/components/Contact";
+import SEOHelmet from "@/components/SEOHelmet";
 
 const EventsPage = () => {
   useEffect(() => {
@@ -29,6 +30,12 @@ const EventsPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHelmet 
+        title="Henna Events & Workshops - Henna Kala by Swathi"
+        description="Join Swathi's henna workshops and events in Lincoln, Nebraska. Learn traditional mehendi techniques, book private henna parties, and explore the art of henna."
+        keywords="henna workshops Lincoln, mehendi classes Nebraska, henna events, private henna party, henna learning, bridal henna events Lincoln"
+        canonicalUrl="https://hennakalabyswathi.lovable.app/events"
+      />
       <Navigation />
       <main>
         <section aria-labelledby="events-header">

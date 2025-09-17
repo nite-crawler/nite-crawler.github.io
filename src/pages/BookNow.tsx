@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Contact from "@/components/Contact";
+import SEOHelmet from "@/components/SEOHelmet";
 
 const BookNow = () => {
   useEffect(() => {
@@ -22,6 +23,12 @@ const BookNow = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHelmet 
+        title="Book Your Henna Appointment - Henna Kala by Swathi Lincoln"
+        description="Book your professional henna appointment with Swathi in Lincoln, Nebraska. Schedule your bridal, festival, or custom mehendi session today!"
+        keywords="book henna appointment Lincoln, schedule mehendi Nebraska, henna booking Lincoln, bridal henna appointment, Swathi henna artist Lincoln"
+        canonicalUrl="https://hennakalabyswathi.lovable.app/book-now"
+      />
       <Navigation />
       <main>
         <Contact />
