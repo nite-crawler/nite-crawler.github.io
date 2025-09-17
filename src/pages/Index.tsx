@@ -33,7 +33,7 @@ const Index = () => {
         title="Henna Kala by Swathi - Professional Henna Artist in Lincoln, Nebraska"
         description="Professional henna artistry by Swathi in Lincoln, Nebraska. Specializing in bridal, festival, and custom mehendi designs. Book your henna session today!"
         keywords="henna artist Lincoln Nebraska, mehendi designs Lincoln, bridal henna Nebraska, traditional henna artist, custom henna patterns, festival mehendi, Arabic henna designs, Indian mehendi artist Lincoln"
-        canonicalUrl="https://hennakalabyswathi.lovable.app/"
+        canonicalUrl="https://hennakala.com/"
       />
       <Navigation />
       <main>

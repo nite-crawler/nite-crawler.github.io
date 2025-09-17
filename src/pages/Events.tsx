@@ -34,7 +34,7 @@ const EventsPage = () => {
         title="Henna Events & Workshops - Henna Kala by Swathi"
         description="Join Swathi's henna workshops and events in Lincoln, Nebraska. Learn traditional mehendi techniques, book private henna parties, and explore the art of henna."
         keywords="henna workshops Lincoln, mehendi classes Nebraska, henna events, private henna party, henna learning, bridal henna events Lincoln"
-        canonicalUrl="https://hennakalabyswathi.lovable.app/events"
+        canonicalUrl="https://hennakala.com/events"
       />
       <Navigation />
       <main>

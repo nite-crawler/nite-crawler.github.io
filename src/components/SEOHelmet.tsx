@@ -13,8 +13,8 @@ const SEOHelmet = ({
   title = "Henna Kala by Swathi - Traditional & Modern Mehendi Designs",
   description = "Professional henna artistry by Swathi featuring traditional and contemporary mehendi designs. Book your session for bridal, festival, or custom henna patterns.",
   keywords = "henna artist Lincoln Nebraska, mehendi designs, bridal henna, traditional henna artist, custom henna patterns",
-  canonicalUrl = "https://hennakalabyswathi.lovable.app/",
-  ogImage = "https://hennakalabyswathi.lovable.app/lovable-uploads/HK%20LOGO.png",
+  canonicalUrl = "https://hennakala.com/",
+  ogImage = "https://hennakala.com/lovable-uploads/HK%20LOGO.png",
   structuredData
 }: SEOHelmetProps) => {
   
