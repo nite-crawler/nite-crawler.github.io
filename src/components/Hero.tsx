@@ -3,7 +3,7 @@ const Hero = () => {
     <section
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url(/lovable-uploads/65c7d2f1-d3bd-42f9-b02b-c6c64883bd03.png)",
+        backgroundImage: "url(/uploads/65c7d2f1-d3bd-42f9-b02b-c6c64883bd03.png)",
       }}
       role="banner"
       aria-label="Henna Kala by Swathi - Professional Henna Artist"

@@ -47,7 +47,7 @@ FONDER &amp; LEAD ARTIST</p>
             </div>
             <div className="animate-scale-in order-first lg:order-last">
               <div className="relative">
-                <img src="/lovable-uploads/f357b71c-2cf0-4518-914e-48b245f516d1.png" alt="Swathi Nambiar - Henna Artist" className="w-full h-auto rounded-2xl shadow-float hover:shadow-float-hover transition-all duration-300 object-cover" />
+                <img src="/uploads/f357b71c-2cf0-4518-914e-48b245f516d1.png" alt="Swathi Nambiar - Henna Artist" className="w-full h-auto rounded-2xl shadow-float hover:shadow-float-hover transition-all duration-300 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl"></div>
               </div>
             </div>

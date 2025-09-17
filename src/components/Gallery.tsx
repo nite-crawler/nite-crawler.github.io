@@ -7,21 +7,21 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import henna1 from "/lovable-uploads/e56afc26-5077-489b-9e98-de43402abd87.png";
-import henna2 from "/lovable-uploads/52ce71f8-db12-4dc9-a6ff-6322023656a6.png";
-import henna3 from "/lovable-uploads/816b54df-6f43-41b7-b4d3-fc47d0d96dfb.png";
-import henna4 from "/lovable-uploads/956c8ed0-9bc5-4785-990b-6e9911cd7772.png";
-import henna5 from "/lovable-uploads/b5b3c836-8c5d-4b91-9847-433f214b1991.png";
-import henna6 from "/lovable-uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
-import henna7 from "/lovable-uploads/d86ddfbd-cf52-4452-8af0-9ac45d76bedf.png";
-import henna8 from "/lovable-uploads/d0da27d1-5f43-4d63-8d8c-4886f9044ca0.png";
-import henna9 from "/lovable-uploads/c499dc2f-2552-40cc-8e61-6f8700cc6b3c.png";
-import henna10 from "/lovable-uploads/269e0f22-a5aa-4a7d-a9e1-7acc6455b4df.png";
-import henna11 from "/lovable-uploads/d6a45b87-b8a4-4901-9f87-6e681873635b.png";
-import henna12 from "/lovable-uploads/df6fe019-5512-4ee3-bbee-30e9568cb134.png";
-import henna13 from "/lovable-uploads/811478a3-ad51-441a-8523-1749cf3d6859.png";
-import henna14 from "/lovable-uploads/f475df6f-7166-4e30-bafd-80d581844b25.png";
-import henna15 from "/lovable-uploads/24f6fe45-8713-40d3-82bf-75a067a9b78c.png";
+import henna1 from "/uploads/e56afc26-5077-489b-9e98-de43402abd87.png";
+import henna2 from "/uploads/52ce71f8-db12-4dc9-a6ff-6322023656a6.png";
+import henna3 from "/uploads/816b54df-6f43-41b7-b4d3-fc47d0d96dfb.png";
+import henna4 from "/uploads/956c8ed0-9bc5-4785-990b-6e9911cd7772.png";
+import henna5 from "/uploads/b5b3c836-8c5d-4b91-9847-433f214b1991.png";
+import henna6 from "/uploads/644343fa-123c-4a85-92a7-8cf27ea5a2ab.png";
+import henna7 from "/uploads/d86ddfbd-cf52-4452-8af0-9ac45d76bedf.png";
+import henna8 from "/uploads/d0da27d1-5f43-4d63-8d8c-4886f9044ca0.png";
+import henna9 from "/uploads/c499dc2f-2552-40cc-8e61-6f8700cc6b3c.png";
+import henna10 from "/uploads/269e0f22-a5aa-4a7d-a9e1-7acc6455b4df.png";
+import henna11 from "/uploads/d6a45b87-b8a4-4901-9f87-6e681873635b.png";
+import henna12 from "/uploads/df6fe019-5512-4ee3-bbee-30e9568cb134.png";
+import henna13 from "/uploads/811478a3-ad51-441a-8523-1749cf3d6859.png";
+import henna14 from "/uploads/f475df6f-7166-4e30-bafd-80d581844b25.png";
+import henna15 from "/uploads/24f6fe45-8713-40d3-82bf-75a067a9b78c.png";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(6); // Start with henna7 as main image
