@@ -13,7 +13,7 @@ const Hero = () => {
         <h1>Henna Kala by Swathi - Professional Traditional & Modern Mehendi Artist in Lincoln, Nebraska</h1>
       </div>
       
-      {/* Hero content at bottom */}
+      {/* Hero content at bottom - hidden per user request 
       <div className="absolute bottom-4 left-0 right-0 text-center">
         <div className="bg-black/30 backdrop-blur-sm py-4 px-6 mx-4 rounded-lg">
           <h2 className="font-seasons text-lg sm:text-xl lg:text-2xl font-light text-white drop-shadow-lg">
@@ -24,6 +24,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
+      */}
     </section>
   );
 };
