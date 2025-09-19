@@ -82,7 +82,7 @@
   "2025-10-01": [
     {
       "title": "Private Henna Event",
-      "description": "",
+      "description": "WEDDING BOOKING",
       "location": "",
       "startTime": "2025-10-01T18:00:00-05:00",
       "endTime": "2025-10-01T20:30:00-05:00",
@@ -102,7 +102,7 @@
   "2025-10-11": [
     {
       "title": "Private Henna Event",
-      "description": "",
+      "description": "Henna for REAL LIFE WELLNESS",
       "location": "",
       "startTime": "2025-10-11T12:00:00-05:00",
       "endTime": "2025-10-11T18:00:00-05:00",
@@ -111,11 +111,21 @@
   ],
   "2025-10-29": [
     {
-      "title": "Private Henna Event @Ameritas",
-      "description": "",
+      "title": "Private Henna Event ",
+      "description": "@Ameritas for DIWALI CELEBRATION",
       "location": "",
       "startTime": "2025-10-29T14:00:00-05:00",
       "endTime": "2025-10-29T16:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-11-01": [
+    {
+      "title": "Made Here Market",
+      "description": "",
+      "location": "South 11th Street & B Street, S 11th St & B St, Lincoln, NE 68502, USA",
+      "startTime": "2025-11-01T12:00:00-05:00",
+      "endTime": "2025-11-01T16:00:00-05:00",
       "isAllDay": false
     }
   ],
@@ -126,6 +136,16 @@
       "location": "Ralston High School, 8969 Park Dr, Ralston, NE 68127, USA",
       "startTime": "2025-11-15T09:00:00-06:00",
       "endTime": "2025-11-15T15:00:00-06:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-12-07": [
+    {
+      "title": "Wax Buffalo’s Winter Market",
+      "description": "",
+      "location": "Bin 105 Quality Wines, 105 N 8th St #100, Lincoln, NE 68508, USA",
+      "startTime": "2025-12-07T11:00:00-06:00",
+      "endTime": "2025-12-07T17:00:00-06:00",
       "isAllDay": false
     }
   ]
