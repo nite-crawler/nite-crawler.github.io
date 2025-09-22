@@ -139,6 +139,16 @@
       "isAllDay": false
     }
   ],
+  "2025-11-08": [
+    {
+      "title": "2nd Annual Arts and Crafts Fair",
+      "description": "",
+      "location": "Peter Kiewit Lodge, Ashland, NE 68003, USA",
+      "startTime": "2025-11-08T09:00:00-06:00",
+      "endTime": "2025-11-08T16:00:00-06:00",
+      "isAllDay": false
+    }
+  ],
   "2025-11-15": [
     {
       "title": "2025 Ralston Baseball Holiday Market",
@@ -147,6 +157,22 @@
       "startTime": "2025-11-15T09:00:00-06:00",
       "endTime": "2025-11-15T15:00:00-06:00",
       "isAllDay": false
+    }
+  ],
+  "2025-12-05": [
+    {
+      "title": "DATE RESERVED - PRIVATE EVENT ",
+      "description": "",
+      "location": "",
+      "isAllDay": true
+    }
+  ],
+  "2025-12-06": [
+    {
+      "title": "DATE RESERVED - PRIVATE EVENT ",
+      "description": "",
+      "location": "",
+      "isAllDay": true
     }
   ],
   "2025-12-07": [
