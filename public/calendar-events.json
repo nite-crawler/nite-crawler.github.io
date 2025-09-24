@@ -61,22 +61,18 @@
   ],
   "2025-09-13": [
     {
-      "title": "Private Event",
+      "title": "Out Of Office",
       "description": "",
       "location": "",
-      "startTime": "2025-09-13T09:30:00-05:00",
-      "endTime": "2025-09-13T11:30:00-05:00",
-      "isAllDay": false
+      "isAllDay": true
     }
   ],
   "2025-09-14": [
     {
-      "title": "Private Event",
+      "title": "Out Of Office",
       "description": "",
       "location": "",
-      "startTime": "2025-09-14T12:00:00-05:00",
-      "endTime": "2025-09-14T17:00:00-05:00",
-      "isAllDay": false
+      "isAllDay": true
     }
   ],
   "2025-10-01": [
@@ -116,6 +112,26 @@
       "location": "",
       "startTime": "2025-10-11T12:00:00-05:00",
       "endTime": "2025-10-11T18:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-10-20": [
+    {
+      "title": "TGG event",
+      "description": "",
+      "location": "",
+      "startTime": "2025-10-19T21:00:00-05:00",
+      "endTime": "2025-10-19T22:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-10-26": [
+    {
+      "title": " THE DAILY MARKET",
+      "description": "",
+      "location": "9611 S 34th Street, Lincoln, NE 68516",
+      "startTime": "2025-10-26T11:00:00-05:00",
+      "endTime": "2025-10-26T15:00:00-05:00",
       "isAllDay": false
     }
   ],
