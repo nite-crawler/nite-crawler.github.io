@@ -115,13 +115,13 @@
       "isAllDay": false
     }
   ],
-  "2025-10-20": [
+  "2025-10-19": [
     {
-      "title": "TGG event",
+      "title": "October Makers Market",
       "description": "",
-      "location": "",
-      "startTime": "2025-10-19T21:00:00-05:00",
-      "endTime": "2025-10-19T22:00:00-05:00",
+      "location": "The Gathering Grove",
+      "startTime": "2025-10-19T10:00:00-05:00",
+      "endTime": "2025-10-19T14:00:00-05:00",
       "isAllDay": false
     }
   ],
