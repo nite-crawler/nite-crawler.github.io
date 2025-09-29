@@ -75,6 +75,16 @@
       "isAllDay": true
     }
   ],
+  "2025-09-29": [
+    {
+      "title": "Henna Appointment at Studio",
+      "description": "",
+      "location": "Roe Beauty, 5815 S 58th St suite d, Lincoln, NE 68516",
+      "startTime": "2025-09-29T16:00:00-05:00",
+      "endTime": "2025-09-29T16:30:00-05:00",
+      "isAllDay": false
+    }
+  ],
   "2025-10-01": [
     {
       "title": "Private Henna Event",
