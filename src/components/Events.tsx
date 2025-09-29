@@ -206,8 +206,8 @@ const Events = () => {
   return (
     <section className="min-h-screen py-20 px-6 bg-gradient-subtle">
       <style>{`
-        .calendar { width: 100%; max-width: 800px; margin: auto; background: hsl(var(--card)); border-radius: 18px; padding: 12px; position: relative; }
-        @media (min-width: 768px) { .calendar { padding: 18px; } }
+        .calendar { width: 100%; max-width: 1200px; margin: auto; background: hsl(var(--card)); border-radius: 18px; padding: 16px; position: relative; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+        @media (min-width: 768px) { .calendar { padding: 24px; } }
         .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
         @media (min-width: 640px) { .header { margin-bottom: 20px; flex-wrap: nowrap; } }
         .header h2 { font-size: clamp(18px, 4vw, 28px); font-weight: 700; color: hsl(var(--foreground)); margin: 0; }
@@ -220,8 +220,8 @@ const Events = () => {
         @media (min-width: 640px) { .day-name, .day { padding: 10px; } }
         .day-name { background: hsl(var(--muted) / 0.3); font-weight: bold; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: hsl(var(--muted-foreground)); }
         @media (min-width: 640px) { .day-name { font-size: 12px; } }
-        .day { position: relative; height: 60px; cursor: pointer; background: hsl(var(--card)); color: hsl(var(--foreground)); transition: 0.2s; display: flex; align-items: flex-start; justify-content: flex-start; font-size: 14px; }
-        @media (min-width: 640px) { .day { height: 80px; font-size: 16px; } }
+        .day { position: relative; height: 80px; cursor: pointer; background: hsl(var(--card)); color: hsl(var(--foreground)); transition: 0.2s; display: flex; align-items: flex-start; justify-content: flex-start; font-size: 16px; }
+        @media (min-width: 640px) { .day { height: 100px; font-size: 18px; } }
         .day:hover, .day:active { background: hsl(var(--muted) / 0.2); transform: translateY(-1px); }
         .day.today { background: #dbbe97; box-shadow: 0 2px 8px rgba(219, 190, 151, 0.4); font-weight: bold; }
         .day .dot { width: 6px; height: 6px; background: red; border-radius: 50%; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); }
@@ -243,10 +243,10 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Event Calendar Section */}
-          <div className="relative">
-            <h3 className="text-2xl font-seasons text-gallery-title mb-6">Event Calendar</h3>
+        {/* Full-width Calendar Section */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            <h3 className="text-3xl font-seasons text-gallery-title mb-8 text-center">Event Calendar</h3>
             <div className="calendar" ref={calendarRef}>
               <div className="header">
                 <button onClick={prevMonth}>Prev</button>
@@ -304,45 +304,92 @@ const Events = () => {
               )}
             </div>
           </div>
+        </div>
 
-          {/* Events List */}
-          <div className="space-y-6">
-            {selectedDate && selectedDateEvents.length > 0 ? (
-              <>
-                <h3 className="text-2xl font-seasons text-gallery-title mb-6">
-                  Events on {selectedDate.toLocaleDateString('en-US', { 
-                    weekday: 'long', 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
-                </h3>
-                {selectedDateEvents.map((event) => (
+        {/* Commented out Events List */}
+        {/* 
+          {selectedDate && selectedDateEvents.length > 0 ? (
+            <>
+              <h3 className="text-2xl font-seasons text-gallery-title mb-6">
+                Events on {selectedDate.toLocaleDateString('en-US', { 
+                  weekday: 'long', 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </h3>
+              {selectedDateEvents.map((event) => (
+                <Card key={event.id} className="bg-card/90 backdrop-blur-sm border-border/50 shadow-float hover:shadow-float-hover transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <h4 className="text-xl font-seasons text-gallery-title">{event.title}</h4>
+                      <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
+                        {event.category}
+                      </Badge>
+                    </div>
+                    
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                        {event.time}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                        {event.location}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                        {event.capacity}
+                      </div>
+                    </div>
+                    
+                    <div className="flex justify-end items-center">
+                      <Button variant="warm" size="lg">
+                        Book Event
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </>
+          ) : (
+            <div>
+              <h3 className="text-2xl font-seasons text-gallery-title mb-6">All Upcoming Events</h3>
+              <div className="space-y-6">
+                {events.map((event) => (
                   <Card key={event.id} className="bg-card/90 backdrop-blur-sm border-border/50 shadow-float hover:shadow-float-hover transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-4">
-                        <h4 className="text-xl font-seasons text-gallery-title">{event.title}</h4>
+                        <div>
+                          <h4 className="text-xl font-seasons text-gallery-title mb-2">{event.title}</h4>
+                          <p className="text-primary font-medium">
+                            {event.date.toLocaleDateString('en-US', { 
+                              weekday: 'long', 
+                              year: 'numeric', 
+                              month: 'long', 
+                              day: 'numeric' 
+                            })}
+                          </p>
+                        </div>
                         <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
                           {event.category}
                         </Badge>
                       </div>
                       
-                      {/* Description removed as it's not available in the current event structure */}
-                      
-                        <div className="space-y-2 mb-6">
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Clock className="w-4 h-4 text-primary flex-shrink-0" />
-                            {event.time}
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                            {event.location}
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                            {event.capacity}
-                          </div>
+                      <div className="flex flex-wrap gap-4 mb-6 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                          {event.time}
                         </div>
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                          {event.location}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                          {event.capacity}
+                        </div>
+                      </div>
                       
                       <div className="flex justify-end items-center">
                         <Button variant="warm" size="lg">
@@ -352,55 +399,9 @@ const Events = () => {
                     </CardContent>
                   </Card>
                 ))}
-              </>
-            ) : (
-              <div>
-                <h3 className="text-2xl font-seasons text-gallery-title mb-6">All Upcoming Events</h3>
-                <div className="space-y-6">
-                  {events.map((event) => (
-                    <Card key={event.id} className="bg-card/90 backdrop-blur-sm border-border/50 shadow-float hover:shadow-float-hover transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex justify-between items-start mb-4">
-                          <div>
-                            <h4 className="text-xl font-seasons text-gallery-title mb-2">{event.title}</h4>
-                            <p className="text-primary font-medium">
-                              {event.date.toLocaleDateString('en-US', { 
-                                weekday: 'long', 
-                                year: 'numeric', 
-                                month: 'long', 
-                                day: 'numeric' 
-                              })}
-                            </p>
-                          </div>
-                          <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
-                            {event.category}
-                          </Badge>
-                        </div>
-                        
-                        {/* Description removed as it's not available in the current event structure */}
-                        
-                          <div className="flex flex-wrap gap-4 mb-6 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-2">
-                              <Clock className="w-4 h-4 text-primary flex-shrink-0" />
-                              {event.time}
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                              {event.location}
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                              {event.capacity}
-                            </div>
-                          </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
               </div>
-            )}
-          </div>
-        </div>
+            </div>)}
+        */}
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in">
