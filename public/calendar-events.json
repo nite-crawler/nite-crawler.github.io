@@ -1,34 +1,4 @@
 {
-  "2025-08-16": [
-    {
-      "title": "Henna @TheVillages",
-      "description": "",
-      "location": "Ten Thousand Villages, 140 N 8th St #125, Lincoln, NE 68508, USA",
-      "startTime": "2025-08-16T10:00:00-05:00",
-      "endTime": "2025-08-16T12:30:00-05:00",
-      "isAllDay": false
-    }
-  ],
-  "2025-08-30": [
-    {
-      "title": "Private Henna Event",
-      "description": "",
-      "location": "studio",
-      "startTime": "2025-08-30T14:00:00-05:00",
-      "endTime": "2025-08-30T18:00:00-05:00",
-      "isAllDay": false
-    }
-  ],
-  "2025-08-31": [
-    {
-      "title": "Private Henna Event",
-      "description": "",
-      "location": "studio",
-      "startTime": "2025-08-31T12:00:00-05:00",
-      "endTime": "2025-08-31T17:00:00-05:00",
-      "isAllDay": false
-    }
-  ],
   "2025-09-07": [
     {
       "title": "Henna Kala @ Lincoln Unites",
@@ -152,6 +122,16 @@
       "location": "9611 S 34th Street, Lincoln, NE 68516",
       "startTime": "2025-10-26T11:00:00-05:00",
       "endTime": "2025-10-26T15:00:00-05:00",
+      "isAllDay": false
+    }
+  ],
+  "2025-10-27": [
+    {
+      "title": "LOFT22 Papillion",
+      "description": "",
+      "location": "134 N Washington St, Papillion, NE 68046",
+      "startTime": "2025-10-27T18:00:00-05:00",
+      "endTime": "2025-10-27T21:00:00-05:00",
       "isAllDay": false
     }
   ],
