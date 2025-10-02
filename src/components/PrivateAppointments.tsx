@@ -148,7 +148,10 @@ const PrivateAppointments = () => {
                 Contact us for a personalized quote!
               </p>
               <Button 
-                onClick={() => handleBookNow(BOOKING_URLS.customQuote)}
+                onClick={() => {
+                  const letsConnectSection = document.getElementById('lets-connect');
+                  letsConnectSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 size="lg"
                 className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
               >
