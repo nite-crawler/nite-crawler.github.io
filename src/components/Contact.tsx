@@ -101,13 +101,18 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase">
             Ready, Set, Henna — Book Now!
           </h2>
-          <p className="text-xl max-w-2xl mx-auto mb-8 font-extralight text-[#272725]">Ready to adorn your hands with beautiful henna art? 
+          <p className="text-xl max-w-2xl mx-auto mb-8 font-extralight text-[#272725]">Ready to adorn your hands with beautiful henna art? 
 Get in touch with us to schedule your appointment or ask any questions.</p>
-          
-          {/* Booking Form */}
-          <div className="max-w-md mx-auto mb-12">
-            <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-              <form onSubmit={handleSubmit} className="space-y-4">
+        </div>
+
+        <div className="max-w-2xl mx-auto">
+          {/* Contact Information */}
+          <div className="animate-fade-in">
+            <div id="lets-connect" className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
+              <h3 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase text-center">LET'S CONNECT!</h3>
+              
+              {/* Booking Form */}
+              <form onSubmit={handleSubmit} className="space-y-4 mb-8">
                 <div>
                   <Label htmlFor="name" className="text-left block mb-2 font-bold" style={{
                   color: '#272725'
@@ -170,15 +175,6 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                   {isLoading ? "SENDING..." : "SUBMIT"}
                 </Button>
               </form>
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-2xl mx-auto">
-          {/* Contact Information */}
-          <div className="animate-fade-in">
-            <div id="lets-connect" className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-              <h3 className="text-4xl md:text-5xl mb-6 text-gallery-title font-seasons uppercase text-center">LET'S CONNECT!</h3>
               
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => <div key={index} className="flex items-center space-x-4 group">
