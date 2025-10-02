@@ -99,16 +99,7 @@ const Navigation = () => {
                 variant="warm" 
                 size="default"
                 className="px-6"
-                onClick={() => {
-                  if (location.pathname !== "/") {
-                    navigate("/");
-                    setTimeout(() => {
-                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                  } else {
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+                onClick={() => navigate("/book-now")}
               >
                 BOOK NOW
               </Button>
@@ -156,14 +147,7 @@ const Navigation = () => {
                 size="sm" 
                 className="w-full"
                 onClick={() => {
-                  if (location.pathname !== "/") {
-                    navigate("/");
-                    setTimeout(() => {
-                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                  } else {
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  navigate("/book-now");
                   setIsOpen(false);
                 }}
               >
