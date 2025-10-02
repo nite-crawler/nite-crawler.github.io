@@ -59,23 +59,23 @@ const PrivateAppointments = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Simple Design</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">1-2 hours</p>
+                <p className="text-3xl font-bold text-contact-accent mb-2">30 minutes</p>
                 <p className="text-muted-foreground">Perfect for beginners or minimal designs</p>
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Detailed Design</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">2-4 hours</p>
+                <p className="text-3xl font-bold text-contact-accent mb-2">1 hour</p>
                 <p className="text-muted-foreground">Intricate patterns and full coverage</p>
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Bridal Package</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">4-6 hours</p>
+                <p className="text-3xl font-bold text-contact-accent mb-2">2-3 hours</p>
                 <p className="text-muted-foreground">Complete bridal henna experience</p>
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Party Events</h3>
                 <p className="text-3xl font-bold text-contact-accent mb-2">Variable</p>
-                <p className="text-muted-foreground">Custom timing based on guest count</p>
+                <p className="text-muted-foreground">Please reach out for more detailst</p>
               </div>
             </div>
           </div>
