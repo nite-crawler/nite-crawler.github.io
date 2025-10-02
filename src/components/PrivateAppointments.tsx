@@ -2,15 +2,17 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Palette } from "lucide-react";
 
 const PrivateAppointments = () => {
-  // TODO: Update this URL with your booking system link
-  const BOOKING_URL = "https://example.com/book";
+  // TODO: Update these URLs with your booking system links
+  const BOOKING_URLS = {
+    simpleHand: "https://example.com/book/simple-hand",
+    bothHands: "https://example.com/book/both-hands",
+    bridal: "https://example.com/book/bridal-package",
+    events: "https://example.com/book/events",
+    customQuote: "https://example.com/book/custom-quote"
+  };
 
-  const handleBookNow = () => {
-    if (BOOKING_URL) {
-      window.open(BOOKING_URL, '_blank');
-    } else {
-      console.log("Booking URL not configured yet");
-    }
+  const handleBookNow = (url: string) => {
+    window.open(url, '_blank');
   };
 
   return (
@@ -95,7 +97,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Simple Hand Design</h3>
                   <Button 
-                    onClick={handleBookNow}
+                    onClick={() => handleBookNow(BOOKING_URLS.simpleHand)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -107,7 +109,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Both Hands</h3>
                   <Button 
-                    onClick={handleBookNow}
+                    onClick={() => handleBookNow(BOOKING_URLS.bothHands)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -119,7 +121,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Bridal Package</h3>
                   <Button 
-                    onClick={handleBookNow}
+                    onClick={() => handleBookNow(BOOKING_URLS.bridal)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -131,7 +133,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Events & Parties</h3>
                   <Button 
-                    onClick={handleBookNow}
+                    onClick={() => handleBookNow(BOOKING_URLS.events)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -146,7 +148,7 @@ const PrivateAppointments = () => {
                 Contact us for a personalized quote!
               </p>
               <Button 
-                onClick={handleBookNow}
+                onClick={() => handleBookNow(BOOKING_URLS.customQuote)}
                 size="lg"
                 className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
               >
