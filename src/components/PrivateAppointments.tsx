@@ -3,7 +3,7 @@ import { MapPin, Clock, Palette } from "lucide-react";
 
 const PrivateAppointments = () => {
   // TODO: Update this URL with your booking system link
-  const BOOKING_URL = "";
+  const BOOKING_URL = "https://example.com/book";
 
   const handleBookNow = () => {
     if (BOOKING_URL) {
@@ -95,7 +95,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Simple Hand Design</h3>
                   <Button 
-                    onClick={() => console.log("Navigate to booking page")}
+                    onClick={handleBookNow}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -107,7 +107,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Both Hands</h3>
                   <Button 
-                    onClick={() => console.log("Navigate to booking page")}
+                    onClick={handleBookNow}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -119,7 +119,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Bridal Package</h3>
                   <Button 
-                    onClick={() => console.log("Navigate to booking page")}
+                    onClick={handleBookNow}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
@@ -131,7 +131,7 @@ const PrivateAppointments = () => {
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Events & Parties</h3>
                   <Button 
-                    onClick={() => console.log("Navigate to booking page")}
+                    onClick={handleBookNow}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
