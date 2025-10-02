@@ -19,10 +19,10 @@ const PrivateAppointments = () => {
       <div className="relative h-[400px] bg-gradient-to-r from-primary/20 to-secondary/30 flex items-center justify-center">
         <div className="text-center z-10">
           <h1 className="text-5xl md:text-7xl font-seasons uppercase text-gallery-title mb-4">
-            Private Appointments
+            Ready, Set, Henna — Book Now!
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
-            Book your personalized henna session in Lincoln, Nebraska
+            Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask any questions.
           </p>
         </div>
       </div>
