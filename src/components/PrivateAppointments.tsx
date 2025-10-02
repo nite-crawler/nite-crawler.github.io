@@ -94,28 +94,48 @@ const PrivateAppointments = () => {
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Simple Hand Design</h3>
-                  <p className="text-2xl font-bold text-contact-accent">Starting at $50</p>
+                  <Button 
+                    onClick={() => console.log("Navigate to booking page")}
+                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
+                  >
+                    Book Now
+                  </Button>
                 </div>
                 <p className="text-muted-foreground">Beautiful patterns for one hand</p>
               </div>
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Both Hands</h3>
-                  <p className="text-2xl font-bold text-contact-accent">Starting at $90</p>
+                  <Button 
+                    onClick={() => console.log("Navigate to booking page")}
+                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
+                  >
+                    Book Now
+                  </Button>
                 </div>
                 <p className="text-muted-foreground">Coordinated designs for both hands</p>
               </div>
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Bridal Package</h3>
-                  <p className="text-2xl font-bold text-contact-accent">Custom Quote</p>
+                  <Button 
+                    onClick={() => console.log("Navigate to booking page")}
+                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
+                  >
+                    Book Now
+                  </Button>
                 </div>
                 <p className="text-muted-foreground">Full bridal service with arms and feet</p>
               </div>
               <div className="pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">Events & Parties</h3>
-                  <p className="text-2xl font-bold text-contact-accent">Custom Quote</p>
+                  <Button 
+                    onClick={() => console.log("Navigate to booking page")}
+                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
+                  >
+                    Book Now
+                  </Button>
                 </div>
                 <p className="text-muted-foreground">Perfect for celebrations and gatherings</p>
               </div>
