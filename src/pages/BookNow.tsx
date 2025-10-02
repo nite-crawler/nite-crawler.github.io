@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
-import Contact from "@/components/Contact";
+import PrivateAppointments from "@/components/PrivateAppointments";
 import SEOHelmet from "@/components/SEOHelmet";
 
 const BookNow = () => {
@@ -31,7 +31,7 @@ const BookNow = () => {
       />
       <Navigation />
       <main>
-        <Contact />
+        <PrivateAppointments />
       </main>
     </div>
   );
