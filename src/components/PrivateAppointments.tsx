@@ -66,7 +66,7 @@ const PrivateAppointments = () => {
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Detailed Design</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">1 hour</p>
+                <p className="text-3xl font-bold text-contact-accent mb-2">1+ hours</p>
                 <p className="text-muted-foreground">Intricate patterns and full coverage</p>
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
