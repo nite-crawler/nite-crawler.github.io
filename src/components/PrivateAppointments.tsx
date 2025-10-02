@@ -105,7 +105,7 @@ const PrivateAppointments = () => {
                 </div>
                 <p className="text-muted-foreground">Join Swathi for a complimentary 15-minute consultation on  henna or jagua session, to ensure everything is a perfect fit</p>
               </div>
-              <div className="border-b border-border pb-4">v
+              <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">30-Minute HENNA Session</h3>
                   <Button 
