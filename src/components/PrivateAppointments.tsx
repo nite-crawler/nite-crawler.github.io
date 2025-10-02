@@ -4,10 +4,10 @@ import { MapPin, Clock, Palette } from "lucide-react";
 const PrivateAppointments = () => {
   // TODO: Update these URLs with your booking system links
   const BOOKING_URLS = {
-    simpleHand: "https://example.com/book/simple-hand",
-    bothHands: "https://example.com/book/both-hands",
-    bridal: "https://example.com/book/bridal-package",
-    events: "https://example.com/book/events",
+    fifteenMinFreeconsultation: "https://tidycal.com/book-session-now/15min-freeconsultation",
+    thirtyMinHenna: "https://tidycal.com/book-session-now/30min-henna",
+    sixtyMinHenna: "https://tidycal.com/book-session-now/60min-henna",
+    ninetyMinHenna: "https://tidycal.com/book-session-now/90min-henna",
     customQuote: "https://example.com/book/custom-quote"
   };
 
@@ -95,51 +95,51 @@ const PrivateAppointments = () => {
             <div className="space-y-6">
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">Simple Hand Design</h3>
+                  <h3 className="text-xl font-semibold text-foreground">15-min FREE CONSULTATION</h3>
                   <Button 
-                    onClick={() => handleBookNow(BOOKING_URLS.simpleHand)}
+                    onClick={() => handleBookNow(BOOKING_URLS.fifteenMinFreeconsultation)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Beautiful patterns for one hand</p>
+                <p className="text-muted-foreground">Join Swathi for a complimentary 15-minute consultation on  henna or jagua session, to ensure everything is a perfect fit</p>
+              </div>
+              <div className="border-b border-border pb-4">v
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">30-Minute HENNA Session</h3>
+                  <Button 
+                    onClick={() => handleBookNow(BOOKING_URLS.thirtyMinHenna)}
+                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
+                  >
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-muted-foreground">Covers one medium design on one hand or smaller motifs on both hands</p>
               </div>
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">Both Hands</h3>
+                  <h3 className="text-xl font-semibold text-foreground">1-Hour HENNA Session</h3>
                   <Button 
-                    onClick={() => handleBookNow(BOOKING_URLS.bothHands)}
+                    onClick={() => handleBookNow(BOOKING_URLS.sixtyMinHenna)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Coordinated designs for both hands</p>
-              </div>
-              <div className="border-b border-border pb-4">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">Bridal Package</h3>
-                  <Button 
-                    onClick={() => handleBookNow(BOOKING_URLS.bridal)}
-                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
-                  >
-                    Book Now
-                  </Button>
-                </div>
-                <p className="text-muted-foreground">Full bridal service with arms and feet</p>
+                <p className="text-muted-foreground">Large designs</p>
               </div>
               <div className="pb-4">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">Events & Parties</h3>
+                  <h3 className="text-xl font-semibold text-foreground">1.5-Hour HENNA Session</h3>
                   <Button 
-                    onClick={() => handleBookNow(BOOKING_URLS.events)}
+                    onClick={() => handleBookNow(BOOKING_URLS.ninetyMinHenna)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Perfect for celebrations and gatherings</p>
+                <p className="text-muted-foreground">Large designs</p>
               </div>
             </div>
             <div className="mt-8 bg-secondary/20 rounded-xl p-6 text-center">
