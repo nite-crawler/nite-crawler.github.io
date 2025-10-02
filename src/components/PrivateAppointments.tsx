@@ -27,33 +27,7 @@ const PrivateAppointments = () => {
         </div>
       </div>
 
-      {/* Quick Links */}
-      <div className="container mx-auto px-6 -mt-8">
-        <div className="bg-card rounded-2xl shadow-float p-6 mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <a href="#location" className="text-foreground hover:text-primary transition-colors font-semibold">
-              Location
-            </a>
-            <span className="text-muted-foreground">|</span>
-            <a href="#estimates" className="text-foreground hover:text-primary transition-colors font-semibold">
-              Time Estimates
-            </a>
-            <span className="text-muted-foreground">|</span>
-            <a href="#pricing" className="text-foreground hover:text-primary transition-colors font-semibold">
-              Pricing
-            </a>
-          </div>
-          <div className="text-center">
-            <Button 
-              onClick={handleBookNow}
-              size="lg"
-              className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold px-8"
-            >
-              BOOK NOW
-            </Button>
-          </div>
-        </div>
-
+      <div className="container mx-auto px-6 py-12">
         {/* Location Section */}
         <div id="location" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
