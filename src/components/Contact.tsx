@@ -167,7 +167,7 @@ Get in touch with us to schedule your appointment or ask any questions.</p>
                   className="w-full bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
                   disabled={isLoading}
                 >
-                  {isLoading ? "SENDING..." : "BOOK APPOINTMENT"}
+                  {isLoading ? "SENDING..." : "SUBMIT"}
                 </Button>
               </form>
             </div>
