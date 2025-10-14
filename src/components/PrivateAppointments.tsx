@@ -66,61 +66,61 @@ const PrivateAppointments = () => {
                 Time Estimates
               </h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaDesignGrid} 
                   alt="Henna design examples" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaDesignDetailed} 
                   alt="Detailed henna design examples" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaBridal} 
                   alt="Bridal henna package examples" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaParty} 
                   alt="Party event henna examples" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaDesign3} 
                   alt="Henna design example 3" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaDesign4} 
                   alt="Henna design example 4" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaDesign5} 
                   alt="Henna design example 5" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={hennaDesign6} 
                   alt="Henna design example 6" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
