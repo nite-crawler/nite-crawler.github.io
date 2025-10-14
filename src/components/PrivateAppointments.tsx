@@ -89,7 +89,9 @@ const PrivateAppointments = () => {
               </h2>
             </div>
             <div className="text-center space-y-2 mb-6">
-              <p className="text-xl font-semibold text-foreground">5815 S 58th St Suite D</p>
+              <p className="text-xl font-semibold text-foreground">
+                5815 S 58th St<br />Suite D
+              </p>
               <p className="text-base text-foreground">Lincoln, NE 68516</p>
               <p className="text-base text-foreground/80 italic">** By appointment only **</p>
             </div>
