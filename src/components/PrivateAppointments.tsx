@@ -64,8 +64,7 @@ const PrivateAppointments = () => {
         {/* Location Section */}
         <div id="location" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6"
-              />
+            <div className="flex items-center justify-center mb-6">
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Location</h2>
             </div>
             <div className="text-center space-y-2 mb-6">
