@@ -167,6 +167,12 @@ const PrivateAppointments = () => {
                 booking your appointment.
               </p>
             </div>
+            
+            <div className="mt-4 text-center">
+              <p className="text-foreground/80">
+                We only offer all natural dyes. By default, all appointments are with henna. If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
+              </p>
+            </div>
           </div>
         </div>
 
