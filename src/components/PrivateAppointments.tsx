@@ -47,7 +47,7 @@ const PrivateAppointments = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-background to-secondary/30">
+    <section className="min-h-screen" style={{ backgroundColor: 'rgba(247, 233, 214, 0.5)' }}>
       {/* Hero Section */}
       <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <img 
