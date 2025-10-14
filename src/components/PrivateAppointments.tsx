@@ -97,13 +97,8 @@ const PrivateAppointments = () => {
                   <img 
                     src={image.src} 
                     alt={image.alt} 
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                    <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-center px-2">
-                      Click to view
-                    </span>
-                  </div>
                 </div>
               ))}
             </div>

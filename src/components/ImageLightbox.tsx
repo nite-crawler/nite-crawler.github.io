@@ -71,13 +71,6 @@ const ImageLightbox = ({ images, isOpen, currentIndex, onClose, onNavigate }: Im
             alt={images[currentIndex].alt}
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
           />
-          
-          {/* Elegant gradient overlay on bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent rounded-b-lg flex items-end justify-center pb-4">
-            <p className="text-white text-sm font-medium px-4 text-center">
-              {images[currentIndex].alt}
-            </p>
-          </div>
         </div>
 
         {/* Next Button */}
