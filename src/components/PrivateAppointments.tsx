@@ -83,6 +83,85 @@ const PrivateAppointments = () => {
           </div>
         </div>
 
+        {/* Color Options Section */}
+        <div id="colors" className="max-w-4xl mx-auto mb-16 animate-fade-in">
+          <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
+            <div className="flex items-center justify-center mb-6">
+              <Palette className="w-8 h-8 text-contact-accent mr-3" />
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">
+                Color Options
+              </h2>
+            </div>
+            <div className="space-y-6">
+              <p className="text-center text-foreground/90 mb-8">
+                We use only all-natural dyes for beautiful, safe body art. Choose the color that best matches your style and event!
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-xl p-6 border-2 border-primary/20">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Traditional Henna</h3>
+                  <div className="mb-4">
+                    <span className="inline-block px-4 py-2 bg-amber-700 text-white rounded-full text-sm font-medium">
+                      Reddish-Brown Color
+                    </span>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Classic warm reddish-brown stain</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Lasts 1-3 weeks depending on care</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Perfect for weddings, festivals & celebrations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>100% natural and skin-safe</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-secondary/10 to-primary/20 rounded-xl p-6 border-2 border-secondary/20">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Jagua (Optional)</h3>
+                  <div className="mb-4">
+                    <span className="inline-block px-4 py-2 bg-slate-700 text-white rounded-full text-sm font-medium">
+                      Dark Blue-Black Color
+                    </span>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Deep blue-black tattoo-like appearance</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Lasts 1-2 weeks with proper aftercare</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Modern alternative to traditional henna</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-contact-accent mr-2">•</span>
+                      <span>Can be blended with henna for unique shades</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
+                <p className="text-sm text-foreground/80 italic">
+                  💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it when booking your appointment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Pricing Section */}
         <div id="pricing" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
