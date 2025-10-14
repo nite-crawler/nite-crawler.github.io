@@ -146,6 +146,12 @@ Old Cheney located at Trade Center. There is ample parking as well.
             }}>Color Options</h2>
             </div>
 
+            <div className="mb-6 text-center">
+              <p className="text-foreground/80">
+                We only offer all natural dyes. By default, all appointments are with henna. If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
+              </p>
+            </div>
+
             <div className="flex justify-center">
               <img src={blendsStainsChart} alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses" className="w-full h-full rounded-lg" />
             </div>
@@ -154,12 +160,6 @@ Old Cheney located at Trade Center. There is ample parking as well.
               <p className="text-sm text-foreground/80 italic">
                 💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it when
                 booking your appointment.
-              </p>
-            </div>
-            
-            <div className="mt-4 text-center">
-              <p className="text-foreground/80">
-                We only offer all natural dyes. By default, all appointments are with henna. If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
               </p>
             </div>
           </div>
