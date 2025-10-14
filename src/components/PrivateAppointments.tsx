@@ -93,7 +93,7 @@ const PrivateAppointments = () => {
               <p className="text-base text-foreground">Lincoln, NE 68516</p>
               <p className="text-base text-foreground/80 italic">** By appointment only **</p>
             </div>
-            <p className="text-center text-base text-foreground/80 max-w-2xl mx-auto">Convenient location in Lincoln, Roe Beauty Studios is easy off of Nebraska Parkway and 
+            <p className="text-center text-base text-foreground/80 max-w-2xl mx-auto">Convenient location in Lincoln, Roe Beauty Studios is easy off of Nebraska Parkway and 
 Old Cheney located at Trade Center. There is ample parking as well.
           </p>
           </div>
@@ -147,9 +147,9 @@ Old Cheney located at Trade Center. There is ample parking as well.
             </div>
 
             <div className="mb-6 text-center">
-              <p className="text-base text-foreground/80">
-                We only offer all natural dyes. By default, all appointments are with henna. If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
-              </p>
+              <p className="text-base text-foreground/80">We only offer all natural dyes. By default, all appointments are with henna. 
+If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
+            </p>
             </div>
 
             <div className="flex justify-center">
