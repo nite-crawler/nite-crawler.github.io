@@ -20,6 +20,17 @@ const PrivateAppointments = () => {
     setLightboxOpen(true);
   };
 
+  const hennaImages = [
+    { src: hennaDesignGrid, alt: "Henna design grid pattern" },
+    { src: hennaDesignDetailed, alt: "Detailed henna design" },
+    { src: hennaBridal, alt: "Bridal henna design" },
+    { src: hennaParty, alt: "Party henna design" },
+    { src: hennaDesign3, alt: "Henna design variation 3" },
+    { src: hennaDesign4, alt: "Henna design variation 4" },
+    { src: hennaDesign5, alt: "Henna design variation 5" },
+    { src: hennaDesign6, alt: "Henna design variation 6" }
+  ];
+
   // TODO: Update these URLs with your booking system links
   const BOOKING_URLS = {
     fifteenMinFreeconsultation: "https://tidycal.com/book-session-now/15min-freeconsultation",
@@ -58,11 +69,12 @@ const PrivateAppointments = () => {
               </h2>
             </div>
             <div className="text-center space-y-2 mb-6">
-              <p className="text-xl font-semibold text-foreground">Lincoln, Nebraska</p>
+              <p className="text-xl font-semibold text-foreground">5815 S 58th St Suite D</p>
+              <p className="text-lg text-foreground">Lincoln, NE 68516</p>
               <p className="text-muted-foreground italic">** By appointment only **</p>
             </div>
             <p className="text-center text-foreground/80 max-w-2xl mx-auto">
-              Convenient location in Lincoln with easy access and parking. Exact address will be provided upon booking confirmation.
+              Convenient location in Lincoln with easy access and parking.
             </p>
           </div>
         </div>
