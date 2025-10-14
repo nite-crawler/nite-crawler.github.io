@@ -80,7 +80,7 @@ const PrivateAppointments = () => {
         </div>
 
         {/* Time Estimates Section */}
-        <div id="estimates" className="max-w-4xl mx-auto mb-16 animate-fade-in">
+        <div id="estimates" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
               <Clock className="w-8 h-8 text-contact-accent mr-3" />
