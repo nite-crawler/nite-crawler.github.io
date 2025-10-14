@@ -147,7 +147,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
             </div>
 
             <div className="mb-6 text-center">
-              <p className="text-base text-foreground/80">We only offer all natural dyes. By default, all appointments are with henna. 
+              <p className="text-base text-foreground/80">We only offer all natural dyes. By default, all appointments are with henna.  
 If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
             </p>
             </div>
