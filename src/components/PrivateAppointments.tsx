@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Palette } from "lucide-react";
+import ImageLightbox from "@/components/ImageLightbox";
 import hennaDesignGrid from "@/assets/henna-design-grid.svg";
 import hennaDesignDetailed from "@/assets/henna-design-detailed.svg";
 import hennaBridal from "@/assets/henna-bridal.svg";
@@ -10,6 +12,25 @@ import hennaDesign5 from "@/assets/henna-design-5.svg";
 import hennaDesign6 from "@/assets/henna-design-6.svg";
 
 const PrivateAppointments = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const hennaImages = [
+    { src: hennaDesignGrid, alt: "30-Minute Session - Medium design on one hand or smaller motifs on both hands" },
+    { src: hennaDesignDetailed, alt: "1-Hour Session - Large detailed designs" },
+    { src: hennaBridal, alt: "Bridal Package - Complete bridal henna experience (2-3 hours)" },
+    { src: hennaParty, alt: "Party Events - Custom designs for groups and celebrations" },
+    { src: hennaDesign3, alt: "Intricate henna pattern with floral elements" },
+    { src: hennaDesign4, alt: "Traditional henna design with geometric patterns" },
+    { src: hennaDesign5, alt: "Elegant bridal henna with detailed motifs" },
+    { src: hennaDesign6, alt: "Modern henna design with contemporary elements" },
+  ];
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
   // TODO: Update these URLs with your booking system links
   const BOOKING_URLS = {
     fifteenMinFreeconsultation: "https://tidycal.com/book-session-now/15min-freeconsultation",
@@ -67,65 +88,35 @@ const PrivateAppointments = () => {
               </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaDesignGrid} 
-                  alt="Henna design examples" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaDesignDetailed} 
-                  alt="Detailed henna design examples" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaBridal} 
-                  alt="Bridal henna package examples" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaParty} 
-                  alt="Party event henna examples" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaDesign3} 
-                  alt="Henna design example 3" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaDesign4} 
-                  alt="Henna design example 4" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaDesign5} 
-                  alt="Henna design example 5" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden">
-                <img 
-                  src={hennaDesign6} 
-                  alt="Henna design example 6" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              {hennaImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="overflow-hidden cursor-pointer group relative"
+                  onClick={() => openLightbox(index)}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                    <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-center px-2">
+                      Click to view
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+
+      <ImageLightbox
+        images={hennaImages}
+        isOpen={lightboxOpen}
+        currentIndex={currentImageIndex}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setCurrentImageIndex}
+      />
 
         {/* Color Options Section */}
         <div id="colors" className="max-w-4xl mx-auto mb-16 animate-fade-in">
