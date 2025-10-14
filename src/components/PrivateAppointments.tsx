@@ -15,17 +15,6 @@ const PrivateAppointments = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const hennaImages = [
-    { src: hennaDesignGrid, alt: "30-Minute Session - Medium design on one hand or smaller motifs on both hands" },
-    { src: hennaDesignDetailed, alt: "1-Hour Session - Large detailed designs" },
-    { src: hennaBridal, alt: "Bridal Package - Complete bridal henna experience (2-3 hours)" },
-    { src: hennaParty, alt: "Party Events - Custom designs for groups and celebrations" },
-    { src: hennaDesign3, alt: "Intricate henna pattern with floral elements" },
-    { src: hennaDesign4, alt: "Traditional henna design with geometric patterns" },
-    { src: hennaDesign5, alt: "Elegant bridal henna with detailed motifs" },
-    { src: hennaDesign6, alt: "Modern henna design with contemporary elements" },
-  ];
-
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
@@ -97,8 +86,13 @@ const PrivateAppointments = () => {
                   <img 
                     src={image.src} 
                     alt={image.alt} 
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
                   />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                    <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-center px-2">
+                      Click to view
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
