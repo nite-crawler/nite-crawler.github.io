@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Palette } from "lucide-react";
 import hennaDesignGrid from "@/assets/henna-design-grid.svg";
+import hennaDesignDetailed from "@/assets/henna-design-detailed.svg";
 
 const PrivateAppointments = () => {
   // TODO: Update these URLs with your booking system links
@@ -67,10 +68,12 @@ const PrivateAppointments = () => {
                   className="w-full h-auto rounded-lg"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Detailed Design</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">1+ hours</p>
-                <p className="text-muted-foreground">Intricate patterns and full coverage</p>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaDesignDetailed} 
+                  alt="Detailed henna design examples" 
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Bridal Package</h3>
