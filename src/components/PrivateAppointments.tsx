@@ -51,7 +51,7 @@ const PrivateAppointments = () => {
       <div className="relative h-[400px] bg-gradient-to-r from-primary/20 to-secondary/30 flex items-center justify-center">
         <div className="text-center z-10">
           <h1 className="text-5xl md:text-7xl font-seasons uppercase text-gallery-title mb-4">
-            Ready, Set, Henna — Book Now!
+            Ready, Set, Henna!
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
             Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask
@@ -64,8 +64,8 @@ const PrivateAppointments = () => {
         {/* Location Section */}
         <div id="location" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6">
-              <MapPin className="w-8 h-8 text-contact-accent mr-3" />
+            <div className="flex items-center justify-center mb-6"
+              />
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Location</h2>
             </div>
             <div className="text-center space-y-2 mb-6">
@@ -83,7 +83,6 @@ const PrivateAppointments = () => {
         <div id="estimates" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <Clock className="w-8 h-8 text-contact-accent mr-3" />
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Time Estimates</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -121,7 +120,6 @@ const PrivateAppointments = () => {
         <div id="colors" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-8">
-              <Palette className="w-8 h-8 text-contact-accent mr-3" />
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Blends & Stains</h2>
             </div>
             
