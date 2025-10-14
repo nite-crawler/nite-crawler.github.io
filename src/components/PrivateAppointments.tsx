@@ -4,6 +4,10 @@ import hennaDesignGrid from "@/assets/henna-design-grid.svg";
 import hennaDesignDetailed from "@/assets/henna-design-detailed.svg";
 import hennaBridal from "@/assets/henna-bridal.svg";
 import hennaParty from "@/assets/henna-party.svg";
+import hennaDesign3 from "@/assets/henna-design-3.svg";
+import hennaDesign4 from "@/assets/henna-design-4.svg";
+import hennaDesign5 from "@/assets/henna-design-5.svg";
+import hennaDesign6 from "@/assets/henna-design-6.svg";
 
 const PrivateAppointments = () => {
   // TODO: Update these URLs with your booking system links
@@ -88,6 +92,34 @@ const PrivateAppointments = () => {
                 <img 
                   src={hennaParty} 
                   alt="Party event henna examples" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaDesign3} 
+                  alt="Henna design example 3" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaDesign4} 
+                  alt="Henna design example 4" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaDesign5} 
+                  alt="Henna design example 5" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaDesign6} 
+                  alt="Henna design example 6" 
                   className="w-full h-auto"
                 />
               </div>
