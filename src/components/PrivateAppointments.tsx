@@ -149,8 +149,8 @@ const PrivateAppointments = () => {
         {/* Color Options Section */}
         <div id="colors" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6" style={{ color: "#8D3218" }}>
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Color Options</h2>
+            <div className="flex items-center justify-center mb-6">
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{ color: "#8D3218" }}>Color Options</h2>
             </div>
 
             <div className="flex justify-center">
@@ -173,8 +173,8 @@ const PrivateAppointments = () => {
         {/* Pricing Section */}
         <div id="pricing" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6" style={{ color: "#8D3218" }}>
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Pricing & Options</h2>
+            <div className="flex items-center justify-center mb-6">
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{ color: "#8D3218" }}>Pricing & Options</h2>
             </div>
             <div className="space-y-6">
               <div className="border-b border-border pb-4">
