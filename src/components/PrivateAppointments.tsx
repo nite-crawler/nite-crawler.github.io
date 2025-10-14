@@ -118,7 +118,7 @@ const PrivateAppointments = () => {
         {/* Color Options Section */}
         <div id="colors" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-8">
+            <div className="flex items-center justify-center mb-6">
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Color Options</h2>
             </div>
             
@@ -126,7 +126,7 @@ const PrivateAppointments = () => {
               <img 
                 src={blendsStainsChart} 
                 alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses"
-                className="w-full max-w-4xl rounded-lg"
+                className="w-full h-full rounded-lg"
               />
             </div>
 
