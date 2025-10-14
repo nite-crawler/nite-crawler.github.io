@@ -65,14 +65,14 @@ const PrivateAppointments = () => {
                 <img 
                   src={hennaDesignGrid} 
                   alt="Henna design examples" 
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
                 <img 
                   src={hennaDesignDetailed} 
                   alt="Detailed henna design examples" 
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
