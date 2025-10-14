@@ -71,7 +71,7 @@ const PrivateAppointments = () => {
         <div id="location" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6" style={{ color: '#8D3218' }}>
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Location</h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Location< style={{ color: '#8D3218' }} /h2>
             </div>
             <div className="text-center space-y-2 mb-6">
               <p className="text-xl font-semibold text-foreground">5815 S 58th St Suite D</p>
@@ -88,7 +88,7 @@ const PrivateAppointments = () => {
         <div id="estimates" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Time Estimates</h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Time Estimates< style={{ color: '#8D3218' }} /h2>
             </div>
             <p className="text-center text-foreground/80 mb-6 max-w-3xl mx-auto">
               The amount of time needed depends on amount of coverage and intricacy of the design. Use the below for reference to decide how much time to book. If you're unsure,{" "}
