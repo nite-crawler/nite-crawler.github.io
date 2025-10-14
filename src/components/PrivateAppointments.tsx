@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Palette } from "lucide-react";
 import hennaDesignGrid from "@/assets/henna-design-grid.svg";
 import hennaDesignDetailed from "@/assets/henna-design-detailed.svg";
+import hennaBridal from "@/assets/henna-bridal.svg";
+import hennaParty from "@/assets/henna-party.svg";
 
 const PrivateAppointments = () => {
   // TODO: Update these URLs with your booking system links
@@ -75,15 +77,19 @@ const PrivateAppointments = () => {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Bridal Package</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">2-3 hours</p>
-                <p className="text-muted-foreground">Complete bridal henna experience</p>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaBridal} 
+                  alt="Bridal henna package examples" 
+                  className="w-full h-auto"
+                />
               </div>
-              <div className="bg-secondary/20 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Party Events</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">Variable</p>
-                <p className="text-muted-foreground">Please reach out for more detailst</p>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaParty} 
+                  alt="Party event henna examples" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </div>
