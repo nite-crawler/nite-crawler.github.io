@@ -11,6 +11,7 @@ import hennaDesign4 from "@/assets/henna-design-4.svg";
 import hennaDesign5 from "@/assets/henna-design-5.svg";
 import hennaDesign6 from "@/assets/henna-design-6.svg";
 import blendsStainsChart from "@/assets/blends-stains-chart.png";
+import hkBanner from "@/assets/hk-banner.svg";
 
 const PrivateAppointments = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -48,8 +49,13 @@ const PrivateAppointments = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-background to-secondary/30">
       {/* Hero Section */}
-      <div className="relative h-[400px] bg-gradient-to-r from-primary/20 to-secondary/30 flex items-center justify-center">
-        <div className="text-center z-10">
+      <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <img 
+          src={hkBanner} 
+          alt="Henna Kala decorative banner" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="text-center z-10 relative">
           <h1 className="text-5xl md:text-7xl font-seasons uppercase text-gallery-title mb-4">
             Ready, Set, Henna!
           </h1>
