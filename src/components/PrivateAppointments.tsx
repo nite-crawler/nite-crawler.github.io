@@ -47,16 +47,16 @@ const PrivateAppointments = () => {
   };
 
   return (
-    <section className="min-h-screen" style={{ backgroundColor: 'rgba(247, 233, 214, 0.5)' }}>
+    <section className="min-h-screen" style={{ backgroundColor: "rgba(247, 233, 214, 0.5)" }}>
       {/* Hero Section */}
       <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <img 
-          src={hkBanner} 
-          alt="Henna Kala decorative banner" 
+        <img
+          src={hkBanner}
+          alt="Henna Kala decorative banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="text-center z-10 relative">
-          <h1 className="text-5xl md:text-7xl font-seasons uppercase mb-4" style={{ color: '#8D3218' }}>
+          <h1 className="text-5xl md:text-7xl font-seasons uppercase mb-4" style={{ color: "#8D3218" }}>
             Ready, Set, Henna!
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
@@ -70,8 +70,13 @@ const PrivateAppointments = () => {
         {/* Location Section */}
         <div id="location" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6" style={{ color: '#8D3218' }}>
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{ color: '#8D3218' }}>Location</h2>
+            <div className="flex items-center justify-center mb-6" style={{ color: "#8D3218" }}>
+              <h2
+                className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title"
+                style={{ color: "#8D3218" }}
+              >
+                Location
+              </h2>
             </div>
             <div className="text-center space-y-2 mb-6">
               <p className="text-xl font-semibold text-foreground">5815 S 58th St Suite D</p>
@@ -88,12 +93,18 @@ const PrivateAppointments = () => {
         <div id="estimates" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{ color: '#8D3218' }}>Time Estimates</h2>
+              <h2
+                className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title"
+                style={{ color: "#8D3218" }}
+              >
+                Time Estimates
+              </h2>
             </div>
             <p className="text-center text-foreground/80 mb-6 max-w-3xl mx-auto">
-              The amount of time needed depends on amount of coverage and intricacy of the design. Use the below for reference to decide how much time to book. If you're unsure,{" "}
-              <a 
-                href="#lets-connect" 
+              The amount of time needed depends on amount of coverage and intricacy of the design. Use the below for
+              reference to decide how much time to book. If you're unsure,{" "}
+              <a
+                href="#lets-connect"
                 className="text-contact-accent underline hover:text-contact-accent/80 transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
@@ -138,13 +149,13 @@ const PrivateAppointments = () => {
         {/* Color Options Section */}
         <div id="colors" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-6" style={{ color: "#8D3218" }}>
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Color Options</h2>
             </div>
-            
+
             <div className="flex justify-center">
-              <img 
-                src={blendsStainsChart} 
+              <img
+                src={blendsStainsChart}
                 alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses"
                 className="w-full h-full rounded-lg"
               />
@@ -152,8 +163,8 @@ const PrivateAppointments = () => {
 
             <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
               <p className="text-sm text-foreground/80 italic">
-                💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it
-                when booking your appointment.
+                💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it when
+                booking your appointment.
               </p>
             </div>
           </div>
@@ -162,7 +173,7 @@ const PrivateAppointments = () => {
         {/* Pricing Section */}
         <div id="pricing" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-6" style={{ color: "#8D3218" }}>
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Pricing & Options</h2>
             </div>
             <div className="space-y-6">
