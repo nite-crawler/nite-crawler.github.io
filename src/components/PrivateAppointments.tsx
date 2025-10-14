@@ -163,7 +163,6 @@ const PrivateAppointments = () => {
         <div id="pricing" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <Palette className="w-8 h-8 text-contact-accent mr-3" />
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Pricing & Options</h2>
             </div>
             <div className="space-y-6">
