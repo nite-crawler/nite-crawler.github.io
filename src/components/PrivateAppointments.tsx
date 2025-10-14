@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Palette } from "lucide-react";
+import hennaDesignGrid from "@/assets/henna-design-grid.svg";
 
 const PrivateAppointments = () => {
   // TODO: Update these URLs with your booking system links
@@ -59,10 +60,12 @@ const PrivateAppointments = () => {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-secondary/20 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Simple Design</h3>
-                <p className="text-3xl font-bold text-contact-accent mb-2">30 minutes</p>
-                <p className="text-muted-foreground">Perfect for beginners or minimal designs</p>
+              <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
+                <img 
+                  src={hennaDesignGrid} 
+                  alt="Henna design examples" 
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
               <div className="bg-secondary/20 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Detailed Design</h3>
