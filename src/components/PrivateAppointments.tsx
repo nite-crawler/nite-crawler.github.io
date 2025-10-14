@@ -84,6 +84,20 @@ const PrivateAppointments = () => {
             <div className="flex items-center justify-center mb-6">
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Time Estimates</h2>
             </div>
+            <p className="text-center text-foreground/80 mb-6 max-w-3xl mx-auto">
+              The amount of time needed depends on amount of coverage and intricacy of the design. Use the below for reference to decide how much time to book. If you're unsure,{" "}
+              <a 
+                href="#lets-connect" 
+                className="text-contact-accent underline hover:text-contact-accent/80 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("lets-connect")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                get in touch
+              </a>{" "}
+              for a quote!
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {hennaImages.map((image, index) => (
                 <div
