@@ -12,26 +12,38 @@ import hennaDesign5 from "@/assets/henna-design-5.svg";
 import hennaDesign6 from "@/assets/henna-design-6.svg";
 import blendsStainsChart from "@/assets/blends-stains-chart.png";
 import hkBanner from "@/assets/hk-banner.svg";
-
 const PrivateAppointments = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
-
-  const hennaImages = [
-    { src: hennaDesignGrid, alt: "Henna design grid pattern" },
-    { src: hennaDesignDetailed, alt: "Detailed henna design" },
-    { src: hennaBridal, alt: "Bridal henna design" },
-    { src: hennaParty, alt: "Party henna design" },
-    { src: hennaDesign3, alt: "Henna design variation 3" },
-    { src: hennaDesign4, alt: "Henna design variation 4" },
-    { src: hennaDesign5, alt: "Henna design variation 5" },
-    { src: hennaDesign6, alt: "Henna design variation 6" },
-  ];
+  const hennaImages = [{
+    src: hennaDesignGrid,
+    alt: "Henna design grid pattern"
+  }, {
+    src: hennaDesignDetailed,
+    alt: "Detailed henna design"
+  }, {
+    src: hennaBridal,
+    alt: "Bridal henna design"
+  }, {
+    src: hennaParty,
+    alt: "Party henna design"
+  }, {
+    src: hennaDesign3,
+    alt: "Henna design variation 3"
+  }, {
+    src: hennaDesign4,
+    alt: "Henna design variation 4"
+  }, {
+    src: hennaDesign5,
+    alt: "Henna design variation 5"
+  }, {
+    src: hennaDesign6,
+    alt: "Henna design variation 6"
+  }];
 
   // TODO: Update these URLs with your booking system links
   const BOOKING_URLS = {
@@ -39,24 +51,21 @@ const PrivateAppointments = () => {
     thirtyMinHenna: "https://tidycal.com/book-session-now/30min-henna",
     sixtyMinHenna: "https://tidycal.com/book-session-now/60min-henna",
     ninetyMinHenna: "https://tidycal.com/book-session-now/90min-henna",
-    customQuote: "https://example.com/book/custom-quote",
+    customQuote: "https://example.com/book/custom-quote"
   };
-
   const handleBookNow = (url: string) => {
     window.open(url, "_blank");
   };
-
-  return (
-    <section className="min-h-screen" style={{ backgroundColor: "rgba(247, 233, 214, 0.5)" }}>
+  return <section className="min-h-screen" style={{
+    backgroundColor: "rgba(247, 233, 214, 0.5)"
+  }}>
       {/* Hero Section */}
       <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <img
-          src={hkBanner}
-          alt="Henna Kala decorative banner"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={hkBanner} alt="Henna Kala decorative banner" className="absolute inset-0 w-full h-full object-cover" />
         <div className="text-center z-10 relative">
-          <h1 className="text-5xl md:text-7xl font-seasons uppercase mb-4" style={{ color: "#8D3218" }}>
+          <h1 className="text-5xl md:text-7xl font-seasons uppercase mb-4" style={{
+          color: "#8D3218"
+        }}>
             Ready, Set, Henna!
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
@@ -70,11 +79,12 @@ const PrivateAppointments = () => {
         {/* Location Section */}
         <div id="location" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
-            <div className="flex items-center justify-center mb-6" style={{ color: "#8D3218" }}>
-              <h2
-                className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title"
-                style={{ color: "#8D3218" }}
-              >
+            <div className="flex items-center justify-center mb-6" style={{
+            color: "#8D3218"
+          }}>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{
+              color: "#8D3218"
+            }}>
                 Location
               </h2>
             </div>
@@ -83,9 +93,9 @@ const PrivateAppointments = () => {
               <p className="text-lg text-foreground">Lincoln, NE 68516</p>
               <p className="text-muted-foreground italic">** By appointment only **</p>
             </div>
-            <p className="text-center text-foreground/80 max-w-2xl mx-auto">
-              Convenient location in Lincoln with easy access and parking.
-            </p>
+            <p className="text-center text-foreground/80 max-w-2xl mx-auto font-normal">Convenient location in Lincoln, Roe Beauty Studios is easy off of Nebraska Parkway and 
+Old Cheney located at Trade Center. There is ample parking as well.
+          </p>
           </div>
         </div>
 
@@ -93,72 +103,51 @@ const PrivateAppointments = () => {
         <div id="estimates" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <h2
-                className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title"
-                style={{ color: "#8D3218" }}
-              >
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{
+              color: "#8D3218"
+            }}>
                 Time Estimates
               </h2>
             </div>
             <p className="text-center text-foreground/80 mb-6 max-w-3xl mx-auto">
               The amount of time needed depends on amount of coverage and intricacy of the design. Use the below for
               reference to decide how much time to book. If you're unsure,{" "}
-              <a
-                href="#lets-connect"
-                className="text-contact-accent underline hover:text-contact-accent/80 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("lets-connect")?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
+              <a href="#lets-connect" className="text-contact-accent underline hover:text-contact-accent/80 transition-colors" onClick={e => {
+              e.preventDefault();
+              document.getElementById("lets-connect")?.scrollIntoView({
+                behavior: "smooth"
+              });
+            }}>
                 get in touch
               </a>{" "}
               for a quote!
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {hennaImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="overflow-hidden cursor-pointer group relative"
-                  onClick={() => openLightbox(index)}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
-                  />
+              {hennaImages.map((image, index) => <div key={index} className="overflow-hidden cursor-pointer group relative" onClick={() => openLightbox(index)}>
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                     <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-center px-2">
                       Click to view
                     </span>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
 
-        <ImageLightbox
-          images={hennaImages}
-          isOpen={lightboxOpen}
-          currentIndex={currentImageIndex}
-          onClose={() => setLightboxOpen(false)}
-          onNavigate={setCurrentImageIndex}
-        />
+        <ImageLightbox images={hennaImages} isOpen={lightboxOpen} currentIndex={currentImageIndex} onClose={() => setLightboxOpen(false)} onNavigate={setCurrentImageIndex} />
 
         {/* Color Options Section */}
         <div id="colors" className="max-w-6xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{ color: "#8D3218" }}>Color Options</h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{
+              color: "#8D3218"
+            }}>Color Options</h2>
             </div>
 
             <div className="flex justify-center">
-              <img
-                src={blendsStainsChart}
-                alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses"
-                className="w-full h-full rounded-lg"
-              />
+              <img src={blendsStainsChart} alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses" className="w-full h-full rounded-lg" />
             </div>
 
             <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
@@ -180,16 +169,15 @@ const PrivateAppointments = () => {
         <div id="pricing" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{ color: "#8D3218" }}>Pricing & Options</h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title" style={{
+              color: "#8D3218"
+            }}>Pricing & Options</h2>
             </div>
             <div className="space-y-6">
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">15-min FREE CONSULTATION</h3>
-                  <Button
-                    onClick={() => handleBookNow(BOOKING_URLS.fifteenMinFreeconsultation)}
-                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
-                  >
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.fifteenMinFreeconsultation)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
                     Book Now
                   </Button>
                 </div>
@@ -201,10 +189,7 @@ const PrivateAppointments = () => {
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">30-Minute HENNA Session</h3>
-                  <Button
-                    onClick={() => handleBookNow(BOOKING_URLS.thirtyMinHenna)}
-                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
-                  >
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.thirtyMinHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
                     Book Now
                   </Button>
                 </div>
@@ -213,10 +198,7 @@ const PrivateAppointments = () => {
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">1-Hour HENNA Session</h3>
-                  <Button
-                    onClick={() => handleBookNow(BOOKING_URLS.sixtyMinHenna)}
-                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
-                  >
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.sixtyMinHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
                     Book Now
                   </Button>
                 </div>
@@ -225,10 +207,7 @@ const PrivateAppointments = () => {
               <div className="pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">1.5-Hour HENNA Session</h3>
-                  <Button
-                    onClick={() => handleBookNow(BOOKING_URLS.ninetyMinHenna)}
-                    className="bg-contact-accent hover:bg-contact-accent/90 text-white"
-                  >
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.ninetyMinHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
                     Book Now
                   </Button>
                 </div>
@@ -240,22 +219,18 @@ const PrivateAppointments = () => {
                 Each design is unique and pricing varies based on complexity and coverage. Contact us for a personalized
                 quote!
               </p>
-              <Button
-                onClick={() => {
-                  const letsConnectSection = document.getElementById("lets-connect");
-                  letsConnectSection?.scrollIntoView({ behavior: "smooth" });
-                }}
-                size="lg"
-                className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
-              >
+              <Button onClick={() => {
+              const letsConnectSection = document.getElementById("lets-connect");
+              letsConnectSection?.scrollIntoView({
+                behavior: "smooth"
+              });
+            }} size="lg" className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold">
                 GET YOUR CUSTOM QUOTE
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PrivateAppointments;
