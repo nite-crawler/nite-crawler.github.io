@@ -28,7 +28,7 @@ const PrivateAppointments = () => {
     { src: hennaDesign3, alt: "Henna design variation 3" },
     { src: hennaDesign4, alt: "Henna design variation 4" },
     { src: hennaDesign5, alt: "Henna design variation 5" },
-    { src: hennaDesign6, alt: "Henna design variation 6" }
+    { src: hennaDesign6, alt: "Henna design variation 6" },
   ];
 
   // TODO: Update these URLs with your booking system links
@@ -37,11 +37,11 @@ const PrivateAppointments = () => {
     thirtyMinHenna: "https://tidycal.com/book-session-now/30min-henna",
     sixtyMinHenna: "https://tidycal.com/book-session-now/60min-henna",
     ninetyMinHenna: "https://tidycal.com/book-session-now/90min-henna",
-    customQuote: "https://example.com/book/custom-quote"
+    customQuote: "https://example.com/book/custom-quote",
   };
 
   const handleBookNow = (url: string) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
@@ -53,7 +53,8 @@ const PrivateAppointments = () => {
             Ready, Set, Henna — Book Now!
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
-            Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask any questions.
+            Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask
+            any questions.
           </p>
         </div>
       </div>
@@ -64,9 +65,7 @@ const PrivateAppointments = () => {
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
               <MapPin className="w-8 h-8 text-contact-accent mr-3" />
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">
-                Location
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Location</h2>
             </div>
             <div className="text-center space-y-2 mb-6">
               <p className="text-xl font-semibold text-foreground">5815 S 58th St Suite D</p>
@@ -84,20 +83,18 @@ const PrivateAppointments = () => {
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
               <Clock className="w-8 h-8 text-contact-accent mr-3" />
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">
-                Time Estimates
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Time Estimates</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {hennaImages.map((image, index) => (
-                <div 
+                <div
                   key={index}
                   className="overflow-hidden cursor-pointer group relative"
                   onClick={() => openLightbox(index)}
                 >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt} 
+                  <img
+                    src={image.src}
+                    alt={image.alt}
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
@@ -111,28 +108,27 @@ const PrivateAppointments = () => {
           </div>
         </div>
 
-      <ImageLightbox
-        images={hennaImages}
-        isOpen={lightboxOpen}
-        currentIndex={currentImageIndex}
-        onClose={() => setLightboxOpen(false)}
-        onNavigate={setCurrentImageIndex}
-      />
+        <ImageLightbox
+          images={hennaImages}
+          isOpen={lightboxOpen}
+          currentIndex={currentImageIndex}
+          onClose={() => setLightboxOpen(false)}
+          onNavigate={setCurrentImageIndex}
+        />
 
         {/* Color Options Section */}
         <div id="colors" className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
               <Palette className="w-8 h-8 text-contact-accent mr-3" />
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">
-                Color Options
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Color Options</h2>
             </div>
             <div className="space-y-6">
               <p className="text-center text-foreground/90 mb-8">
-                We use only all-natural dyes for beautiful, safe body art. Choose the color that best matches your style and event!
+                We use only all-natural dyes for beautiful, safe body art. Choose the color that best matches your style
+                and event!
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-xl p-6 border-2 border-primary/20">
                   <h3 className="text-2xl font-semibold text-foreground mb-3">Traditional Henna</h3>
@@ -162,7 +158,7 @@ const PrivateAppointments = () => {
                 </div>
 
                 <div className="bg-gradient-to-br from-secondary/10 to-primary/20 rounded-xl p-6 border-2 border-secondary/20">
-                  <h3 className="text-2xl font-semibold text-foreground mb-3">Jagua (Optional)</h3>
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">Jagua </h3>
                   <div className="mb-4">
                     <span className="inline-block px-4 py-2 bg-slate-700 text-white rounded-full text-sm font-medium">
                       Dark Blue-Black Color
@@ -191,7 +187,8 @@ const PrivateAppointments = () => {
 
               <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
                 <p className="text-sm text-foreground/80 italic">
-                  💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it when booking your appointment.
+                  💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it
+                  when booking your appointment.
                 </p>
               </div>
             </div>
@@ -203,69 +200,70 @@ const PrivateAppointments = () => {
           <div className="bg-card rounded-2xl p-8 shadow-float hover:shadow-float-hover transition-all duration-300">
             <div className="flex items-center justify-center mb-6">
               <Palette className="w-8 h-8 text-contact-accent mr-3" />
-              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">
-                Pricing & Options
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Pricing & Options</h2>
             </div>
             <div className="space-y-6">
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">15-min FREE CONSULTATION</h3>
-                  <Button 
+                  <Button
                     onClick={() => handleBookNow(BOOKING_URLS.fifteenMinFreeconsultation)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Join Swathi for a complimentary 15-minute consultation on  henna or jagua session, to ensure everything is a perfect fit</p>
+                <p className="text-muted-foreground">
+                  Join Swathi for a complimentary 15-minute consultation on henna or jagua session, to ensure everything
+                  is a perfect fit
+                </p>
               </div>
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">30-Minute HENNA Session</h3>
-                  <Button 
+                  <Button
                     onClick={() => handleBookNow(BOOKING_URLS.thirtyMinHenna)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Covers one medium design on one hand or smaller motifs on both hands</p>
+                <p className="text-muted-foreground"></p>
               </div>
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">1-Hour HENNA Session</h3>
-                  <Button 
+                  <Button
                     onClick={() => handleBookNow(BOOKING_URLS.sixtyMinHenna)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Large designs</p>
+                <p className="text-muted-foreground"></p>
               </div>
               <div className="pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">1.5-Hour HENNA Session</h3>
-                  <Button 
+                  <Button
                     onClick={() => handleBookNow(BOOKING_URLS.ninetyMinHenna)}
                     className="bg-contact-accent hover:bg-contact-accent/90 text-white"
                   >
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">Large designs</p>
+                <p className="text-muted-foreground"></p>
               </div>
             </div>
             <div className="mt-8 bg-secondary/20 rounded-xl p-6 text-center">
               <p className="text-foreground/80 mb-4">
-                Each design is unique and pricing varies based on complexity and coverage. 
-                Contact us for a personalized quote!
+                Each design is unique and pricing varies based on complexity and coverage. Contact us for a personalized
+                quote!
               </p>
-              <Button 
+              <Button
                 onClick={() => {
-                  const letsConnectSection = document.getElementById('lets-connect');
-                  letsConnectSection?.scrollIntoView({ behavior: 'smooth' });
+                  const letsConnectSection = document.getElementById("lets-connect");
+                  letsConnectSection?.scrollIntoView({ behavior: "smooth" });
                 }}
                 size="lg"
                 className="bg-contact-accent hover:bg-contact-accent/90 text-white font-semibold"
