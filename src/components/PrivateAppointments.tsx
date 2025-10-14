@@ -66,7 +66,7 @@ const PrivateAppointments = () => {
                 Time Estimates
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-secondary/20 rounded-xl p-6 overflow-hidden">
                 <img 
                   src={hennaDesignGrid} 
