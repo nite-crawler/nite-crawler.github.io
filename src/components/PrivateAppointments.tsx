@@ -153,7 +153,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
             </div>
 
             <div className="flex justify-center">
-              <img src={blendsStainsChart} alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses" className="w-full h-full rounded-lg" />
+              <img src={blendsStainsChart} alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses" className="w-full h-full" />
             </div>
 
             <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
