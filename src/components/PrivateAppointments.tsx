@@ -68,7 +68,7 @@ const PrivateAppointments = () => {
         }}>
             Ready, Set, Henna!
           </h1>
-          <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
+          <p className="text-base text-foreground/80 max-w-2xl mx-auto px-4">
             Ready to adorn your hands with beautiful henna art? Get in touch with us to schedule your appointment or ask
             any questions.
           </p>
@@ -90,10 +90,10 @@ const PrivateAppointments = () => {
             </div>
             <div className="text-center space-y-2 mb-6">
               <p className="text-xl font-semibold text-foreground">5815 S 58th St Suite D</p>
-              <p className="text-lg text-foreground">Lincoln, NE 68516</p>
-              <p className="text-muted-foreground italic">** By appointment only **</p>
+              <p className="text-base text-foreground">Lincoln, NE 68516</p>
+              <p className="text-base text-foreground/80 italic">** By appointment only **</p>
             </div>
-            <p className="text-center text-foreground/80 max-w-2xl mx-auto font-normal">Convenient location in Lincoln, Roe Beauty Studios is easy off of Nebraska Parkway and 
+            <p className="text-center text-base text-foreground/80 max-w-2xl mx-auto">Convenient location in Lincoln, Roe Beauty Studios is easy off of Nebraska Parkway and 
 Old Cheney located at Trade Center. There is ample parking as well.
           </p>
           </div>
@@ -109,7 +109,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
                 Time Estimates
               </h2>
             </div>
-            <p className="text-center text-foreground/80 mb-6 max-w-3xl mx-auto">
+            <p className="text-center text-base text-foreground/80 mb-6 max-w-3xl mx-auto">
               The amount of time needed depends on amount of coverage and intricacy of the design. Use the below for
               reference to decide how much time to book. If you're unsure,{" "}
               <a href="#lets-connect" className="text-contact-accent underline hover:text-contact-accent/80 transition-colors" onClick={e => {
@@ -147,7 +147,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
             </div>
 
             <div className="mb-6 text-center">
-              <p className="text-foreground/80">
+              <p className="text-base text-foreground/80">
                 We only offer all natural dyes. By default, all appointments are with henna. If you want jagua / henna-jagua blend, select it from the 'add-ons' list when booking.
               </p>
             </div>
@@ -157,7 +157,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
             </div>
 
             <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
-              <p className="text-sm text-foreground/80 italic">
+              <p className="text-base text-foreground/80 italic">
                 💡 Tip: Henna is our default option. If you'd like jagua or a jagua-henna blend, please mention it when
                 booking your appointment.
               </p>
@@ -181,7 +181,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-base text-foreground/80">
                   Join Swathi for a complimentary 15-minute consultation on henna or jagua session, to ensure everything
                   is a perfect fit
                 </p>
@@ -193,7 +193,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground"></p>
+                <p className="text-base text-foreground/80"></p>
               </div>
               <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
@@ -202,7 +202,7 @@ Old Cheney located at Trade Center. There is ample parking as well.
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground"></p>
+                <p className="text-base text-foreground/80"></p>
               </div>
               <div className="pb-4">
                 <div className="flex justify-between items-center mb-2">
@@ -211,11 +211,11 @@ Old Cheney located at Trade Center. There is ample parking as well.
                     Book Now
                   </Button>
                 </div>
-                <p className="text-muted-foreground"></p>
+                <p className="text-base text-foreground/80"></p>
               </div>
             </div>
             <div className="mt-8 bg-secondary/20 rounded-xl p-6 text-center">
-              <p className="text-foreground/80 mb-4">
+              <p className="text-base text-foreground/80 mb-4">
                 Each design is unique and pricing varies based on complexity and coverage. Contact us for a personalized
                 quote!
               </p>
