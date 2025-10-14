@@ -10,6 +10,7 @@ import hennaDesign3 from "@/assets/henna-design-3.svg";
 import hennaDesign4 from "@/assets/henna-design-4.svg";
 import hennaDesign5 from "@/assets/henna-design-5.svg";
 import hennaDesign6 from "@/assets/henna-design-6.svg";
+import blendsStainsChart from "@/assets/blends-stains-chart.png";
 
 const PrivateAppointments = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -124,120 +125,12 @@ const PrivateAppointments = () => {
               <h2 className="text-3xl md:text-4xl font-seasons uppercase text-gallery-title">Blends & Stains</h2>
             </div>
             
-            {/* Comparison Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-secondary/20">
-                    <th className="p-4 text-left font-semibold text-foreground border border-border"></th>
-                    <th className="p-4 text-center font-semibold text-foreground border border-border">WHAT IT IS</th>
-                    <th className="p-4 text-center font-semibold text-foreground border border-border">DURATION</th>
-                    <th className="p-4 text-center font-semibold text-foreground border border-border">COLOR</th>
-                    <th className="p-4 text-center font-semibold text-foreground border border-border">USED FOR</th>
-                    <th className="p-4 text-center font-semibold text-foreground border border-border">BEST FOR</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {/* Henna Row */}
-                  <tr className="bg-secondary/10 hover:bg-secondary/20 transition-colors">
-                    <td className="p-4 border border-border">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-amber-800 flex items-center justify-center text-white font-bold text-sm">
-                          H
-                        </div>
-                        <span className="font-semibold text-foreground">HENNA</span>
-                      </div>
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Leaves of the Henna Tree
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      <div className="space-y-1">
-                        <p className="font-medium">ALL NATURAL</p>
-                        <p>stains last 2 weeks</p>
-                        <p className="text-sm italic">The color fades as your skin naturally exfoliates.</p>
-                      </div>
-                    </td>
-                    <td className="p-4 border border-border text-center">
-                      <span className="inline-block px-3 py-1 bg-amber-700 text-white rounded-full text-sm font-medium">
-                        Reddish-Brown
-                      </span>
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Body Art, Hair and Nails
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Kids, Pregnant People & those going through Chemo; Intricate designs.
-                    </td>
-                  </tr>
-
-                  {/* Jagua Row */}
-                  <tr className="bg-secondary/5 hover:bg-secondary/15 transition-colors">
-                    <td className="p-4 border border-border">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white font-bold text-sm">
-                          J
-                        </div>
-                        <span className="font-semibold text-foreground">JAGUA *</span>
-                      </div>
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Juice of the Jagua Fruit
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      <div className="space-y-1">
-                        <p className="font-medium">ALL NATURAL</p>
-                        <p>stains last 2 weeks</p>
-                        <p className="text-sm italic">The color fades as your skin naturally exfoliates.</p>
-                      </div>
-                    </td>
-                    <td className="p-4 border border-border text-center">
-                      <span className="inline-block px-3 py-1 bg-slate-700 text-white rounded-full text-sm font-medium">
-                        Blue-Black
-                      </span>
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Body Art Only
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Darkest Stains & Easiest Aftercare
-                    </td>
-                  </tr>
-
-                  {/* Henna/Jagua Blend Row */}
-                  <tr className="bg-secondary/10 hover:bg-secondary/20 transition-colors">
-                    <td className="p-4 border border-border">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-amber-900 flex items-center justify-center text-white font-bold text-xs">
-                          H/J
-                        </div>
-                        <span className="font-semibold text-foreground">HENNA JAGUA *</span>
-                      </div>
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Henna & Jagua Blended
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      <div className="space-y-1">
-                        <p className="font-medium">ALL NATURAL</p>
-                        <p>stains last 2 weeks</p>
-                        <p className="text-sm italic">The color fades as your skin naturally exfoliates.</p>
-                      </div>
-                    </td>
-                    <td className="p-4 border border-border text-center">
-                      <span className="inline-block px-3 py-1 bg-amber-900 text-white rounded-full text-sm font-medium">
-                        Roasted Chestnut
-                      </span>
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Body Art Only
-                    </td>
-                    <td className="p-4 border border-border text-center text-muted-foreground">
-                      Dark stains & intricate designs
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="flex justify-center">
+              <img 
+                src={blendsStainsChart} 
+                alt="Henna and Jagua blends and stains comparison chart showing colors, duration, and best uses"
+                className="w-full max-w-4xl rounded-lg"
+              />
             </div>
 
             <div className="mt-6 bg-secondary/20 rounded-xl p-4 text-center">
