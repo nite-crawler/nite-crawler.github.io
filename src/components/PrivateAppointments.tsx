@@ -56,7 +56,7 @@ const PrivateAppointments = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="text-center z-10 relative">
-          <h1 className="text-5xl md:text-7xl font-seasons uppercase text-gallery-title mb-4">
+          <h1 className="text-5xl md:text-7xl font-seasons uppercase mb-4" style={{ color: '#8D3218' }}>
             Ready, Set, Henna!
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto px-4">
