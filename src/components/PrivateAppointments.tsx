@@ -186,8 +186,8 @@ Old Cheney located at Trade Center. There is ample parking as well.
                   </Button>
                 </div>
                 <p className="text-base text-foreground/80">
-                  Join Swathi for a complimentary 15-minute consultation on henna or jagua session, to ensure everything
-                  is a perfect fit
+                  Join Swathi for a complimentary 15-minute consultation on henna or jagua session,<br />
+                  to ensure everything is a perfect fit
                 </p>
               </div>
               <div className="border-b border-border pb-4">
