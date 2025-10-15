@@ -54,6 +54,16 @@ const PrivateAppointments = () => {
     sixtyMinJagua: "https://tidycal.com/book-session-now/60min-jagua",
     ninetyMinHenna: "https://tidycal.com/book-session-now/90min-henna",
     ninetyMinJagua: "https://tidycal.com/book-session-now/90min-jagua",
+    twoHourHenna: "https://tidycal.com/book-session-now/PLACEHOLDER-120min-henna",
+    twoHourJagua: "https://tidycal.com/book-session-now/PLACEHOLDER-120min-jagua",
+    twoHalfHourHenna: "https://tidycal.com/book-session-now/PLACEHOLDER-150min-henna",
+    twoHalfHourJagua: "https://tidycal.com/book-session-now/PLACEHOLDER-150min-jagua",
+    threeHourHenna: "https://tidycal.com/book-session-now/PLACEHOLDER-180min-henna",
+    threeHourJagua: "https://tidycal.com/book-session-now/PLACEHOLDER-180min-jagua",
+    threeHalfHourHenna: "https://tidycal.com/book-session-now/PLACEHOLDER-210min-henna",
+    threeHalfHourJagua: "https://tidycal.com/book-session-now/PLACEHOLDER-210min-jagua",
+    fourHourHenna: "https://tidycal.com/book-session-now/PLACEHOLDER-240min-henna",
+    fourHourJagua: "https://tidycal.com/book-session-now/PLACEHOLDER-240min-jagua",
     customQuote: "https://example.com/book/custom-quote"
   };
   const handleBookNow = (url: string) => {
@@ -238,10 +248,100 @@ Old Cheney located at Trade Center. There is ample parking as well.
                 </div>
                 <p className="text-base text-foreground/80"></p>
               </div>
-              <div className="pb-4">
+              <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">1.5-Hour JAGUA Session</h3>
                   <Button onClick={() => handleBookNow(BOOKING_URLS.ninetyMinJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">2-Hour HENNA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.twoHourHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">2-Hour JAGUA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.twoHourJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">2.5-Hour HENNA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.twoHalfHourHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">2.5-Hour JAGUA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.twoHalfHourJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">3-Hour HENNA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.threeHourHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">3-Hour JAGUA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.threeHourJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">3.5-Hour HENNA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.threeHalfHourHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">3.5-Hour JAGUA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.threeHalfHourJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="border-b border-border pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">4-Hour HENNA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.fourHourHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">4-Hour JAGUA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.fourHourJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
                     Book Now
                   </Button>
                 </div>
