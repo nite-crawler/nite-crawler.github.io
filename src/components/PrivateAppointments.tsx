@@ -53,6 +53,7 @@ const PrivateAppointments = () => {
     sixtyMinHenna: "https://tidycal.com/book-session-now/60min-henna",
     sixtyMinJagua: "https://tidycal.com/book-session-now/60min-jagua",
     ninetyMinHenna: "https://tidycal.com/book-session-now/90min-henna",
+    ninetyMinJagua: "https://tidycal.com/book-session-now/90min-jagua",
     customQuote: "https://example.com/book/custom-quote"
   };
   const handleBookNow = (url: string) => {
@@ -228,10 +229,19 @@ Old Cheney located at Trade Center. There is ample parking as well.
                 </div>
                 <p className="text-base text-foreground/80"></p>
               </div>
-              <div className="pb-4">
+              <div className="border-b border-border pb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-foreground">1.5-Hour HENNA Session</h3>
                   <Button onClick={() => handleBookNow(BOOKING_URLS.ninetyMinHenna)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
+                    Book Now
+                  </Button>
+                </div>
+                <p className="text-base text-foreground/80"></p>
+              </div>
+              <div className="pb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-semibold text-foreground">1.5-Hour JAGUA Session</h3>
+                  <Button onClick={() => handleBookNow(BOOKING_URLS.ninetyMinJagua)} className="bg-contact-accent hover:bg-contact-accent/90 text-white">
                     Book Now
                   </Button>
                 </div>
